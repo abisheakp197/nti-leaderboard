@@ -1,12 +1,18 @@
+"use client";
+
+import React, { useState } from "react";
 import leaderboardDataRaw from "@/data/leaderboard.json";
 import { LeaderboardTable } from "@/components/LeaderboardTable";
 import { ReproducibilityEngine } from "@/components/ReproducibilityEngine";
+import { SubmitRepoModal } from "@/components/SubmitRepoModal";
 import { LeaderboardData } from "@/types/leaderboard";
 import { ArrowUpRight, Shield, Zap } from "lucide-react";
 
 const leaderboardData = leaderboardDataRaw as LeaderboardData;
 
 export default function Home() {
+  const [isSubmitModalOpen, setIsSubmitModalOpen] = useState(false);
+
   return (
     <main className="min-h-screen bg-[#050505] text-white selection:bg-emerald-500/30 selection:text-emerald-200 relative overflow-hidden font-sans pb-24">
       {/* Background Gradients */}
@@ -29,15 +35,13 @@ export default function Home() {
             </div>
           </div>
 
-          <a
-            href="https://github.com/marketplace"
-            target="_blank"
-            rel="noreferrer"
+          <button
+            onClick={() => setIsSubmitModalOpen(true)}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white text-black font-semibold text-xs hover:bg-zinc-200 transition-all shadow-lg hover:shadow-white/10"
           >
             <span>Get Your Framework Scored</span>
             <ArrowUpRight className="w-4 h-4" />
-          </a>
+          </button>
         </div>
       </header>
 
@@ -68,6 +72,12 @@ export default function Home() {
 
       {/* Reproducibility Section */}
       <ReproducibilityEngine />
+
+      {/* Submit Repo Modal */}
+      <SubmitRepoModal
+        isOpen={isSubmitModalOpen}
+        onClose={() => setIsSubmitModalOpen(false)}
+      />
 
       {/* Footer */}
       <footer className="mt-24 border-t border-white/5 pt-8 text-center font-mono text-xs text-zinc-500">
