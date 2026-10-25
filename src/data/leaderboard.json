@@ -1,6 +1,6 @@
 {
   "source": "NTI-Registry",
-  "generatedAt": "2026-10-25T10:22:24Z",
+  "generatedAt": "2026-10-25T10:38:36Z",
   "rubricVersion": "NTI-1.0",
   "entries": [
     {
@@ -21,6 +21,2039 @@
     },
     {
       "rank": 2,
+      "name": "aps-conformance-suite",
+      "slug": "aps-conformance-suite",
+      "score": 66,
+      "grade": "D",
+      "status": "Failing",
+      "lastScanned": "Just now",
+      "trend": null,
+      "evidence": {
+        "attestationHash": "sha256:f6b8adaa02943d9706061d8943c54726142ed9096bd2f7c8ae8087c3dfb71c26",
+        "signature": "mldsa5:0e1891c0fdc7da0733555ec7b2cd6a6c485ae1f087b63ff02f7940103ff59b5c",
+        "scannerVersion": "nti-scanner:0.1.1"
+      },
+      "findings": [
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "runners/verify_receipts_v2.py",
+          "line": 15
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "runners/verify_receipts_v2.py",
+          "line": 81
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "runners/verify_receipts_v2.py",
+          "line": 155
+        },
+        {
+          "rule": "SEC-PQC-001",
+          "severity": "High",
+          "desc": "Quantum-vulnerable crypto imported: cryptography.hazmat.primitives.asymmetric.ed25519.",
+          "file": "runners/verify_receipts_v2.py",
+          "line": 5
+        },
+        {
+          "rule": "SEC-PQC-001",
+          "severity": "High",
+          "desc": "Quantum-vulnerable crypto imported: cryptography.hazmat.primitives.asymmetric.ed25519.",
+          "file": "runners/receipt_runner.py",
+          "line": 17
+        },
+        {
+          "rule": "SEC-PQC-001",
+          "severity": "High",
+          "desc": "Quantum-vulnerable crypto imported: cryptography.hazmat.primitives.asymmetric.ed25519.",
+          "file": "runners/generate_synthetic_regression.py",
+          "line": 14
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "runners/aeoess_receipt_runner.py",
+          "line": 61
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "runners/aeoess_receipt_runner.py",
+          "line": 85
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "runners/aeoess_receipt_runner.py",
+          "line": 88
+        },
+        {
+          "rule": "SEC-PQC-001",
+          "severity": "High",
+          "desc": "Quantum-vulnerable crypto imported: cryptography.hazmat.primitives.asymmetric.ed25519.",
+          "file": "runners/aeoess_receipt_runner.py",
+          "line": 27
+        },
+        {
+          "rule": "SEC-SSRF-001",
+          "severity": "High",
+          "desc": "Dynamic URL passed to urllib.request.urlopen()",
+          "file": "runners/aat_runner.py",
+          "line": 135
+        },
+        {
+          "rule": "SEC-PQC-001",
+          "severity": "High",
+          "desc": "Quantum-vulnerable crypto imported: cryptography.hazmat.primitives.asymmetric.ed25519.",
+          "file": "runners/aat_runner.py",
+          "line": 40
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/wasmagent-aep-2026-09-13-03/adapter/lab-semantic.py",
+          "line": 70
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/wasmagent-aep-2026-09-13-03/adapter/lab-semantic.py",
+          "line": 73
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/wasmagent-aep-2026-09-13-03/adapter/lab-semantic.py",
+          "line": 58
+        },
+        {
+          "rule": "SEC-PATH-001",
+          "severity": "High",
+          "desc": "Concatenated path passed to open()",
+          "file": "interop/wasmagent-aep-2026-09-13-03/adapter/build-matrix.py",
+          "line": 27
+        },
+        {
+          "rule": "SEC-PATH-001",
+          "severity": "High",
+          "desc": "Concatenated path passed to open()",
+          "file": "interop/wasmagent-aep-2026-09-13-03/adapter/build-matrix.py",
+          "line": 11
+        },
+        {
+          "rule": "SEC-PATH-001",
+          "severity": "High",
+          "desc": "Concatenated path passed to open()",
+          "file": "interop/wasmagent-aep-2026-09-13-03/adapter/build-matrix.py",
+          "line": 12
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/vaid-a2a-0.1.1-cleanroom-ca6077a2/vaid_cr.py",
+          "line": 107
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/vaid-a2a-0.1.1-cleanroom-ca6077a2/vaid_cr.py",
+          "line": 228
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/vaid-a2a-0.1.1-cleanroom-ca6077a2/vaid_cr.py",
+          "line": 228
+        },
+        {
+          "rule": "SEC-PQC-001",
+          "severity": "High",
+          "desc": "Quantum-vulnerable crypto imported: cryptography.hazmat.primitives.asymmetric.ed25519.",
+          "file": "interop/vaid-a2a-0.1.1-cleanroom-ca6077a2/vaid_cr.py",
+          "line": 23
+        },
+        {
+          "rule": "SEC-PQC-001",
+          "severity": "High",
+          "desc": "Quantum-vulnerable crypto imported: cryptography.hazmat.primitives.asymmetric.",
+          "file": "interop/sharif-aat-03/adapter/py/test_timestamps.py",
+          "line": 62
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/sharif-aat-03/adapter/py/run.py",
+          "line": 53
+        },
+        {
+          "rule": "SEC-PQC-001",
+          "severity": "High",
+          "desc": "Quantum-vulnerable crypto imported: cryptography.hazmat.primitives.asymmetric.",
+          "file": "interop/sharif-aat-03/adapter/py/generate.py",
+          "line": 12
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/sharif-aat-03/adapter/py/aat.py",
+          "line": 165
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/sharif-aat-03/adapter/py/aat.py",
+          "line": 186
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/sharif-aat-03/adapter/py/aat.py",
+          "line": 189
+        },
+        {
+          "rule": "SEC-PQC-001",
+          "severity": "High",
+          "desc": "Quantum-vulnerable crypto imported: cryptography.hazmat.primitives.asymmetric.",
+          "file": "interop/sharif-aat-03/adapter/py/aat.py",
+          "line": 28
+        },
+        {
+          "rule": "SEC-PQC-001",
+          "severity": "High",
+          "desc": "Quantum-vulnerable crypto imported: cryptography.hazmat.primitives.asymmetric.utils.",
+          "file": "interop/sharif-aat-03/adapter/py/aat.py",
+          "line": 29
+        },
+        {
+          "rule": "SEC-PQC-001",
+          "severity": "High",
+          "desc": "Quantum-vulnerable crypto imported: cryptography.hazmat.primitives.asymmetric.utils.",
+          "file": "interop/sharif-aat-03/adapter/py/aat.py",
+          "line": 112
+        },
+        {
+          "rule": "SEC-PATH-001",
+          "severity": "High",
+          "desc": "Concatenated path passed to open()",
+          "file": "interop/receipt-signature-veritasacta-verify-0.10.21-8f81e376/digests21.py",
+          "line": 4
+        },
+        {
+          "rule": "SEC-SSRF-001",
+          "severity": "High",
+          "desc": "Dynamic URL passed to urllib.request.urlopen()",
+          "file": "interop/hjs-bb6be62/run-rfc8785-witness.py",
+          "line": 10
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/hjs-bb6be62/rerun-hjs-over-aps.py",
+          "line": 11
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/hjs-bb6be62/rerun-hjs-over-aps.py",
+          "line": 18
+        },
+        {
+          "rule": "SEC-CMD-001",
+          "severity": "Critical",
+          "desc": "Direct shell execution via os.popen",
+          "file": "interop/cryptovalid-opencore-aps-da95834/run_aps_da95834.py",
+          "line": 16
+        },
+        {
+          "rule": "SEC-SQL-001",
+          "severity": "Critical",
+          "desc": "f-string contains SQL keywords.",
+          "file": "interop/cryptovalid-opencore-aps-da95834/run_aps_da95834.py",
+          "line": 26
+        },
+        {
+          "rule": "SEC-PQC-001",
+          "severity": "High",
+          "desc": "Quantum-vulnerable crypto imported: cryptography.hazmat.primitives.asymmetric.ed25519.",
+          "file": "interop/crypto-recompute-ctef-v0.3.1-a71b7329/recompute.py",
+          "line": 60
+        },
+        {
+          "rule": "SEC-PQC-001",
+          "severity": "High",
+          "desc": "Quantum-vulnerable crypto imported: cryptography.hazmat.primitives.asymmetric.ed25519.",
+          "file": "interop/crypto-recompute-ctef-v0.3.1-a642c17/recompute.py",
+          "line": 60
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/cosai-ws4-189-evidence-sufficiency/adapter/py/run.py",
+          "line": 165
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/cosai-ws4-189-evidence-sufficiency/adapter/py/run.py",
+          "line": 168
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/cosai-ws4-189-evidence-sufficiency/adapter/py/run.py",
+          "line": 190
+        },
+        {
+          "rule": "SEC-SQL-001",
+          "severity": "Critical",
+          "desc": "f-string contains SQL keywords.",
+          "file": "interop/cosai-ws4-189-evidence-sufficiency/adapter/py/run.py",
+          "line": 181
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/cosai-ws4-189-evidence-sufficiency/adapter/py/checker.py",
+          "line": 152
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/cosai-ws4-189-evidence-sufficiency/adapter/py/checker.py",
+          "line": 72
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/cosai-ws4-189-evidence-sufficiency/adapter/py/checker.py",
+          "line": 83
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/cosai-ws4-149-decision-to-effect/adapter/py/run.py",
+          "line": 447
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/cosai-ws4-149-decision-to-effect/adapter/py/run.py",
+          "line": 450
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/cosai-ws4-149-decision-to-effect/adapter/py/run.py",
+          "line": 471
+        },
+        {
+          "rule": "SEC-SQL-001",
+          "severity": "Critical",
+          "desc": "f-string contains SQL keywords.",
+          "file": "interop/cosai-ws4-149-decision-to-effect/adapter/py/run.py",
+          "line": 462
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/cosai-ws4-149-decision-to-effect/adapter/py/checker.py",
+          "line": 371
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/cosai-ws4-149-decision-to-effect/adapter/py/checker.py",
+          "line": 106
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/cosai-ws4-149-decision-to-effect/adapter/py/checker.py",
+          "line": 215
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/cosai-odis-148dc41/adapter/py/run.py",
+          "line": 140
+        },
+        {
+          "rule": "SEC-PQC-001",
+          "severity": "High",
+          "desc": "Quantum-vulnerable crypto imported: cryptography.hazmat.primitives.asymmetric.ed25519.",
+          "file": "interop/cleanroom-oracle-safety-check-6e8b05b2/cleanroom_osc.py",
+          "line": 6
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/attenu-guard-0.6.1/cleanroom/verify_asor00.py",
+          "line": 122
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/attenu-guard-0.6.1/cleanroom/verify_asor00.py",
+          "line": 123
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/attenu-guard-0.6.1/cleanroom/verify_asor00.py",
+          "line": 31
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/attenu-guard-0.6.0/cleanroom/verify_asor00.py",
+          "line": 120
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/attenu-guard-0.6.0/cleanroom/verify_asor00.py",
+          "line": 31
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/attenu-guard-0.6.0/cleanroom/verify_asor00.py",
+          "line": 82
+        },
+        {
+          "rule": "SEC-PQC-001",
+          "severity": "High",
+          "desc": "Quantum-vulnerable crypto imported: cryptography.hazmat.primitives.asymmetric.ed25519.",
+          "file": "interop/attenu-guard-0.15.0-envelopes/cleanroom/verify_envelope_v1.py",
+          "line": 52
+        },
+        {
+          "rule": "SEC-PQC-001",
+          "severity": "High",
+          "desc": "Quantum-vulnerable crypto imported: cryptography.hazmat.primitives.asymmetric.ed25519.",
+          "file": "interop/attenu-guard-0.13.0-envelopes/cleanroom/verify_envelope_v1.py",
+          "line": 52
+        },
+        {
+          "rule": "SEC-A2A-001",
+          "severity": "High",
+          "desc": "A2A communication without identity verification.",
+          "file": "interop/agent-passport-v2-readers-407ca2d5/check-against-vectors.py",
+          "line": 0
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/aae-envelope/moltycel-format/build_moltycel_format.py",
+          "line": 74
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/aae-envelope/moltycel-format/build_moltycel_format.py",
+          "line": 121
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/aae-envelope/moltycel-format/build_moltycel_format.py",
+          "line": 144
+        },
+        {
+          "rule": "SEC-PQC-001",
+          "severity": "High",
+          "desc": "Quantum-vulnerable crypto imported: cryptography.hazmat.primitives.asymmetric.ed25519.",
+          "file": "interop/aae-envelope/moltycel-format/build_moltycel_format.py",
+          "line": 25
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/aae-envelope/moltycel-format/constraint-monotonicity/build_constraint_vectors.py",
+          "line": 79
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/aae-envelope/moltycel-format/constraint-monotonicity/build_constraint_vectors.py",
+          "line": 130
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/aae-envelope/moltycel-format/constraint-monotonicity/build_constraint_vectors.py",
+          "line": 151
+        },
+        {
+          "rule": "SEC-PQC-001",
+          "severity": "High",
+          "desc": "Quantum-vulnerable crypto imported: cryptography.hazmat.primitives.asymmetric.ed25519.",
+          "file": "interop/aae-envelope/moltycel-format/constraint-monotonicity/build_constraint_vectors.py",
+          "line": 34
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/teardown-accounting/verify.py",
+          "line": 74
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/teardown-accounting/verify.py",
+          "line": 371
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/teardown-accounting/verify.py",
+          "line": 440
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/suspension-cause-composition/validate.py",
+          "line": 109
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/suspension-cause-composition/validate.py",
+          "line": 117
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/suspension-cause-composition/validate.py",
+          "line": 141
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/suspension-cause-composition/sdk_support.py",
+          "line": 58
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/suspension-cause-composition/sdk_support.py",
+          "line": 60
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/suspension-cause-composition/sdk_support.py",
+          "line": 56
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/sponsor-handover/validate.py",
+          "line": 83
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/sponsor-handover/validate.py",
+          "line": 141
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/sponsor-handover/validate.py",
+          "line": 120
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/sponsor-handover/mint.py",
+          "line": 48
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/single-chain-selection/validate.py",
+          "line": 191
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/single-chain-selection/validate.py",
+          "line": 104
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/single-chain-selection/validate.py",
+          "line": 148
+        },
+        {
+          "rule": "SEC-SQL-001",
+          "severity": "Critical",
+          "desc": "f-string contains SQL keywords.",
+          "file": "fixtures/single-chain-selection/validate.py",
+          "line": 191
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/single-chain-selection/mint.py",
+          "line": 78
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/revocation-resolution-forward-compat/validate.py",
+          "line": 145
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/revocation-resolution-forward-compat/validate.py",
+          "line": 72
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/revocation-resolution-forward-compat/validate.py",
+          "line": 42
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/revocation-resolution-forward-compat/mint.py",
+          "line": 34
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/read-fidelity-receipt/validate.py",
+          "line": 157
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/read-fidelity-receipt/validate.py",
+          "line": 169
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/read-fidelity-receipt/validate.py",
+          "line": 181
+        },
+        {
+          "rule": "SEC-PQC-001",
+          "severity": "High",
+          "desc": "Quantum-vulnerable crypto imported: cryptography.hazmat.primitives.asymmetric.ed25519.",
+          "file": "fixtures/read-fidelity-receipt/validate.py",
+          "line": 228
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-time-and-scheduling/verify_python_sdk.py",
+          "line": 614
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-time-and-scheduling/verify_python_sdk.py",
+          "line": 212
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-time-and-scheduling/verify_python_sdk.py",
+          "line": 289
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-third-party-reliance-notice/verify_python_sdk.py",
+          "line": 261
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-third-party-reliance-notice/verify_python_sdk.py",
+          "line": 272
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-third-party-reliance-notice/verify_python_sdk.py",
+          "line": 301
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-subdelegation-edges/verify.py",
+          "line": 285
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-subdelegation-edges/verify.py",
+          "line": 58
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-subdelegation-edges/verify.py",
+          "line": 271
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-subdelegation-edges/sdk_probe.py",
+          "line": 68
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-subdelegation-edges/sdk_probe.py",
+          "line": 65
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-subdelegation-edges/mint.py",
+          "line": 68
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-shared-identity-with-no-accountable-principal/verify.py",
+          "line": 39
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-shared-identity-with-no-accountable-principal/verify.py",
+          "line": 120
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-shared-identity-with-no-accountable-principal/verify.py",
+          "line": 178
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-shared-identity-with-no-accountable-principal/sdk_probe.py",
+          "line": 87
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-shared-identity-with-no-accountable-principal/sdk_probe.py",
+          "line": 33
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-shared-identity-with-no-accountable-principal/sdk_probe.py",
+          "line": 91
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-purpose-exhaustion/verify.py",
+          "line": 124
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-purpose-exhaustion/verify.py",
+          "line": 189
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-purpose-exhaustion/verify.py",
+          "line": 541
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-purpose-exhaustion/sdk_probe.py",
+          "line": 88
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-purpose-exhaustion/sdk_probe.py",
+          "line": 85
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-purpose-exhaustion/mint_single_use.py",
+          "line": 66
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-policy-change/verify.py",
+          "line": 383
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-policy-change/verify.py",
+          "line": 333
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-policy-change/verify.py",
+          "line": 342
+        },
+        {
+          "rule": "SEC-SQL-001",
+          "severity": "Critical",
+          "desc": "f-string contains SQL keywords.",
+          "file": "fixtures/lifecycle-policy-change/verify.py",
+          "line": 133
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-policy-change/sdk-probe.py",
+          "line": 35
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-policy-change/sdk-probe.py",
+          "line": 45
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-policy-change/sdk-probe.py",
+          "line": 48
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-outside-the-chain-standing/verify_python_sdk.py",
+          "line": 110
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-outside-the-chain-standing/verify_python_sdk.py",
+          "line": 112
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-outside-the-chain-standing/verify_python_sdk.py",
+          "line": 118
+        },
+        {
+          "rule": "SEC-SQL-001",
+          "severity": "Critical",
+          "desc": "f-string contains SQL keywords.",
+          "file": "fixtures/lifecycle-outside-the-chain-standing/verify_python_sdk.py",
+          "line": 112
+        },
+        {
+          "rule": "SEC-SQL-001",
+          "severity": "Critical",
+          "desc": "f-string contains SQL keywords.",
+          "file": "fixtures/lifecycle-outside-the-chain-standing/verify_python_sdk.py",
+          "line": 192
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-outside-the-chain-standing/mint.py",
+          "line": 85
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-outside-the-chain-standing/mint.py",
+          "line": 125
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-outside-the-chain-standing/mint.py",
+          "line": 142
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-outside-the-chain-standing/generate.py",
+          "line": 121
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-outside-the-chain-standing/generate.py",
+          "line": 304
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-outside-the-chain-standing/generate.py",
+          "line": 465
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-organization-events/verify.py",
+          "line": 467
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-organization-events/verify.py",
+          "line": 91
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-organization-events/verify.py",
+          "line": 176
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-organization-events/sdk_probe.py",
+          "line": 72
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-organization-events/sdk_probe.py",
+          "line": 69
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-organization-events/mint.py",
+          "line": 107
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-organization-events/mint.py",
+          "line": 87
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-multiple-principals-and-conflict/verify_python_sdk.py",
+          "line": 113
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-multiple-principals-and-conflict/verify_python_sdk.py",
+          "line": 116
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-multiple-principals-and-conflict/verify_python_sdk.py",
+          "line": 120
+        },
+        {
+          "rule": "SEC-SQL-001",
+          "severity": "Critical",
+          "desc": "f-string contains SQL keywords.",
+          "file": "fixtures/lifecycle-multiple-principals-and-conflict/verify_python_sdk.py",
+          "line": 116
+        },
+        {
+          "rule": "SEC-SQL-001",
+          "severity": "Critical",
+          "desc": "f-string contains SQL keywords.",
+          "file": "fixtures/lifecycle-multiple-principals-and-conflict/verify_python_sdk.py",
+          "line": 209
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-multiple-principals-and-conflict/mint.py",
+          "line": 79
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-multiple-principals-and-conflict/mint.py",
+          "line": 121
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-multiple-principals-and-conflict/mint.py",
+          "line": 86
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-multiple-principals-and-conflict/generate.py",
+          "line": 739
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-multiple-principals-and-conflict/generate.py",
+          "line": 148
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-legal-regulatory-events/verify_python_sdk.py",
+          "line": 81
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-legal-regulatory-events/verify_python_sdk.py",
+          "line": 462
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-legal-regulatory-events/verify_python_sdk.py",
+          "line": 491
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-infrastructure-failure/verify.py",
+          "line": 42
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-infrastructure-failure/verify.py",
+          "line": 232
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-infrastructure-failure/verify.py",
+          "line": 266
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-infrastructure-failure/sdk_probe.py",
+          "line": 108
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-infrastructure-failure/sdk_probe.py",
+          "line": 37
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-infrastructure-failure/sdk_probe.py",
+          "line": 113
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-identifier-reuse-and-rename/verify.py",
+          "line": 113
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-identifier-reuse-and-rename/verify.py",
+          "line": 117
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-identifier-reuse-and-rename/verify.py",
+          "line": 350
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-identifier-reuse-and-rename/sdk-probe.py",
+          "line": 33
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-identifier-reuse-and-rename/sdk-probe.py",
+          "line": 43
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-identifier-reuse-and-rename/sdk-probe.py",
+          "line": 46
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-expiry-and-renewal/verify_python_sdk.py",
+          "line": 302
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-expiry-and-renewal/verify_python_sdk.py",
+          "line": 121
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-expiry-and-renewal/verify_python_sdk.py",
+          "line": 321
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-evidence-and-record/verify.py",
+          "line": 39
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-evidence-and-record/verify.py",
+          "line": 133
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-evidence-and-record/verify.py",
+          "line": 176
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-evidence-and-record/sdk_probe.py",
+          "line": 74
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-evidence-and-record/sdk_probe.py",
+          "line": 33
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-evidence-and-record/sdk_probe.py",
+          "line": 78
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-credential-events/validate.py",
+          "line": 622
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-credential-events/validate.py",
+          "line": 829
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-credential-events/validate.py",
+          "line": 139
+        },
+        {
+          "rule": "SEC-SQL-001",
+          "severity": "Critical",
+          "desc": "f-string contains SQL keywords.",
+          "file": "fixtures/lifecycle-credential-events/validate.py",
+          "line": 737
+        },
+        {
+          "rule": "SEC-SQL-001",
+          "severity": "Critical",
+          "desc": "f-string contains SQL keywords.",
+          "file": "fixtures/lifecycle-credential-events/validate.py",
+          "line": 740
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-credential-events/sdk_bridge.py",
+          "line": 49
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-credential-events/sdk_bridge.py",
+          "line": 94
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-credential-events/sdk_bridge.py",
+          "line": 140
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-credential-events/mint.py",
+          "line": 39
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-conferral-without-authority/verify_python_sdk.py",
+          "line": 136
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-conferral-without-authority/verify_python_sdk.py",
+          "line": 137
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-conferral-without-authority/verify_python_sdk.py",
+          "line": 138
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-agent-side-events/verify.py",
+          "line": 343
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-agent-side-events/verify.py",
+          "line": 410
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-agent-side-events/verify.py",
+          "line": 294
+        },
+        {
+          "rule": "SEC-SQL-001",
+          "severity": "Critical",
+          "desc": "f-string contains SQL keywords.",
+          "file": "fixtures/lifecycle-agent-side-events/verify.py",
+          "line": 250
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-agent-side-events/sdk-probe.py",
+          "line": 35
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-agent-side-events/sdk-probe.py",
+          "line": 45
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lifecycle-agent-side-events/sdk-probe.py",
+          "line": 48
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lease-revocation-axes/generate.py",
+          "line": 49
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/key-rotation-historical/validate.py",
+          "line": 121
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/key-rotation-historical/validate.py",
+          "line": 149
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/key-rotation-historical/validate.py",
+          "line": 151
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/key-rotation-historical/mint.py",
+          "line": 108
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/key-rotation-historical/mint.py",
+          "line": 83
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/issuance-refusal-expiry/validate.py",
+          "line": 146
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/issuance-refusal-expiry/validate.py",
+          "line": 93
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/issuance-refusal-expiry/validate.py",
+          "line": 66
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/issuance-refusal-expiry/mint.py",
+          "line": 55
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/inference-session/generate-fixtures.py",
+          "line": 352
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/inference-session/generate-fixtures.py",
+          "line": 353
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/inference-session/generate-fixtures.py",
+          "line": 357
+        },
+        {
+          "rule": "SEC-PQC-001",
+          "severity": "High",
+          "desc": "Quantum-vulnerable crypto imported: cryptography.hazmat.primitives.asymmetric.ed25519.",
+          "file": "fixtures/inference-session/generate-fixtures.py",
+          "line": 27
+        },
+        {
+          "rule": "SEC-PQC-001",
+          "severity": "High",
+          "desc": "Quantum-vulnerable crypto imported: cryptography.hazmat.primitives.asymmetric.ed25519.",
+          "file": "fixtures/inference-session/generate-fixtures.py",
+          "line": 340
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/cross-stack/tool-manifest-digest/results/07-aeoess-python-check-annotations-run/check.py",
+          "line": 64
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/cross-stack/tool-manifest-digest/results/07-aeoess-python-check-annotations-run/check.py",
+          "line": 124
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/cross-stack/tool-manifest-digest/results/07-aeoess-python-check-annotations-run/check.py",
+          "line": 134
+        },
+        {
+          "rule": "SEC-PQC-001",
+          "severity": "High",
+          "desc": "Quantum-vulnerable crypto imported: cryptography.hazmat.primitives.asymmetric.",
+          "file": "fixtures/cross-stack/tool-manifest-digest/results/07-aeoess-python-check-annotations-run/check.py",
+          "line": 6
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/cross-stack/ctef-v0.3.1/plugins/jcs.py",
+          "line": 43
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/cross-stack/argentum-action-ref-v1v2/plugins/agt_evidence_anchor/action_ref.py",
+          "line": 253
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/cross-stack/argentum-action-ref-v1v2/plugins/agt_evidence_anchor/action_ref.py",
+          "line": 179
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/cross-stack/argentum-action-ref-v1v2/plugins/agt_evidence_anchor/action_ref.py",
+          "line": 279
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/cross-stack/argentum-action-ref-v1v2/action-ref-v2/validate.py",
+          "line": 61
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/cross-stack/argentum-action-ref-v1v2/action-ref-v2/validate.py",
+          "line": 148
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/cross-stack/argentum-action-ref-v1v2/action-ref-v2/validate.py",
+          "line": 86
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/cross-stack/argentum-action-ref-v1v2/action-ref-v1-domain-negative/validate.py",
+          "line": 83
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/cross-stack/argentum-action-ref-v1v2/action-ref-v1-domain-negative/validate.py",
+          "line": 63
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/cross-stack/argentum-action-ref-v1v2/action-ref-v1-domain-negative/validate.py",
+          "line": 65
+        },
+        {
+          "rule": "SEC-SQL-001",
+          "severity": "Critical",
+          "desc": "f-string contains SQL keywords.",
+          "file": "fixtures/conflicting-status-sources/verify.py",
+          "line": 129
+        },
+        {
+          "rule": "SEC-SQL-001",
+          "severity": "Critical",
+          "desc": "f-string contains SQL keywords.",
+          "file": "fixtures/conflicting-status-sources/verify.py",
+          "line": 323
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/conflicting-status-sources/sdk_bridge.py",
+          "line": 36
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/conflicting-status-sources/sdk_bridge.py",
+          "line": 37
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/conflicting-status-sources/sdk_bridge.py",
+          "line": 85
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/conflicting-status-sources/mint.py",
+          "line": 39
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/chain-selection-no-union/validate.py",
+          "line": 316
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/chain-selection-no-union/validate.py",
+          "line": 65
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/chain-selection-no-union/validate.py",
+          "line": 72
+        },
+        {
+          "rule": "SEC-SQL-001",
+          "severity": "Critical",
+          "desc": "f-string contains SQL keywords.",
+          "file": "fixtures/chain-selection-no-union/validate.py",
+          "line": 79
+        },
+        {
+          "rule": "SEC-SQL-001",
+          "severity": "Critical",
+          "desc": "f-string contains SQL keywords.",
+          "file": "fixtures/chain-selection-no-union/validate.py",
+          "line": 316
+        },
+        {
+          "rule": "SEC-SQL-001",
+          "severity": "Critical",
+          "desc": "f-string contains SQL keywords.",
+          "file": "fixtures/chain-selection-no-union/validate.py",
+          "line": 65
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/capability-binding-drift/verify.py",
+          "line": 115
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/capability-binding-drift/verify.py",
+          "line": 214
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/capability-binding-drift/verify.py",
+          "line": 231
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/capability-binding-drift/sdk-probe.py",
+          "line": 31
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/capability-binding-drift/sdk-probe.py",
+          "line": 48
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/capability-binding-drift/sdk-probe.py",
+          "line": 41
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/authority-revocation-record/validate.py",
+          "line": 122
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/authority-revocation-record/validate.py",
+          "line": 66
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/authority-revocation-record/validate.py",
+          "line": 68
+        },
+        {
+          "rule": "SEC-SQL-001",
+          "severity": "Critical",
+          "desc": "f-string contains SQL keywords.",
+          "file": "fixtures/authority-revocation-record/validate.py",
+          "line": 102
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/authority-revocation-record/mint.py",
+          "line": 180
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/authority-revocation-record/mint.py",
+          "line": 203
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/authority-revocation-record/mint.py",
+          "line": 105
+        },
+        {
+          "rule": "SEC-SQL-001",
+          "severity": "Critical",
+          "desc": "f-string contains SQL keywords.",
+          "file": "fixtures/authority-revocation-record/mint.py",
+          "line": 180
+        },
+        {
+          "rule": "SEC-SQL-001",
+          "severity": "Critical",
+          "desc": "f-string contains SQL keywords.",
+          "file": "fixtures/authority-revocation-record/mint.py",
+          "line": 203
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/authority-epoch-rollback/validate.py",
+          "line": 448
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/authority-epoch-rollback/validate.py",
+          "line": 450
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/authority-epoch-rollback/validate.py",
+          "line": 461
+        },
+        {
+          "rule": "SEC-SQL-001",
+          "severity": "Critical",
+          "desc": "f-string contains SQL keywords.",
+          "file": "fixtures/authority-epoch-rollback/validate.py",
+          "line": 450
+        },
+        {
+          "rule": "SEC-SQL-001",
+          "severity": "Critical",
+          "desc": "f-string contains SQL keywords.",
+          "file": "fixtures/authority-epoch-rollback/validate.py",
+          "line": 453
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/authority-epoch-rollback/sdk_support_probe.py",
+          "line": 40
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/authority-epoch-rollback/sdk_support_probe.py",
+          "line": 44
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/approval-single-use/verify.py",
+          "line": 159
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/approval-single-use/verify.py",
+          "line": 173
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/approval-single-use/verify.py",
+          "line": 174
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/approval-authority-expiry/verify.py",
+          "line": 112
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/approval-authority-expiry/verify.py",
+          "line": 211
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/approval-authority-expiry/verify.py",
+          "line": 227
+        },
+        {
+          "rule": "SEC-SQL-001",
+          "severity": "Critical",
+          "desc": "f-string contains SQL keywords.",
+          "file": "fixtures/approval-authority-expiry/verify.py",
+          "line": 142
+        },
+        {
+          "rule": "SEC-SQL-001",
+          "severity": "Critical",
+          "desc": "f-string contains SQL keywords.",
+          "file": "fixtures/approval-authority-expiry/verify.py",
+          "line": 190
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/ancestor-revocation-chain/validate.py",
+          "line": 143
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/ancestor-revocation-chain/validate.py",
+          "line": 70
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/ancestor-revocation-chain/validate.py",
+          "line": 42
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/ancestor-revocation-chain/mint.py",
+          "line": 38
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/activation-not-established/validate.py",
+          "line": 170
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/activation-not-established/validate.py",
+          "line": 227
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/activation-not-established/validate.py",
+          "line": 231
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/activation-not-established/sdk_support.py",
+          "line": 59
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/activation-not-established/sdk_support.py",
+          "line": 61
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/activation-not-established/sdk_support.py",
+          "line": 57
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/action-result-binding/validate.py",
+          "line": 227
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/action-result-binding/validate.py",
+          "line": 390
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/action-result-binding/validate.py",
+          "line": 88
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/accountability-record/validate.py",
+          "line": 90
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/accountability-record/validate.py",
+          "line": 109
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/accountability-record/validate.py",
+          "line": 111
+        },
+        {
+          "rule": "SEC-PQC-001",
+          "severity": "High",
+          "desc": "Quantum-vulnerable crypto imported: cryptography.hazmat.primitives.asymmetric.ed25519.",
+          "file": "fixtures/accountability-record/validate.py",
+          "line": 210
+        }
+      ]
+    },
+    {
+      "rank": 3,
       "name": "AutoGen",
       "slug": "autogen",
       "score": 25,
@@ -4524,7 +6557,7 @@
       ]
     },
     {
-      "rank": 3,
+      "rank": 4,
       "name": "LangChain",
       "slug": "langchain",
       "score": 16,
@@ -12115,7 +14148,7 @@
       ]
     },
     {
-      "rank": 4,
+      "rank": 5,
       "name": "CrewAI",
       "slug": "crewai",
       "score": 0,
