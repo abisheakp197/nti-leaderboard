@@ -1,0 +1,32 @@
+[
+  {
+    "name": "CrewAI",
+    "slug": "crewai",
+    "score": 0,
+    "grade": "F",
+    "findings": [
+      "f-string used in prompt context.",
+      "f-string used in prompt context."
+    ]
+  },
+  {
+    "name": "LangChain",
+    "slug": "langchain",
+    "score": 16,
+    "grade": "F",
+    "findings": [
+      "Dynamic URL passed to httpx.get()",
+      "f-string contains SQL keywords."
+    ]
+  },
+  {
+    "name": "AutoGen",
+    "slug": "autogen",
+    "score": 25,
+    "grade": "D",
+    "findings": [
+      "f-string used in prompt context.",
+      "f-string used in prompt context."
+    ]
+  }
+]
