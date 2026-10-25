@@ -19,7 +19,7 @@ export interface Trend {
   delta: number;
 }
 
-export type Status = "Verified" | "Pending" | "Failing";
+export type Status = "Verified" | "Pending" | "Failing" | "Scan Failed";
 
 export interface LeaderboardEntry {
   rank: number;
