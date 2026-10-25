@@ -12,34 +12,17 @@ PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TRACKED_REPOS_PATH = os.path.join(PROJECT_ROOT, "tracked_repos.json")
 OUTPUT_JSON_PATH = os.path.join(PROJECT_ROOT, "src", "data", "leaderboard.json")
 
-# The Hardcoded Baseline Entry (Always Rank #1, Score 100, Grade A+)
-NTI_BASELINE_ENTRY = {
-    "rank": 1,
-    "name": "NTI Reference Implementation",
-    "slug": "nti-core",
-    "score": 100,
-    "grade": "A+",
-    "status": "Verified",
-    "lastScanned": "Just now",
-    "trend": None,
-    "evidence": {
-        "attestationHash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-        "signature": "mldsa5:0000000000000000000000000000000000000000000000000000000000000000",
-        "scannerVersion": "nti-scanner:0.1.1"
-    },
-    "findings": []
-}
-
 NAME_MAP = {
     "crewai": "CrewAI",
     "langchain": "LangChain",
-    "autogen": "AutoGen"
+    "autogen": "AutoGen",
+    "neutral-trust-infrastructure": "NTI Reference Implementation"
 }
 
 def get_grade(score: int) -> str:
-    """Mathematical Grading: >=90 (A), >=80 (B), >=70 (C), >=60 (D), <60 (F)."""
+    """Mathematical Grading: >=90 (A+), >=80 (B), >=70 (C), >=60 (D), <60 (F)."""
     if score >= 90:
-        return "A"
+        return "A+"
     elif score >= 80:
         return "B"
     elif score >= 70:
@@ -163,8 +146,7 @@ def main():
         entry = scan_repository(url)
         scanned_entries.append(entry)
 
-    # Combine NTI baseline and scanned repos
-    all_entries = [NTI_BASELINE_ENTRY] + scanned_entries
+    all_entries = scanned_entries
 
     # Sort descending by score
     all_entries.sort(key=lambda x: x["score"], reverse=True)
