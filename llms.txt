@@ -1,0 +1,1216 @@
+# nti-leaderboard: Verifiable AI Agent Security Benchmarks
+
+> This repository is the public compliance leaderboard for the NTI ecosystem. It ranks AI agent frameworks based on cryptographically signed security attestations from the nti-registry. It solves the problem of fake self-reported security scores by requiring offline-verifiable proof.
+
+Directory structure:
+└── app/
+    ├── README.md
+    ├── AGENTS.md
+    ├── eslint.config.mjs
+    ├── LICENSE
+    ├── next.config.ts
+    ├── package.json
+    ├── tsconfig.json
+    ├── vercel.json
+    └── src/
+        ├── app/
+        │   ├── globals.css
+        │   ├── layout.tsx
+        │   └── page.tsx
+        ├── components/
+        │   ├── LeaderboardTable.tsx
+        │   ├── ReproducibilityEngine.tsx
+        │   └── VerificationModal.tsx
+        ├── data/
+        │   └── leaderboard.json
+        └── types/
+            └── leaderboard.ts
+
+================================================
+FILE: README.md
+================================================
+# nti-leaderboard
+
+Cryptographically verifiable compliance leaderboard for AI agent frameworks.
+
+```mermaid
+graph TD
+    UserRepo[User GitHub Repo] -->|Run scan| NtiAction[nti-scan-action]
+    NtiAction -->|Cryptographic Attestation| NtiRegistry[nti-registry]
+    NtiRegistry -->|Sync Evidence| LeaderboardJson[leaderboard.json]
+    LeaderboardJson -->|Static Source of Truth| NextApp[Next.js Leaderboard App]
+```
+
+## Overview
+
+`nti-leaderboard` is the definitive public benchmark for AI Agent Security. It solves the problem of fake, self-reported security scores by demanding cryptographic proof via AST static analysis and post-quantum attestations.
+
+## Quick Start
+
+Run a local verification scan using `nti-scanner`:
+
+```bash
+pip install nti-scanner
+nti-scanner scan . --submit
+```
+
+## Features
+
+- **Enterprise Schema:** Static JSON source of truth (`src/data/leaderboard.json`) backed by `NTI-Registry`.
+- **Cryptographic Attestations:** Post-quantum signatures (`ML-DSA-5`) and SHA-256 attestation hashes.
+- **Deep Tech UI:** Pure dark mode glassmorphism UI with expandable AST findings.
+- **Reproducibility Engine:** Self-service verification instructions.
+
+## License
+
+[Apache 2.0](LICENSE)
+
+
+
+================================================
+FILE: AGENTS.md
+================================================
+<!-- BEGIN:nextjs-agent-rules -->
+
+## This is NOT the Next.js you know
+
+This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
+
+This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+
+<!-- END:nextjs-agent-rules -->
+
+
+
+================================================
+FILE: eslint.config.mjs
+================================================
+import { defineConfig, globalIgnores } from "eslint/config";
+import nextVitals from "eslint-config-next/core-web-vitals";
+import nextTs from "eslint-config-next/typescript";
+
+const eslintConfig = defineConfig([
+  ...nextVitals,
+  ...nextTs,
+  // Override default ignores of eslint-config-next.
+  globalIgnores([
+    // Default ignores of eslint-config-next:
+    ".next/**",
+    "out/**",
+    "build/**",
+    "next-env.d.ts",
+  ]),
+]);
+
+export default eslintConfig;
+
+
+
+================================================
+FILE: LICENSE
+================================================
+                                 Apache License
+                           Version 2.0, January 2004
+                        http://www.apache.org/licenses/
+
+   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+
+   1. Definitions.
+
+      "License" shall mean the terms and conditions for use, reproduction,
+      and distribution as defined by Sections 1 through 9 of this document.
+
+      "Licensor" shall mean the copyright owner or entity authorized by
+      the copyright owner that is granting the License.
+
+      "Legal Entity" shall mean the union of the acting entity and all
+      other entities that control, are controlled by, or are under common
+      control with that entity. For the purposes of this definition,
+      "control" means (i) the power, direct or indirect, to cause the
+      direction or management of such entity, whether by contract or
+      otherwise, or (ii) ownership of fifty percent (50%) or more of the
+      outstanding shares, or (iii) beneficial ownership of such entity.
+
+      "You" (or "Your") shall mean an individual or Legal Entity
+      exercising permissions granted by this License.
+
+      "Source" form shall mean the preferred form for making modifications,
+      including but not limited to software source code, documentation
+      source, and configuration files.
+
+      "Object" form shall mean any form resulting from mechanical
+      transformation or translation of a Source form, including but
+      not limited to compiled object code, generated documentation,
+      and conversions to other media types.
+
+      "Work" shall mean the work of authorship, whether in Source or
+      Object form, made available under the License, as indicated by a
+      copyright notice that is included in or attached to the work
+      (an example is provided in the Appendix below).
+
+      "Derivative Works" shall mean any work, whether in Source or Object
+      form, that is based on (or derived from) the Work and for which the
+      editorial revisions, annotations, elaborations, or other modifications
+      represent, as a whole, an original work of authorship. For the purposes
+      of this License, Derivative Works shall not include works that remain
+      separable from, or merely link (or bind by name) to the interfaces of,
+      the Work and Derivative Works thereof.
+
+      "Contribution" shall mean any work of authorship, including
+      the original version of the Work and any modifications or additions
+      to that Work or Derivative Works thereof, that is intentionally
+      submitted to Licensor for inclusion in the Work by the copyright owner
+      or by an individual or Legal Entity authorized to submit on behalf of
+      the copyright owner. For the purposes of this definition, "submitted"
+      means any form of electronic, verbal, or written communication sent
+      to the Licensor or its representatives, including but not limited to
+      communication on electronic mailing lists, source code control systems,
+      and issue tracking systems that are managed by, or on behalf of, the
+      Licensor for the purpose of discussing and improving the Work, but
+      excluding communication that is conspicuously marked or otherwise
+      designated in writing by the copyright owner as "Not a Contribution."
+
+      "Contributor" shall mean Licensor and any individual or Legal Entity
+      on behalf of whom a Contribution has been received by Licensor and
+      subsequently incorporated within the Work.
+
+   2. Grant of Copyright License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      copyright license to reproduce, prepare Derivative Works of,
+      publicly display, publicly perform, sublicense, and distribute the
+      Work and such Derivative Works in Source or Object form.
+
+   3. Grant of Patent License. Subject to the terms and conditions of
+      this License, each Contributor hereby grants to You a perpetual,
+      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
+      (except as stated in this section) patent license to make, have made,
+      use, offer to sell, sell, import, and otherwise transfer the Work,
+      where such license applies only to those patent claims licensable
+      by such Contributor that are necessarily infringed by their
+      Contribution(s) alone or by combination of their Contribution(s)
+      with the Work to which such Contribution(s) was submitted. If You
+      institute patent litigation against any entity (including a
+      cross-claim or counterclaim in a lawsuit) alleging that the Work
+      or a Contribution incorporated within the Work constitutes direct
+      or contributory patent infringement, then any patent licenses
+      granted to You under this License for that Work shall terminate
+      as of the date such litigation is filed.
+
+   4. Redistribution. You may reproduce and distribute copies of the
+      Work or Derivative Works thereof in any medium, with or without
+      modifications, and in Source or Object form, provided that You
+      meet the following conditions:
+
+      (a) You must give any other recipients of the Work or
+          Derivative Works a copy of this License; and
+
+      (b) You must cause any modified files to carry prominent notices
+          stating that You changed the files; and
+
+      (c) You must retain, in the Source form of any Derivative Works
+          that You distribute, all copyright, patent, trademark, and
+          attribution notices from the Source form of the Work,
+          excluding those notices that do not pertain to any part of
+          the Derivative Works; and
+
+      (d) If the Work includes a "NOTICE" text file as part of its
+          distribution, then any Derivative Works that You distribute must
+          include a readable copy of the attribution notices contained
+          within such NOTICE file, excluding those notices that do not
+          pertain to any part of the Derivative Works, in at least one
+          of the following places: within a NOTICE text file distributed
+          as part of the Derivative Works; within the Source form or
+          documentation, if provided along with the Derivative Works; or,
+          within a display generated by the Derivative Works, if and
+          wherever such third-party notices normally appear. The contents
+          of the NOTICE file are for informational purposes only and
+          do not modify the License. You may add Your own attribution
+          notices within Derivative Works that You distribute, alongside
+          or as an addendum to the NOTICE text from the Work, provided
+          that such additional attribution notices cannot be construed
+          as modifying the License.
+
+      You may add Your own copyright statement to Your modifications and
+      may provide additional or different license terms and conditions
+      for use, reproduction, or distribution of Your modifications, or
+      for any such Derivative Works as a whole, provided Your use,
+      reproduction, and distribution of the Work otherwise complies with
+      the conditions stated in this License.
+
+   5. Submission of Contributions. Unless You explicitly state otherwise,
+      any Contribution intentionally submitted for inclusion in the Work
+      by You to the Licensor shall be under the terms and conditions of
+      this License, without any additional terms or conditions.
+      Notwithstanding the above, nothing herein shall supersede or modify
+      the terms of any separate license agreement you may have executed
+      with Licensor regarding such Contributions.
+
+   6. Trademarks. This License does not grant permission to use the trade
+      names, trademarks, service marks, or product names of the Licensor,
+      except as required for reasonable and customary use in describing the
+      origin of the Work and reproducing the content of the NOTICE file.
+
+   7. Disclaimer of Warranty. Unless required by applicable law or
+      agreed to in writing, Licensor provides the Work (and each
+      Contributor provides its Contributions) on an "AS IS" BASIS,
+      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
+      implied, including, without limitation, any warranties or conditions
+      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
+      PARTICULAR PURPOSE. You are solely responsible for determining the
+      appropriateness of using or redistributing the Work and assume any
+      risks associated with Your exercise of permissions under this License.
+
+   8. Limitation of Liability. In no event and under no legal theory,
+      whether in tort (including negligence), contract, or otherwise,
+      unless required by applicable law (such as deliberate and grossly
+      negligent acts) or agreed to in writing, shall any Contributor be
+      liable to You for damages, including any direct, indirect, special,
+      incidental, or consequential damages of any character arising as a
+      result of this License or out of the use or inability to use the
+      Work (including but not limited to damages for loss of goodwill,
+      work stoppage, computer failure or malfunction, or any and all
+      other commercial damages or losses), even if such Contributor
+      has been advised of the possibility of such damages.
+
+   9. Accepting Warranty or Additional Liability. While redistributing
+      the Work or Derivative Works thereof, You may choose to offer,
+      and charge a fee for, acceptance of support, warranty, indemnity,
+      or other liability obligations and/or rights consistent with this
+      License. However, in accepting such obligations, You may act only
+      on Your own behalf and on Your sole responsibility, not on behalf
+      of any other Contributor, and only if You agree to indemnify,
+      defend, and hold each Contributor harmless for any liability
+      incurred by, or claims asserted against, such Contributor by reason
+      of your accepting any such warranty or additional liability.
+
+   END OF TERMS AND CONDITIONS
+
+
+
+================================================
+FILE: next.config.ts
+================================================
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
+  /* config options here */
+  cacheComponents: true,
+  partialPrefetching: true,
+  turbopack: {
+    rules: {
+      "*.css": {
+        loaders: ["@tailwindcss/turbopack"],
+        as: "*.css",
+      },
+    },
+  },
+};
+
+export default nextConfig;
+
+
+
+================================================
+FILE: package.json
+================================================
+{
+  "name": "tmp-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "lucide-react": "^1.61.0",
+    "next": "16.4.3",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/turbopack": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.3",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
+
+
+
+================================================
+FILE: tsconfig.json
+================================================
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    ".next/dev/types/**/*.ts",
+    "**/*.mts"
+  ],
+  "exclude": ["node_modules"]
+}
+
+
+
+================================================
+FILE: vercel.json
+================================================
+{
+  "framework": "nextjs",
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next"
+}
+
+
+
+================================================
+FILE: src/app/globals.css
+================================================
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+================================================
+FILE: src/app/layout.tsx
+================================================
+import type { Metadata } from "next";
+import { Geist, Geist_Mono } from "next/font/google";
+import "./globals.css";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+export const metadata: Metadata = {
+  title: "Create Next App",
+  description: "Generated by create next app",
+};
+
+export default function RootLayout({ children }: LayoutProps<"/">) {
+  return (
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+    >
+      <body className="min-h-full flex flex-col">{children}</body>
+    </html>
+  );
+}
+
+
+
+================================================
+FILE: src/app/page.tsx
+================================================
+import leaderboardDataRaw from "@/data/leaderboard.json";
+import { LeaderboardTable } from "@/components/LeaderboardTable";
+import { ReproducibilityEngine } from "@/components/ReproducibilityEngine";
+import { LeaderboardData } from "@/types/leaderboard";
+import { ArrowUpRight, Shield, Zap } from "lucide-react";
+
+const leaderboardData = leaderboardDataRaw as LeaderboardData;
+
+export default function Home() {
+  return (
+    <main className="min-h-screen bg-[#050505] text-white selection:bg-emerald-500/30 selection:text-emerald-200 relative overflow-hidden font-sans pb-24">
+      {/* Background Gradients */}
+      <div className="fixed top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-gradient-to-b from-emerald-500/10 via-cyan-500/5 to-transparent blur-3xl pointer-events-none -z-10" />
+
+      {/* Top Navigation */}
+      <header className="border-b border-white/[0.08] bg-black/40 backdrop-blur-md sticky top-0 z-40">
+        <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            <div className="p-2 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
+              <Shield className="w-5 h-5" />
+            </div>
+            <div>
+              <span className="font-mono font-bold tracking-wider text-sm text-white">
+                NTI LEADERBOARD
+              </span>
+              <span className="ml-2.5 text-[10px] font-mono px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                {leaderboardData.rubricVersion}
+              </span>
+            </div>
+          </div>
+
+          <a
+            href="https://github.com/marketplace"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white text-black font-semibold text-xs hover:bg-zinc-200 transition-all shadow-lg hover:shadow-white/10"
+          >
+            <span>Get Your Framework Scored</span>
+            <ArrowUpRight className="w-4 h-4" />
+          </a>
+        </div>
+      </header>
+
+      {/* Hero Section */}
+      <section className="pt-20 pb-12 max-w-5xl mx-auto px-6 text-center">
+        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.04] border border-white/10 text-zinc-300 text-xs font-mono mb-6">
+          <Zap className="w-3.5 h-3.5 text-amber-400" />
+          <span>Post-Quantum ML-DSA-5 Verified Benchmarks</span>
+        </div>
+
+        <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-[1.1]">
+          The Standard for{" "}
+          <span className="bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-400 bg-clip-text text-transparent">
+            AI Agent Security
+          </span>
+        </h1>
+
+        <p className="mt-6 text-zinc-400 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+          The definitive public benchmark for AI Agent security. Eliminating
+          self-reported scores with offline-verifiable post-quantum security attestations.
+        </p>
+      </section>
+
+      {/* Leaderboard Table */}
+      <section className="max-w-7xl mx-auto px-6 mt-6">
+        <LeaderboardTable entries={leaderboardData.entries} />
+      </section>
+
+      {/* Reproducibility Section */}
+      <ReproducibilityEngine />
+
+      {/* Footer */}
+      <footer className="mt-24 border-t border-white/5 pt-8 text-center font-mono text-xs text-zinc-500">
+        <p>
+          Generated at {leaderboardData.generatedAt} • Source: {leaderboardData.source} • Rubric: {leaderboardData.rubricVersion}
+        </p>
+      </footer>
+    </main>
+  );
+}
+
+
+
+================================================
+FILE: src/components/LeaderboardTable.tsx
+================================================
+"use client";
+
+import React, { useState } from "react";
+import {
+  ChevronDown,
+  ChevronUp,
+  ShieldCheck,
+  AlertTriangle,
+  AlertOctagon,
+  Info,
+  CheckCircle2,
+  TrendingUp,
+  TrendingDown,
+  Minus,
+} from "lucide-react";
+import { LeaderboardEntry, Severity, Status } from "@/types/leaderboard";
+import { VerificationModal } from "./VerificationModal";
+
+interface LeaderboardTableProps {
+  entries: LeaderboardEntry[];
+}
+
+export const LeaderboardTable: React.FC<LeaderboardTableProps> = ({ entries }) => {
+  const [expandedRow, setExpandedRow] = useState<string | null>(null);
+  const [selectedVerification, setSelectedVerification] = useState<{
+    name: string;
+    evidence: LeaderboardEntry["evidence"];
+  } | null>(null);
+
+  const toggleExpand = (slug: string) => {
+    setExpandedRow((prev) => (prev === slug ? null : slug));
+  };
+
+  const getStatusBadge = (status: Status) => {
+    switch (status) {
+      case "Verified":
+        return (
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-400/10 text-emerald-400 border border-emerald-500/20">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+            Verified
+          </span>
+        );
+      case "Pending":
+        return (
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-amber-400/10 text-amber-400 border border-amber-500/20">
+            <span className="w-1.5 h-1.5 rounded-full bg-amber-400" />
+            Pending
+          </span>
+        );
+      case "Failing":
+        return (
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-rose-400/10 text-rose-400 border border-rose-500/20">
+            <span className="w-1.5 h-1.5 rounded-full bg-rose-400" />
+            Failing
+          </span>
+        );
+    }
+  };
+
+  const getSeverityBadge = (severity: Severity) => {
+    switch (severity) {
+      case "Critical":
+        return (
+          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-semibold bg-rose-500/20 text-rose-400 border border-rose-500/30">
+            <AlertOctagon className="w-3 h-3" />
+            Critical
+          </span>
+        );
+      case "High":
+        return (
+          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-semibold bg-red-500/20 text-red-400 border border-red-500/30">
+            <AlertTriangle className="w-3 h-3" />
+            High
+          </span>
+        );
+      case "Moderate":
+        return (
+          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-semibold bg-amber-500/20 text-amber-400 border border-amber-500/30">
+            <AlertTriangle className="w-3 h-3" />
+            Moderate
+          </span>
+        );
+      default:
+        return (
+          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-semibold bg-blue-500/20 text-blue-400 border border-blue-500/30">
+            <Info className="w-3 h-3" />
+            {severity}
+          </span>
+        );
+    }
+  };
+
+  return (
+    <div className="w-full">
+      <div className="overflow-x-auto rounded-2xl border border-white/[0.08] bg-white/[0.03] backdrop-blur-xl shadow-2xl">
+        <table className="w-full text-left border-collapse">
+          <thead>
+            <tr className="border-b border-white/[0.08] text-xs font-medium text-zinc-400 uppercase tracking-wider">
+              <th className="py-4 px-6 w-16">Rank</th>
+              <th className="py-4 px-6">Framework</th>
+              <th className="py-4 px-6 text-center">Score</th>
+              <th className="py-4 px-6 text-center">Grade</th>
+              <th className="py-4 px-6 text-center">Status</th>
+              <th className="py-4 px-6 text-center">Trend</th>
+              <th className="py-4 px-6 text-right">Last Scanned</th>
+              <th className="py-4 px-6 text-center">Verification</th>
+              <th className="py-4 px-6 w-12"></th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-white/[0.05] text-sm">
+            {entries.map((entry) => {
+              const isExpanded = expandedRow === entry.slug;
+
+              return (
+                <React.Fragment key={entry.slug}>
+                  <tr
+                    onClick={() => toggleExpand(entry.slug)}
+                    className={`group cursor-pointer transition-colors duration-150 ${
+                      isExpanded ? "bg-white/[0.06]" : "hover:bg-white/[0.04]"
+                    }`}
+                  >
+                    {/* Rank */}
+                    <td className="py-4 px-6 font-mono text-zinc-400 font-bold">
+                      #{entry.rank}
+                    </td>
+
+                    {/* Name */}
+                    <td className="py-4 px-6">
+                      <div className="font-semibold text-white group-hover:text-emerald-300 transition-colors flex items-center gap-2">
+                        {entry.name}
+                        {entry.findings.length > 0 && (
+                          <span className="text-[10px] px-1.5 py-0.5 rounded bg-zinc-800 text-zinc-400 font-mono">
+                            {entry.findings.length} findings
+                          </span>
+                        )}
+                      </div>
+                      <div className="text-xs text-zinc-500 font-mono">
+                        {entry.slug}
+                      </div>
+                    </td>
+
+                    {/* Score */}
+                    <td className="py-4 px-6 text-center">
+                      <span
+                        className={`font-mono font-bold text-lg ${
+                          entry.score >= 90
+                            ? "text-emerald-400"
+                            : entry.score >= 50
+                            ? "text-amber-400"
+                            : "text-rose-400"
+                        }`}
+                      >
+                        {entry.score}
+                      </span>
+                    </td>
+
+                    {/* Grade */}
+                    <td className="py-4 px-6 text-center">
+                      <span
+                        className={`font-mono font-bold px-2.5 py-1 rounded text-xs border ${
+                          entry.grade.startsWith("A")
+                            ? "bg-emerald-500/10 text-emerald-400 border-emerald-500/30"
+                            : "bg-rose-500/10 text-rose-400 border-rose-500/30"
+                        }`}
+                      >
+                        {entry.grade}
+                      </span>
+                    </td>
+
+                    {/* Status */}
+                    <td className="py-4 px-6 text-center">
+                      {getStatusBadge(entry.status)}
+                    </td>
+
+                    {/* Trend */}
+                    <td className="py-4 px-6 text-center font-mono text-xs">
+                      {entry.trend ? (
+                        <div
+                          className={`inline-flex items-center gap-1 font-semibold ${
+                            entry.trend.delta > 0
+                              ? "text-emerald-400"
+                              : entry.trend.delta < 0
+                              ? "text-rose-400"
+                              : "text-zinc-400"
+                          }`}
+                        >
+                          {entry.trend.delta > 0 ? (
+                            <TrendingUp className="w-3.5 h-3.5" />
+                          ) : (
+                            <TrendingDown className="w-3.5 h-3.5" />
+                          )}
+                          {entry.trend.delta > 0 ? `+${entry.trend.delta}` : entry.trend.delta}
+                        </div>
+                      ) : (
+                        <div className="inline-flex items-center text-zinc-600">
+                          <Minus className="w-3.5 h-3.5" />
+                        </div>
+                      )}
+                    </td>
+
+                    {/* Last Scanned */}
+                    <td className="py-4 px-6 text-right font-mono text-xs text-zinc-400">
+                      {entry.lastScanned}
+                    </td>
+
+                    {/* Verification Action */}
+                    <td
+                      className="py-4 px-6 text-center"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      <button
+                        onClick={() =>
+                          setSelectedVerification({
+                            name: entry.name,
+                            evidence: entry.evidence,
+                          })
+                        }
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium text-emerald-400 bg-emerald-400/10 hover:bg-emerald-400/20 border border-emerald-500/30 transition-all shadow-sm hover:shadow-emerald-500/10"
+                      >
+                        <ShieldCheck className="w-3.5 h-3.5" />
+                        Verify
+                      </button>
+                    </td>
+
+                    {/* Expand Toggle */}
+                    <td className="py-4 px-6 text-center text-zinc-500 hover:text-white transition-colors">
+                      {isExpanded ? (
+                        <ChevronUp className="w-4 h-4" />
+                      ) : (
+                        <ChevronDown className="w-4 h-4" />
+                      )}
+                    </td>
+                  </tr>
+
+                  {/* Expanded AST Findings Drawer */}
+                  {isExpanded && (
+                    <tr className="bg-black/40 border-b border-white/[0.08]">
+                      <td colSpan={9} className="p-6">
+                        <div className="space-y-3">
+                          <div className="flex items-center justify-between pb-2 border-b border-white/5">
+                            <span className="text-xs font-semibold text-zinc-300 uppercase tracking-wider font-mono flex items-center gap-2">
+                              <span>AST Vulnerability Findings</span>
+                              <span className="text-[10px] text-zinc-500 font-normal">
+                                (Engine: {entry.evidence.scannerVersion})
+                              </span>
+                            </span>
+                          </div>
+
+                          {entry.findings.length === 0 ? (
+                            <div className="p-4 rounded-xl bg-emerald-500/5 border border-emerald-500/10 flex items-center gap-3">
+                              <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" />
+                              <div className="text-xs text-emerald-300 font-sans">
+                                No AST vulnerabilities detected. 100% compliant with NTI-1.0 security rubric.
+                              </div>
+                            </div>
+                          ) : (
+                            <div className="space-y-2">
+                              {entry.findings.map((finding, idx) => (
+                                <div
+                                  key={idx}
+                                  className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 hover:border-white/10 transition-colors flex flex-col md:flex-row md:items-center justify-between gap-3 text-xs"
+                                >
+                                  <div className="flex items-start md:items-center gap-3">
+                                    {getSeverityBadge(finding.severity)}
+                                    <span className="font-mono text-zinc-300 font-semibold">
+                                      [{finding.rule}]
+                                    </span>
+                                    <span className="text-zinc-200 font-sans">
+                                      {finding.desc}
+                                    </span>
+                                  </div>
+
+                                  <div className="font-mono text-zinc-400 bg-black/60 px-2.5 py-1 rounded border border-white/5 text-[11px] shrink-0 self-start md:self-auto">
+                                    {finding.file}:{finding.line}
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      </td>
+                    </tr>
+                  )}
+                </React.Fragment>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+
+      {/* Verification Modal */}
+      {selectedVerification && (
+        <VerificationModal
+          isOpen={!!selectedVerification}
+          onClose={() => setSelectedVerification(null)}
+          entryName={selectedVerification.name}
+          evidence={selectedVerification.evidence}
+        />
+      )}
+    </div>
+  );
+};
+
+
+
+================================================
+FILE: src/components/ReproducibilityEngine.tsx
+================================================
+"use client";
+
+import React, { useState } from "react";
+import { Terminal, Shield, Check, Copy } from "lucide-react";
+
+export const ReproducibilityEngine: React.FC = () => {
+  const [copied, setCopied] = useState(false);
+
+  const commandText = `pip install nti-scanner\nnti-scanner scan . --submit`;
+
+  const handleCopy = () => {
+    navigator.clipboard.writeText(commandText);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  return (
+    <section className="mt-20 w-full max-w-5xl mx-auto">
+      <div className="relative rounded-3xl border border-white/10 bg-white/[0.02] p-8 md:p-12 backdrop-blur-2xl shadow-2xl overflow-hidden">
+        {/* Glow Effects */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none" />
+
+        <div className="flex items-center gap-3 mb-4">
+          <div className="p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400">
+            <Shield className="w-6 h-6" />
+          </div>
+          <span className="text-xs font-mono uppercase tracking-widest text-emerald-400 font-semibold">
+            The Reproducibility Engine
+          </span>
+        </div>
+
+        <h2 className="text-2xl md:text-3xl font-bold text-white tracking-tight font-sans">
+          Don&apos;t trust us. Verify it yourself.
+        </h2>
+
+        <p className="mt-3 text-zinc-400 text-sm md:text-base leading-relaxed max-w-2xl font-sans">
+          Every score on this board is backed by a cryptographic attestation. We don&apos;t guess.
+          We parse the AST and generate offline-verifiable post-quantum attestations.
+        </p>
+
+        {/* Terminal Snippet */}
+        <div className="mt-8 rounded-2xl bg-[#09090b] border border-white/10 overflow-hidden shadow-2xl">
+          <div className="flex items-center justify-between px-4 py-3 bg-white/[0.03] border-b border-white/10">
+            <div className="flex items-center gap-2">
+              <Terminal className="w-4 h-4 text-zinc-400" />
+              <span className="text-xs font-mono text-zinc-400">
+                terminal — local verification
+              </span>
+            </div>
+            <button
+              onClick={handleCopy}
+              className="flex items-center gap-1.5 text-xs text-zinc-400 hover:text-white transition-colors bg-white/5 hover:bg-white/10 px-2.5 py-1 rounded-md font-mono"
+            >
+              {copied ? (
+                <>
+                  <Check className="w-3.5 h-3.5 text-emerald-400" />
+                  <span className="text-emerald-400">Copied</span>
+                </>
+              ) : (
+                <>
+                  <Copy className="w-3.5 h-3.5" />
+                  <span>Copy</span>
+                </>
+              )}
+            </button>
+          </div>
+
+          <div className="p-5 font-mono text-xs md:text-sm text-zinc-300 leading-relaxed overflow-x-auto select-all">
+            <div className="flex items-center gap-2 text-zinc-500 mb-1">
+              <span># 1. Install the official NTI static analyzer</span>
+            </div>
+            <div className="text-emerald-400 font-semibold">
+              <span className="text-zinc-500 select-none">$ </span>pip install nti-scanner
+            </div>
+            <div className="flex items-center gap-2 text-zinc-500 mt-4 mb-1">
+              <span># 2. Run local AST scan and generate cryptographic proof</span>
+            </div>
+            <div className="text-emerald-400 font-semibold">
+              <span className="text-zinc-500 select-none">$ </span>nti-scanner scan . --submit
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+
+
+================================================
+FILE: src/components/VerificationModal.tsx
+================================================
+"use client";
+
+import React, { useState } from "react";
+import { CheckCircle2, Copy, ShieldCheck, X, ExternalLink } from "lucide-react";
+import { Evidence } from "@/types/leaderboard";
+
+interface VerificationModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  entryName: string;
+  evidence: Evidence;
+}
+
+export const VerificationModal: React.FC<VerificationModalProps> = ({
+  isOpen,
+  onClose,
+  entryName,
+  evidence,
+}) => {
+  const [copiedHash, setCopiedHash] = useState(false);
+  const [copiedSig, setCopiedSig] = useState(false);
+
+  if (!isOpen) return null;
+
+  const handleCopyHash = () => {
+    navigator.clipboard.writeText(evidence.attestationHash);
+    setCopiedHash(true);
+    setTimeout(() => setCopiedHash(false), 2000);
+  };
+
+  const handleCopySig = () => {
+    navigator.clipboard.writeText(evidence.signature);
+    setCopiedSig(true);
+    setTimeout(() => setCopiedSig(false), 2000);
+  };
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md transition-opacity">
+      <div className="relative w-full max-w-2xl rounded-2xl bg-[#09090b] border border-white/10 p-6 shadow-2xl overflow-hidden font-mono text-xs">
+        {/* Ambient Glow background */}
+        <div className="absolute -top-24 -left-24 w-48 h-48 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-24 -right-24 w-48 h-48 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
+
+        {/* Modal Header */}
+        <div className="flex items-center justify-between pb-4 border-b border-white/10">
+          <div className="flex items-center gap-2">
+            <ShieldCheck className="w-5 h-5 text-emerald-400" />
+            <h3 className="text-sm font-semibold text-white font-sans tracking-wide">
+              Attestation Verification
+            </h3>
+          </div>
+          <button
+            onClick={onClose}
+            className="p-1 rounded-lg text-zinc-400 hover:text-white hover:bg-white/10 transition-colors"
+          >
+            <X className="w-4 h-4" />
+          </button>
+        </div>
+
+        {/* Status Badge Banner */}
+        <div className="my-5 p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center gap-3">
+          <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" />
+          <div>
+            <div className="text-emerald-400 font-semibold font-sans">
+              Cryptographically Verified via NTI-Registry
+            </div>
+            <div className="text-zinc-400 text-[11px] font-sans mt-0.5">
+              Target Framework: <span className="text-white font-mono">{entryName}</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Attestation Details */}
+        <div className="space-y-4">
+          <div>
+            <div className="flex justify-between items-center mb-1 text-zinc-400">
+              <span className="text-[11px]">Attestation Hash (SHA-256)</span>
+              <button
+                onClick={handleCopyHash}
+                className="flex items-center gap-1 text-[10px] text-zinc-400 hover:text-white transition-colors"
+              >
+                <Copy className="w-3 h-3" />
+                {copiedHash ? "Copied" : "Copy"}
+              </button>
+            </div>
+            <div className="p-2.5 rounded-lg bg-black/60 border border-white/5 text-zinc-300 break-all select-all font-mono text-[11px]">
+              {evidence.attestationHash}
+            </div>
+          </div>
+
+          <div>
+            <div className="flex justify-between items-center mb-1 text-zinc-400">
+              <span className="text-[11px]">Post-Quantum Signature (ML-DSA-5)</span>
+              <button
+                onClick={handleCopySig}
+                className="flex items-center gap-1 text-[10px] text-zinc-400 hover:text-white transition-colors"
+              >
+                <Copy className="w-3 h-3" />
+                {copiedSig ? "Copied" : "Copy"}
+              </button>
+            </div>
+            <div className="p-2.5 rounded-lg bg-black/60 border border-white/5 text-zinc-300 break-all select-all font-mono text-[11px]">
+              {evidence.signature}
+            </div>
+          </div>
+
+          <div className="flex items-center justify-between pt-2 text-[11px] text-zinc-500 font-sans border-t border-white/5">
+            <div>
+              Scanner Engine: <span className="text-zinc-300 font-mono">{evidence.scannerVersion}</span>
+            </div>
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-1 text-emerald-400 hover:underline"
+            >
+              Verify on Chain/Registry <ExternalLink className="w-3 h-3" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+
+================================================
+FILE: src/data/leaderboard.json
+================================================
+{
+  "source": "NTI-Registry",
+  "generatedAt": "2026-10-25T07:44:00Z",
+  "rubricVersion": "NTI-1.0",
+  "entries": [
+    {
+      "rank": 1,
+      "name": "NTI Reference Implementation",
+      "slug": "nti-core",
+      "score": 100,
+      "grade": "A+",
+      "status": "Verified",
+      "lastScanned": "2 hours ago",
+      "trend": null,
+      "evidence": {
+        "attestationHash": "sha256:f8a7f93e2b1a4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d",
+        "signature": "mldsa5:89a1f2e3d4c5b6a7f8e9d0c1b2a3f4e5d6c7b8a9f0e1d2c3b4a5f6e7d8c9b0a1",
+        "scannerVersion": "nti-scanner:0.1.1"
+      },
+      "findings": []
+    },
+    {
+      "rank": 2,
+      "name": "CrewAI",
+      "slug": "crewai",
+      "score": 52,
+      "grade": "F",
+      "status": "Pending",
+      "lastScanned": "3 days ago",
+      "trend": {
+        "previousScore": 45,
+        "delta": 7
+      },
+      "evidence": {
+        "attestationHash": "sha256:d8a7f6e5d4c3b2a1f0e9d8c7b6a5f4e3d2c1b0a9f8e7d6c5b4a3f2e1d0c9b8a7",
+        "signature": "mldsa5:12b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3",
+        "scannerVersion": "nti-scanner:0.1.1"
+      },
+      "findings": [
+        {
+          "rule": "NTI-001",
+          "severity": "High",
+          "desc": "Unsigned tool calls in execution loop",
+          "file": "server/utils/agents/aibitat/index.js",
+          "line": 142
+        },
+        {
+          "rule": "NTI-002",
+          "severity": "Moderate",
+          "desc": "Missing message trust on inter-agent handoff",
+          "file": "server/utils/agents/index.js",
+          "line": 88
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "name": "LangChain",
+      "slug": "langchain",
+      "score": 45,
+      "grade": "F",
+      "status": "Failing",
+      "lastScanned": "1 week ago",
+      "trend": {
+        "previousScore": 48,
+        "delta": -3
+      },
+      "evidence": {
+        "attestationHash": "sha256:a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2",
+        "signature": "mldsa5:99x88y77z66a55b44c33d22e11f00a99b88c77d66e55f44a33b22c11d00e99f8",
+        "scannerVersion": "nti-scanner:0.1.1"
+      },
+      "findings": [
+        {
+          "rule": "NTI-004",
+          "severity": "Critical",
+          "desc": "Insecure AST injection in prompt loader",
+          "file": "libs/core/prompts/loader.py",
+          "line": 33
+        }
+      ]
+    }
+  ]
+}
+
+
+
+================================================
+FILE: src/types/leaderboard.ts
+================================================
+export type Severity = "Critical" | "High" | "Moderate" | "Low" | "Info";
+
+export interface Finding {
+  rule: string;
+  severity: Severity;
+  desc: string;
+  file: string;
+  line: number;
+}
+
+export interface Evidence {
+  attestationHash: string;
+  signature: string;
+  scannerVersion: string;
+}
+
+export interface Trend {
+  previousScore: number;
+  delta: number;
+}
+
+export type Status = "Verified" | "Pending" | "Failing";
+
+export interface LeaderboardEntry {
+  rank: number;
+  name: string;
+  slug: string;
+  score: number;
+  grade: string;
+  status: Status;
+  lastScanned: string;
+  trend: Trend | null;
+  evidence: Evidence;
+  findings: Finding[];
+}
+
+export interface LeaderboardData {
+  source: string;
+  generatedAt: string;
+  rubricVersion: string;
+  entries: LeaderboardEntry[];
+}

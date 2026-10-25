@@ -1,0 +1,16 @@
+
+> tmp-app@0.1.0 dev
+> next dev
+
+▲ Next.js 16.4.3 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.2:3000
+✓ Ready in 543ms
+✓ Running next.config.ts took 48ms
+- Cache Components enabled
+- Partial Prefetching enabled
+
+ HEAD / 200 in 559ms (next.js: 294ms, application-code: 265ms)
+ GET / 200 in 128ms (next.js: 5ms, application-code: 124ms)
+ GET / 200 in 72ms (next.js: 1.8ms, application-code: 70ms)
+ GET / 200 in 77ms (next.js: 1.7ms, application-code: 75ms)
