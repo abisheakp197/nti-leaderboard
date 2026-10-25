@@ -255,26 +255,35 @@ export const LeaderboardTable: React.FC<LeaderboardTableProps> = ({ entries }) =
                             </div>
                           ) : (
                             <div className="space-y-2">
-                              {entry.findings.map((finding, idx) => (
-                                <div
-                                  key={idx}
-                                  className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 hover:border-white/10 transition-colors flex flex-col md:flex-row md:items-center justify-between gap-3 text-xs"
-                                >
-                                  <div className="flex items-start md:items-center gap-3">
-                                    {getSeverityBadge(finding.severity)}
-                                    <span className="font-mono text-zinc-300 font-semibold">
-                                      [{finding.rule}]
-                                    </span>
-                                    <span className="text-zinc-200 font-sans">
-                                      {finding.desc}
-                                    </span>
-                                  </div>
+                              {entry.findings.map((finding, idx) => {
+                                const isString = typeof finding === "string";
+                                const severity: Severity = isString ? "High" : finding.severity;
+                                const rule = isString ? "NTI-SCAN" : finding.rule;
+                                const desc = isString ? finding : finding.desc;
+                                const file = isString ? entry.slug : finding.file;
+                                const line = isString ? 1 : finding.line;
 
-                                  <div className="font-mono text-zinc-400 bg-black/60 px-2.5 py-1 rounded border border-white/5 text-[11px] shrink-0 self-start md:self-auto">
-                                    {finding.file}:{finding.line}
+                                return (
+                                  <div
+                                    key={idx}
+                                    className="p-3.5 rounded-xl bg-white/[0.02] border border-white/5 hover:border-white/10 transition-colors flex flex-col md:flex-row md:items-center justify-between gap-3 text-xs"
+                                  >
+                                    <div className="flex items-start md:items-center gap-3">
+                                      {getSeverityBadge(severity)}
+                                      <span className="font-mono text-zinc-300 font-semibold">
+                                        [{rule}]
+                                      </span>
+                                      <span className="text-zinc-200 font-sans">
+                                        {desc}
+                                      </span>
+                                    </div>
+
+                                    <div className="font-mono text-zinc-400 bg-black/60 px-2.5 py-1 rounded border border-white/5 text-[11px] shrink-0 self-start md:self-auto">
+                                      {file}:{line}
+                                    </div>
                                   </div>
-                                </div>
-                              ))}
+                                );
+                              })}
                             </div>
                           )}
                         </div>

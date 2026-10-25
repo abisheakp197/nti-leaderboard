@@ -31,7 +31,7 @@ export interface LeaderboardEntry {
   lastScanned: string;
   trend: Trend | null;
   evidence: Evidence;
-  findings: Finding[];
+  findings: (Finding | string)[];
 }
 
 export interface LeaderboardData {
