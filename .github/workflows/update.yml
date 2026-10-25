@@ -1,18 +1,20 @@
-name: Automated Leaderboard Update
+name: Update Leaderboard Data
 
 on:
-  schedule:
-    - cron: '0 0 * * *'
   push:
     branches:
       - main
+    paths:
+      - 'tracked_repos.json'
+  schedule:
+    - cron: '0 0 * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  update-leaderboard:
+  update-data:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -24,22 +26,14 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install nti-scanner
+        run: pip install nti-scanner
 
-      - name: Run leaderboard scanner
-        run: |
-          python scripts/update_data.py
+      - name: Run data pipeline
+        run: python scripts/update_data.py
 
       - name: Commit and push changes
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "NTI Bot"
+          git config --global user.email "bot@nti.dev"
           git add src/data/leaderboard.json
-          if git diff --staged --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "chore: automated leaderboard scan [skip ci]"
-            git push
-          fi
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore: automated leaderboard scan [skip ci]" && git push)
