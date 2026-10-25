@@ -1,0 +1,84 @@
+{
+  "source": "NTI-Registry",
+  "generatedAt": "2026-10-25T07:44:00Z",
+  "rubricVersion": "NTI-1.0",
+  "entries": [
+    {
+      "rank": 1,
+      "name": "NTI Reference Implementation",
+      "slug": "nti-core",
+      "score": 100,
+      "grade": "A+",
+      "status": "Verified",
+      "lastScanned": "2 hours ago",
+      "trend": null,
+      "evidence": {
+        "attestationHash": "sha256:f8a7f93e2b1a4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d",
+        "signature": "mldsa5:89a1f2e3d4c5b6a7f8e9d0c1b2a3f4e5d6c7b8a9f0e1d2c3b4a5f6e7d8c9b0a1",
+        "scannerVersion": "nti-scanner:0.1.1"
+      },
+      "findings": []
+    },
+    {
+      "rank": 2,
+      "name": "CrewAI",
+      "slug": "crewai",
+      "score": 52,
+      "grade": "F",
+      "status": "Pending",
+      "lastScanned": "3 days ago",
+      "trend": {
+        "previousScore": 45,
+        "delta": 7
+      },
+      "evidence": {
+        "attestationHash": "sha256:d8a7f6e5d4c3b2a1f0e9d8c7b6a5f4e3d2c1b0a9f8e7d6c5b4a3f2e1d0c9b8a7",
+        "signature": "mldsa5:12b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3",
+        "scannerVersion": "nti-scanner:0.1.1"
+      },
+      "findings": [
+        {
+          "rule": "NTI-001",
+          "severity": "High",
+          "desc": "Unsigned tool calls in execution loop",
+          "file": "server/utils/agents/aibitat/index.js",
+          "line": 142
+        },
+        {
+          "rule": "NTI-002",
+          "severity": "Moderate",
+          "desc": "Missing message trust on inter-agent handoff",
+          "file": "server/utils/agents/index.js",
+          "line": 88
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "name": "LangChain",
+      "slug": "langchain",
+      "score": 45,
+      "grade": "F",
+      "status": "Failing",
+      "lastScanned": "1 week ago",
+      "trend": {
+        "previousScore": 48,
+        "delta": -3
+      },
+      "evidence": {
+        "attestationHash": "sha256:a1b2c3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2",
+        "signature": "mldsa5:99x88y77z66a55b44c33d22e11f00a99b88c77d66e55f44a33b22c11d00e99f8",
+        "scannerVersion": "nti-scanner:0.1.1"
+      },
+      "findings": [
+        {
+          "rule": "NTI-004",
+          "severity": "Critical",
+          "desc": "Insecure AST injection in prompt loader",
+          "file": "libs/core/prompts/loader.py",
+          "line": 33
+        }
+      ]
+    }
+  ]
+}
