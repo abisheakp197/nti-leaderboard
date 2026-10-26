@@ -1,6 +1,6 @@
 {
   "source": "NTI-Registry",
-  "generatedAt": "2026-10-25T13:24:12Z",
+  "generatedAt": "2026-10-26T02:52:53Z",
   "rubricVersion": "NTI-1.0",
   "entries": [
     {
@@ -1461,7 +1461,14 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "fixtures/lease-revocation-axes/generate.py",
-          "line": 49
+          "line": 99
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "fixtures/lease-revocation-axes/generate.py",
+          "line": 68
         },
         {
           "rule": "SEC-PROMPT-001",
