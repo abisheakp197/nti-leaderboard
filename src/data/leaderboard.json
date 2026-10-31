@@ -1,6 +1,6 @@
 {
   "source": "NTI-Registry",
-  "generatedAt": "2026-10-30T04:03:40Z",
+  "generatedAt": "2026-10-31T03:49:15Z",
   "rubricVersion": "NTI-1.0",
   "entries": [
     {
@@ -2127,6 +2127,34 @@
           "desc": "Quantum-vulnerable crypto imported: cryptography.hazmat.primitives.asymmetric.utils.",
           "file": "candidates/tactiq-tpm-bound-key/tpmq.py",
           "line": 9
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "candidates/silentpartnercoding-wimse-agent-mandate/runs/aeoess-2026-10-30/outer_witness.py",
+          "line": 62
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "candidates/silentpartnercoding-wimse-agent-mandate/runs/aeoess-2026-10-30/outer_witness.py",
+          "line": 88
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "candidates/silentpartnercoding-wimse-agent-mandate/runs/aeoess-2026-10-30/outer_witness.py",
+          "line": 91
+        },
+        {
+          "rule": "SEC-PQC-001",
+          "severity": "High",
+          "desc": "Quantum-vulnerable crypto imported: cryptography.hazmat.primitives.asymmetric.ed25519.",
+          "file": "candidates/silentpartnercoding-wimse-agent-mandate/runs/aeoess-2026-10-30/outer_witness.py",
+          "line": 17
         }
       ]
     },
