@@ -1,6 +1,6 @@
 {
   "source": "NTI-Registry",
-  "generatedAt": "2026-10-31T03:49:15Z",
+  "generatedAt": "2026-11-01T03:57:27Z",
   "rubricVersion": "NTI-1.0",
   "entries": [
     {
@@ -18347,14 +18347,14 @@
           "severity": "High",
           "desc": "Agent without audit trail. NTI-1 requires Merkle-chained logs.",
           "file": "lib/crewai/tests/test_llm_litellm_streaming_errors.py",
-          "line": 277
+          "line": 275
         },
         {
           "rule": "NTI-PERS-001",
           "severity": "Low",
           "desc": "Agent state persistence lacks cryptographic integrity checks.",
           "file": "lib/crewai/tests/test_llm_litellm_streaming_errors.py",
-          "line": 277
+          "line": 275
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -18606,14 +18606,14 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/tests/test_llm.py",
-          "line": 576
+          "line": 569
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/tests/test_llm.py",
-          "line": 678
+          "line": 671
         },
         {
           "rule": "NTI-AUDIT-001",
