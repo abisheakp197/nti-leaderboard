@@ -1,6 +1,6 @@
 {
   "source": "NTI-Registry",
-  "generatedAt": "2026-11-02T04:00:29Z",
+  "generatedAt": "2026-11-03T05:01:37Z",
   "rubricVersion": "NTI-1.0",
   "entries": [
     {
@@ -9629,21 +9629,21 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/core/tests/unit_tests/load/test_serializable.py",
-          "line": 1056
+          "line": 1066
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/core/tests/unit_tests/load/test_serializable.py",
-          "line": 1075
+          "line": 1085
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/core/tests/unit_tests/load/test_serializable.py",
-          "line": 1097
+          "line": 1107
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -9916,28 +9916,28 @@
           "severity": "Critical",
           "desc": "Tools declared but no grant_capability(). All 4 tools unauthorized.",
           "file": "libs/partners/anthropic/tests/unit_tests/test_chat_models.py",
-          "line": 123
+          "line": 140
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/anthropic/tests/unit_tests/test_chat_models.py",
-          "line": 3093
+          "line": 3141
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/anthropic/tests/unit_tests/test_chat_models.py",
-          "line": 5224
+          "line": 5288
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/anthropic/tests/unit_tests/test_chat_models.py",
-          "line": 5252
+          "line": 5316
         },
         {
           "rule": "SEC-SQL-001",
