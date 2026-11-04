@@ -1,6 +1,6 @@
 {
   "source": "NTI-Registry",
-  "generatedAt": "2026-11-03T05:01:37Z",
+  "generatedAt": "2026-11-04T04:34:33Z",
   "rubricVersion": "NTI-1.0",
   "entries": [
     {
@@ -8642,7 +8642,21 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/core/langchain_core/exceptions.py",
-          "line": 163
+          "line": 222
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "libs/core/langchain_core/exceptions.py",
+          "line": 184
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "libs/core/langchain_core/exceptions.py",
+          "line": 186
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -8740,14 +8754,14 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/core/langchain_core/messages/block_translators/openai.py",
-          "line": 632
+          "line": 636
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/core/langchain_core/messages/block_translators/openai.py",
-          "line": 650
+          "line": 654
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -8755,6 +8769,20 @@
           "desc": "f-string used in prompt context.",
           "file": "libs/core/langchain_core/messages/block_translators/openai.py",
           "line": 51
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "libs/core/langchain_core/messages/block_translators/google_genai.py",
+          "line": 316
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "libs/core/langchain_core/messages/block_translators/google_genai.py",
+          "line": 226
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -8978,21 +9006,21 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/core/langchain_core/output_parsers/openai_tools.py",
-          "line": 353
+          "line": 359
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/core/langchain_core/output_parsers/openai_tools.py",
-          "line": 65
+          "line": 66
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/core/langchain_core/output_parsers/openai_tools.py",
-          "line": 363
+          "line": 369
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -9020,7 +9048,7 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/core/langchain_core/output_parsers/json.py",
-          "line": 90
+          "line": 94
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -9160,7 +9188,7 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/core/langchain_core/language_models/chat_models.py",
-          "line": 2576
+          "line": 2579
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -9438,44 +9466,44 @@
         {
           "rule": "NTI-CAPDIFF-001",
           "severity": "Critical",
-          "desc": "Tools declared but no grant_capability(). All 38 tools unauthorized.",
+          "desc": "Tools declared but no grant_capability(). All 40 tools unauthorized.",
           "file": "libs/core/tests/unit_tests/test_tools.py",
-          "line": 105
+          "line": 107
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/core/tests/unit_tests/test_tools.py",
-          "line": 3990
+          "line": 4048
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/core/tests/unit_tests/test_tools.py",
-          "line": 4003
+          "line": 4061
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/core/tests/unit_tests/test_tools.py",
-          "line": 146
+          "line": 148
         },
         {
           "rule": "SEC-DESER-001",
           "severity": "Critical",
           "desc": "Unsafe deserialization via pickle.loads()",
           "file": "libs/core/tests/unit_tests/test_tools.py",
-          "line": 4688
+          "line": 4746
         },
         {
           "rule": "SEC-DESER-001",
           "severity": "Critical",
           "desc": "Unsafe deserialization via pickle.loads()",
           "file": "libs/core/tests/unit_tests/test_tools.py",
-          "line": 4691
+          "line": 4749
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -9916,28 +9944,28 @@
           "severity": "Critical",
           "desc": "Tools declared but no grant_capability(). All 4 tools unauthorized.",
           "file": "libs/partners/anthropic/tests/unit_tests/test_chat_models.py",
-          "line": 140
+          "line": 142
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/anthropic/tests/unit_tests/test_chat_models.py",
-          "line": 3141
+          "line": 3143
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/anthropic/tests/unit_tests/test_chat_models.py",
-          "line": 5288
+          "line": 5290
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/anthropic/tests/unit_tests/test_chat_models.py",
-          "line": 5316
+          "line": 5318
         },
         {
           "rule": "SEC-SQL-001",
@@ -10028,7 +10056,7 @@
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "libs/partners/anthropic/langchain_anthropic/chat_models.py",
-          "line": 2639
+          "line": 2650
         },
         {
           "rule": "NTI-CAPDIFF-001",
@@ -10490,42 +10518,42 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/openai/langchain_openai/chat_models/base.py",
-          "line": 4475
+          "line": 4474
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/openai/langchain_openai/chat_models/base.py",
-          "line": 4440
+          "line": 4454
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/openai/langchain_openai/chat_models/base.py",
-          "line": 4502
+          "line": 4540
         },
         {
           "rule": "SEC-SQL-001",
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "libs/partners/openai/langchain_openai/chat_models/base.py",
-          "line": 2076
+          "line": 2080
         },
         {
           "rule": "SEC-SQL-001",
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "libs/partners/openai/langchain_openai/chat_models/base.py",
-          "line": 2448
+          "line": 2452
         },
         {
           "rule": "SEC-SQL-001",
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "libs/partners/openai/langchain_openai/chat_models/base.py",
-          "line": 5119
+          "line": 5157
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -10770,28 +10798,28 @@
           "severity": "Critical",
           "desc": "Tools declared but no grant_capability(). All 3 tools unauthorized.",
           "file": "libs/partners/openai/tests/unit_tests/chat_models/test_base.py",
-          "line": 113
+          "line": 114
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/openai/tests/unit_tests/chat_models/test_base.py",
-          "line": 3686
+          "line": 3687
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/openai/tests/unit_tests/chat_models/test_base.py",
-          "line": 5173
+          "line": 5174
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/openai/tests/unit_tests/chat_models/test_base.py",
-          "line": 4812
+          "line": 4813
         },
         {
           "rule": "NTI-AUDIT-001",
