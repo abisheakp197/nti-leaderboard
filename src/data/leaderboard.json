@@ -1,6 +1,6 @@
 {
   "source": "NTI-Registry",
-  "generatedAt": "2026-11-04T04:34:33Z",
+  "generatedAt": "2026-11-05T04:50:21Z",
   "rubricVersion": "NTI-1.0",
   "entries": [
     {
@@ -475,6 +475,83 @@
           "desc": "f-string used in prompt context.",
           "file": "interop/cosai-ws4-189-evidence-sufficiency/adapter/py/checker.py",
           "line": 83
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/wasmagent-aep-0.1.12-blind/cases/make_cases.py",
+          "line": 39
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/wasmagent-aep-0.1.12-blind/cases/make_cases.py",
+          "line": 38
+        },
+        {
+          "rule": "SEC-PQC-001",
+          "severity": "High",
+          "desc": "Quantum-vulnerable crypto imported: cryptography.hazmat.primitives.asymmetric.ed25519.",
+          "file": "interop/wasmagent-aep-0.1.12-blind/cases/make_cases.py",
+          "line": 8
+        },
+        {
+          "rule": "SEC-PQC-001",
+          "severity": "High",
+          "desc": "Quantum-vulnerable crypto imported: cryptography.hazmat.primitives.asymmetric.ed25519.",
+          "file": "interop/wasmagent-aep-0.1.12-blind/cases/run_cases.py",
+          "line": 5
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/wasmagent-aep-0.1.12-blind/verifier/aep_verify_v2.py",
+          "line": 78
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/wasmagent-aep-0.1.12-blind/verifier/aep_verify_v2.py",
+          "line": 186
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/wasmagent-aep-0.1.12-blind/verifier/aep_verify_v2.py",
+          "line": 190
+        },
+        {
+          "rule": "SEC-PQC-001",
+          "severity": "High",
+          "desc": "Quantum-vulnerable crypto imported: cryptography.hazmat.primitives.asymmetric.ed25519.",
+          "file": "interop/wasmagent-aep-0.1.12-blind/verifier/aep_verify_v2.py",
+          "line": 15
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/wasmagent-aep-0.1.12-blind/verifier/aep_verify_v1_blind.py",
+          "line": 174
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/wasmagent-aep-0.1.12-blind/verifier/aep_verify_v1_blind.py",
+          "line": 178
+        },
+        {
+          "rule": "SEC-PQC-001",
+          "severity": "High",
+          "desc": "Quantum-vulnerable crypto imported: cryptography.hazmat.primitives.asymmetric.ed25519.",
+          "file": "interop/wasmagent-aep-0.1.12-blind/verifier/aep_verify_v1_blind.py",
+          "line": 15
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -2113,6 +2190,34 @@
           "desc": "f-string used in prompt context.",
           "file": "fixtures/lifecycle-identifier-reuse-and-rename/verify.py",
           "line": 350
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "candidates/aeoess-presenter-key-possession/generate.py",
+          "line": 28
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "candidates/aeoess-presenter-key-possession/generate.py",
+          "line": 27
+        },
+        {
+          "rule": "SEC-PQC-001",
+          "severity": "High",
+          "desc": "Quantum-vulnerable crypto imported: cryptography.hazmat.primitives.asymmetric.ed25519.",
+          "file": "candidates/aeoess-presenter-key-possession/generate.py",
+          "line": 6
+        },
+        {
+          "rule": "SEC-PQC-001",
+          "severity": "High",
+          "desc": "Quantum-vulnerable crypto imported: cryptography.hazmat.primitives.asymmetric.ed25519.",
+          "file": "candidates/aeoess-presenter-key-possession/check.py",
+          "line": 9
         },
         {
           "rule": "SEC-PQC-001",
@@ -8866,21 +8971,21 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/core/langchain_core/runnables/base.py",
-          "line": 1609
+          "line": 1672
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/core/langchain_core/runnables/base.py",
-          "line": 1755
+          "line": 1818
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/core/langchain_core/runnables/base.py",
-          "line": 4632
+          "line": 4647
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -9286,21 +9391,21 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/core/langchain_core/utils/json.py",
-          "line": 219
+          "line": 233
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/core/langchain_core/utils/json.py",
-          "line": 215
+          "line": 229
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/core/langchain_core/utils/json.py",
-          "line": 226
+          "line": 240
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -9559,21 +9664,21 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/core/tests/unit_tests/runnables/test_runnable.py",
-          "line": 125
+          "line": 6226
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/core/tests/unit_tests/runnables/test_runnable.py",
-          "line": 2986
+          "line": 135
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/core/tests/unit_tests/runnables/test_runnable.py",
-          "line": 3042
+          "line": 2996
         },
         {
           "rule": "NTI-CAPDIFF-001",
@@ -10245,35 +10350,35 @@
           "severity": "High",
           "desc": "Agent without audit trail. NTI-1 requires Merkle-chained logs.",
           "file": "libs/partners/typesafe/tests/unit_tests/experimental/middleware/test_auto_mode.py",
-          "line": 150
+          "line": 151
         },
         {
           "rule": "NTI-PERS-001",
           "severity": "Low",
           "desc": "Agent state persistence lacks cryptographic integrity checks.",
           "file": "libs/partners/typesafe/tests/unit_tests/experimental/middleware/test_auto_mode.py",
-          "line": 150
+          "line": 151
         },
         {
           "rule": "NTI-CAPDIFF-001",
           "severity": "Critical",
           "desc": "Tools declared but no grant_capability(). All 1 tools unauthorized.",
           "file": "libs/partners/typesafe/tests/unit_tests/experimental/middleware/test_auto_mode.py",
-          "line": 50
+          "line": 51
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/typesafe/tests/unit_tests/experimental/middleware/test_auto_mode.py",
-          "line": 296
+          "line": 309
         },
         {
           "rule": "SEC-CAP-001",
           "severity": "High",
           "desc": "Tool 'delete_file' has destructive name.",
           "file": "libs/partners/typesafe/tests/unit_tests/experimental/middleware/test_auto_mode.py",
-          "line": 77
+          "line": 78
         },
         {
           "rule": "NTI-IDENT-001",
@@ -11092,7 +11197,7 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/fireworks/langchain_fireworks/chat_models.py",
-          "line": 701
+          "line": 713
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -11113,7 +11218,7 @@
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "libs/partners/fireworks/langchain_fireworks/chat_models.py",
-          "line": 701
+          "line": 713
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -17045,21 +17150,21 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/src/crewai/llms/base_llm.py",
-          "line": 120
+          "line": 122
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/src/crewai/llms/base_llm.py",
-          "line": 908
+          "line": 910
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/src/crewai/llms/base_llm.py",
-          "line": 140
+          "line": 142
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -17157,28 +17262,28 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/src/crewai/llms/providers/openai/completion.py",
-          "line": 166
+          "line": 167
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/src/crewai/llms/providers/openai/completion.py",
-          "line": 164
+          "line": 165
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/src/crewai/llms/providers/openai/completion.py",
-          "line": 1944
+          "line": 2013
         },
         {
           "rule": "SEC-SQL-001",
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "lib/crewai/src/crewai/llms/providers/openai/completion.py",
-          "line": 2904
+          "line": 3029
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -21509,37 +21614,37 @@
         {
           "rule": "NTI-CONS-001",
           "severity": "Moderate",
-          "desc": "Multi-agent system (3 agents) without BFT consensus.",
+          "desc": "Multi-agent system (5 agents) without BFT consensus.",
           "file": "lib/crewai/tests/llms/openai/test_tools_reasoning_effort_retry.py",
-          "line": 277
+          "line": 711
         },
         {
           "rule": "NTI-AUDIT-001",
           "severity": "High",
           "desc": "Agent without audit trail. NTI-1 requires Merkle-chained logs.",
           "file": "lib/crewai/tests/llms/openai/test_tools_reasoning_effort_retry.py",
-          "line": 277
+          "line": 711
         },
         {
           "rule": "NTI-PERS-001",
           "severity": "Low",
           "desc": "Agent state persistence lacks cryptographic integrity checks.",
           "file": "lib/crewai/tests/llms/openai/test_tools_reasoning_effort_retry.py",
-          "line": 277
+          "line": 711
         },
         {
           "rule": "NTI-CAPDIFF-001",
           "severity": "Critical",
-          "desc": "Tools declared but no grant_capability(). All 1 tools unauthorized.",
+          "desc": "Tools declared but no grant_capability(). All 2 tools unauthorized.",
           "file": "lib/crewai/tests/llms/openai/test_tools_reasoning_effort_retry.py",
-          "line": 46
+          "line": 62
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/tests/llms/openai/test_tools_reasoning_effort_retry.py",
-          "line": 72
+          "line": 88
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -22008,42 +22113,42 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/devtools/src/crewai_devtools/cli.py",
-          "line": 584
+          "line": 573
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/devtools/src/crewai_devtools/cli.py",
-          "line": 965
+          "line": 954
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/devtools/src/crewai_devtools/cli.py",
-          "line": 1123
+          "line": 1112
         },
         {
           "rule": "SEC-SQL-001",
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "lib/devtools/src/crewai_devtools/cli.py",
-          "line": 584
+          "line": 573
         },
         {
           "rule": "SEC-SQL-001",
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "lib/devtools/src/crewai_devtools/cli.py",
-          "line": 1123
+          "line": 1112
         },
         {
           "rule": "SEC-SQL-001",
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "lib/devtools/src/crewai_devtools/cli.py",
-          "line": 1130
+          "line": 1119
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -22162,28 +22267,28 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/src/crewai_cli/cli.py",
-          "line": 317
+          "line": 322
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/src/crewai_cli/cli.py",
-          "line": 365
+          "line": 370
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/src/crewai_cli/cli.py",
-          "line": 641
+          "line": 646
         },
         {
           "rule": "SEC-SQL-001",
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "lib/cli/src/crewai_cli/cli.py",
-          "line": 418
+          "line": 423
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -22232,21 +22337,21 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/src/crewai_cli/create_flow.py",
-          "line": 23
+          "line": 66
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/src/crewai_cli/create_flow.py",
-          "line": 44
+          "line": 122
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/src/crewai_cli/create_flow.py",
-          "line": 27
+          "line": 126
         },
         {
           "rule": "SEC-SQL-001",
@@ -22260,77 +22365,77 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/src/crewai_cli/create_crew.py",
-          "line": 143
+          "line": 145
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/src/crewai_cli/create_crew.py",
-          "line": 329
+          "line": 341
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/src/crewai_cli/create_crew.py",
-          "line": 64
+          "line": 66
         },
         {
           "rule": "SEC-SQL-001",
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "lib/cli/src/crewai_cli/create_crew.py",
-          "line": 287
+          "line": 299
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/src/crewai_cli/utils.py",
-          "line": 62
+          "line": 66
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/src/crewai_cli/utils.py",
-          "line": 177
+          "line": 186
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/src/crewai_cli/utils.py",
-          "line": 204
+          "line": 319
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/src/crewai_cli/provider.py",
-          "line": 32
+          "line": 29
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/src/crewai_cli/provider.py",
-          "line": 100
+          "line": 97
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/src/crewai_cli/provider.py",
-          "line": 175
+          "line": 172
         },
         {
           "rule": "SEC-SQL-001",
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "lib/cli/src/crewai_cli/provider.py",
-          "line": 104
+          "line": 101
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -22477,28 +22582,28 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/src/crewai_cli/create_json_crew.py",
-          "line": 349
+          "line": 380
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/src/crewai_cli/create_json_crew.py",
-          "line": 353
+          "line": 384
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/src/crewai_cli/create_json_crew.py",
-          "line": 370
+          "line": 401
         },
         {
           "rule": "SEC-SQL-001",
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "lib/cli/src/crewai_cli/create_json_crew.py",
-          "line": 372
+          "line": 403
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -22995,21 +23100,21 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/tests/test_cli.py",
-          "line": 523
+          "line": 537
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/tests/test_cli.py",
-          "line": 524
+          "line": 538
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/tests/test_cli.py",
-          "line": 591
+          "line": 605
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -23022,36 +23127,71 @@
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
+          "file": "lib/cli/tests/test_constants.py",
+          "line": 367
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "lib/cli/tests/test_constants.py",
+          "line": 371
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "lib/cli/tests/test_constants.py",
+          "line": 404
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
           "file": "lib/cli/tests/test_create_flow.py",
-          "line": 103
+          "line": 150
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "lib/cli/tests/test_create_flow.py",
+          "line": 175
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "lib/cli/tests/test_create_flow.py",
+          "line": 203
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/tests/test_create_crew.py",
-          "line": 1827
+          "line": 2761
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/tests/test_create_crew.py",
-          "line": 1835
+          "line": 2769
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/tests/test_create_crew.py",
-          "line": 1520
+          "line": 1529
         },
         {
           "rule": "SEC-SQL-001",
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "lib/cli/tests/test_create_crew.py",
-          "line": 1827
+          "line": 2761
         },
         {
           "rule": "SEC-PROMPT-001",
