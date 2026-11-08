@@ -1,6 +1,6 @@
 {
   "source": "NTI-Registry",
-  "generatedAt": "2026-11-07T04:18:12Z",
+  "generatedAt": "2026-11-08T04:01:03Z",
   "rubricVersion": "NTI-1.0",
   "entries": [
     {
@@ -44,21 +44,21 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "conformance/witness_generator/generate_seals.py",
-          "line": 195
+          "line": 314
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "conformance/witness_generator/generate_seals.py",
-          "line": 233
+          "line": 373
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "conformance/witness_generator/generate_seals.py",
-          "line": 234
+          "line": 374
         }
       ]
     },
@@ -14903,14 +14903,14 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/src/crewai_cli/crew_run_tui.py",
-          "line": 665
+          "line": 693
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/src/crewai_cli/crew_run_tui.py",
-          "line": 1794
+          "line": 1821
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -15134,35 +15134,35 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/src/crewai_cli/experimental/eval_crew.py",
-          "line": 165
+          "line": 208
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/src/crewai_cli/experimental/eval_crew.py",
-          "line": 218
+          "line": 271
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/src/crewai_cli/experimental/eval_crew.py",
-          "line": 1465
+          "line": 1554
         },
         {
           "rule": "SEC-SQL-001",
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "lib/cli/src/crewai_cli/experimental/eval_crew.py",
-          "line": 2582
+          "line": 2675
         },
         {
           "rule": "SEC-SQL-001",
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "lib/cli/src/crewai_cli/experimental/eval_crew.py",
-          "line": 2026
+          "line": 2119
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -15267,14 +15267,14 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/tests/test_run_crew.py",
-          "line": 1351
+          "line": 1363
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/tests/test_run_crew.py",
-          "line": 1653
+          "line": 1424
         },
         {
           "rule": "SEC-SQL-001",
@@ -15414,7 +15414,7 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/tests/test_constants.py",
-          "line": 425
+          "line": 429
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -15459,6 +15459,20 @@
           "line": 305
         },
         {
+          "rule": "NTI-AUDIT-001",
+          "severity": "High",
+          "desc": "Agent without audit trail. NTI-1 requires Merkle-chained logs.",
+          "file": "lib/cli/tests/test_run_usage.py",
+          "line": 1400
+        },
+        {
+          "rule": "NTI-PERS-001",
+          "severity": "Low",
+          "desc": "Agent state persistence lacks cryptographic integrity checks.",
+          "file": "lib/cli/tests/test_run_usage.py",
+          "line": 1400
+        },
+        {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
@@ -15491,35 +15505,35 @@
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "lib/cli/tests/test_run_usage.py",
-          "line": 1140
+          "line": 1150
         },
         {
           "rule": "SEC-SQL-001",
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "lib/cli/tests/test_run_usage.py",
-          "line": 1730
+          "line": 1784
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/tests/test_crew_run_tui.py",
-          "line": 85
+          "line": 87
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/tests/test_crew_run_tui.py",
-          "line": 443
+          "line": 484
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/tests/test_crew_run_tui.py",
-          "line": 444
+          "line": 485
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -15597,6 +15611,13 @@
           "desc": "Agent state persistence lacks cryptographic integrity checks.",
           "file": "lib/cli/tests/test_run_agent.py",
           "line": 284
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "lib/cli/tests/test_run_agent.py",
+          "line": 434
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -15799,21 +15820,21 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/tests/experimental/test_eval_crew.py",
-          "line": 2548
+          "line": 2796
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/tests/experimental/test_eval_crew.py",
-          "line": 3759
+          "line": 4060
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/tests/experimental/test_eval_crew.py",
-          "line": 529
+          "line": 191
         },
         {
           "rule": "SEC-SQL-001",
@@ -17696,42 +17717,42 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/src/crewai/llm.py",
-          "line": 356
+          "line": 350
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/src/crewai/llm.py",
-          "line": 565
+          "line": 559
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/src/crewai/llm.py",
-          "line": 2559
+          "line": 2553
         },
         {
           "rule": "SEC-SQL-001",
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "lib/crewai/src/crewai/llm.py",
-          "line": 969
+          "line": 963
         },
         {
           "rule": "SEC-SQL-001",
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "lib/crewai/src/crewai/llm.py",
-          "line": 1035
+          "line": 1029
         },
         {
           "rule": "SEC-SQL-001",
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "lib/crewai/src/crewai/llm.py",
-          "line": 1032
+          "line": 1026
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -18025,14 +18046,14 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/src/crewai/llms/providers/openai/completion.py",
-          "line": 2013
+          "line": 2016
         },
         {
           "rule": "SEC-SQL-001",
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "lib/crewai/src/crewai/llms/providers/openai/completion.py",
-          "line": 3029
+          "line": 3032
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -21287,70 +21308,70 @@
           "severity": "High",
           "desc": "Agent declared without cryptographic identity. NTI-1 requires Dilithium5 signatures.",
           "file": "lib/crewai/tests/test_project.py",
-          "line": 112
+          "line": 114
         },
         {
           "rule": "NTI-IDENT-001",
           "severity": "High",
           "desc": "Agent declared without cryptographic identity. NTI-1 requires Dilithium5 signatures.",
           "file": "lib/crewai/tests/test_project.py",
-          "line": 113
+          "line": 115
         },
         {
           "rule": "NTI-IDENT-001",
           "severity": "High",
           "desc": "Agent declared without cryptographic identity. NTI-1 requires Dilithium5 signatures.",
           "file": "lib/crewai/tests/test_project.py",
-          "line": 265
+          "line": 329
         },
         {
           "rule": "NTI-GOV-001",
           "severity": "Critical",
           "desc": "Found 2 tool function(s) without governance.",
           "file": "lib/crewai/tests/test_project.py",
-          "line": 313
+          "line": 377
         },
         {
           "rule": "NTI-CONS-001",
           "severity": "Moderate",
-          "desc": "Multi-agent system (12 agents) without BFT consensus.",
+          "desc": "Multi-agent system (16 agents) without BFT consensus.",
           "file": "lib/crewai/tests/test_project.py",
-          "line": 265
+          "line": 329
         },
         {
           "rule": "NTI-AUDIT-001",
           "severity": "High",
           "desc": "Agent without audit trail. NTI-1 requires Merkle-chained logs.",
           "file": "lib/crewai/tests/test_project.py",
-          "line": 265
+          "line": 329
         },
         {
           "rule": "NTI-PERS-001",
           "severity": "Low",
           "desc": "Agent state persistence lacks cryptographic integrity checks.",
           "file": "lib/crewai/tests/test_project.py",
-          "line": 265
+          "line": 329
         },
         {
           "rule": "NTI-CAPDIFF-001",
           "severity": "Critical",
           "desc": "Tools declared but no grant_capability(). All 2 tools unauthorized.",
           "file": "lib/crewai/tests/test_project.py",
-          "line": 110
+          "line": 112
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/tests/test_project.py",
-          "line": 398
+          "line": 462
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/tests/test_project.py",
-          "line": 414
+          "line": 478
         },
         {
           "rule": "NTI-CONS-001",
@@ -22099,14 +22120,14 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/tests/cli/test_run_crew.py",
-          "line": 130
+          "line": 168
         },
         {
           "rule": "SEC-SQL-001",
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "lib/crewai/tests/cli/test_run_crew.py",
-          "line": 235
+          "line": 273
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -22237,44 +22258,44 @@
         {
           "rule": "NTI-CONS-001",
           "severity": "Moderate",
-          "desc": "Multi-agent system (3 agents) without BFT consensus.",
+          "desc": "Multi-agent system (4 agents) without BFT consensus.",
           "file": "lib/crewai/tests/llms/test_missing_api_key.py",
-          "line": 335
+          "line": 500
         },
         {
           "rule": "NTI-AUDIT-001",
           "severity": "High",
           "desc": "Agent without audit trail. NTI-1 requires Merkle-chained logs.",
           "file": "lib/crewai/tests/llms/test_missing_api_key.py",
-          "line": 335
+          "line": 500
         },
         {
           "rule": "NTI-PERS-001",
           "severity": "Low",
           "desc": "Agent state persistence lacks cryptographic integrity checks.",
           "file": "lib/crewai/tests/llms/test_missing_api_key.py",
-          "line": 335
+          "line": 500
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/tests/llms/test_missing_api_key.py",
-          "line": 97
+          "line": 123
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/tests/llms/test_missing_api_key.py",
-          "line": 409
+          "line": 164
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/tests/llms/test_missing_api_key.py",
-          "line": 138
+          "line": 176
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -22583,6 +22604,27 @@
           "desc": "Agent state persistence lacks cryptographic integrity checks.",
           "file": "lib/crewai/tests/llms/azure/test_azure_async.py",
           "line": 123
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "lib/crewai/tests/llms/openai_compatible/test_openai_compatible.py",
+          "line": 551
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "lib/crewai/tests/llms/openai_compatible/test_openai_compatible.py",
+          "line": 560
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "lib/crewai/tests/llms/openai_compatible/test_openai_compatible.py",
+          "line": 553
         },
         {
           "rule": "SEC-SECRET-001",
@@ -24598,28 +24640,28 @@
           "severity": "Moderate",
           "desc": "Multi-agent system (2 agents) without BFT consensus.",
           "file": "lib/crewai/tests/telemetry/test_flow_telemetry.py",
-          "line": 531
+          "line": 532
         },
         {
           "rule": "NTI-AUDIT-001",
           "severity": "High",
           "desc": "Agent without audit trail. NTI-1 requires Merkle-chained logs.",
           "file": "lib/crewai/tests/telemetry/test_flow_telemetry.py",
-          "line": 531
+          "line": 532
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/tests/telemetry/test_flow_telemetry.py",
-          "line": 319
+          "line": 320
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/tests/telemetry/test_flow_telemetry.py",
-          "line": 573
+          "line": 574
         },
         {
           "rule": "SEC-PROMPT-001",
