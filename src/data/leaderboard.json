@@ -1,6 +1,6 @@
 {
   "source": "NTI-Registry",
-  "generatedAt": "2026-11-09T04:18:03Z",
+  "generatedAt": "2026-11-10T05:43:17Z",
   "rubricVersion": "NTI-1.0",
   "entries": [
     {
@@ -7354,28 +7354,28 @@
           "severity": "Critical",
           "desc": "Tools declared but no grant_capability(). All 5 tools unauthorized.",
           "file": "libs/langchain_v1/tests/unit_tests/agents/middleware/implementations/test_tool_selection.py",
-          "line": 32
+          "line": 33
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain_v1/tests/unit_tests/agents/middleware/implementations/test_tool_selection.py",
-          "line": 34
+          "line": 35
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain_v1/tests/unit_tests/agents/middleware/implementations/test_tool_selection.py",
-          "line": 40
+          "line": 41
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain_v1/tests/unit_tests/agents/middleware/implementations/test_tool_selection.py",
-          "line": 46
+          "line": 47
         },
         {
           "rule": "NTI-CAPDIFF-001",
@@ -7431,7 +7431,7 @@
           "severity": "Critical",
           "desc": "Tools declared but no grant_capability(). All 3 tools unauthorized.",
           "file": "libs/langchain_v1/tests/unit_tests/agents/middleware/implementations/test_tool_emulator.py",
-          "line": 30
+          "line": 31
         },
         {
           "rule": "NTI-CAPDIFF-001",
@@ -7620,28 +7620,28 @@
           "severity": "High",
           "desc": "Agent without audit trail. NTI-1 requires Merkle-chained logs.",
           "file": "libs/langchain_v1/tests/unit_tests/agents/middleware/implementations/test_summarization.py",
-          "line": 1498
+          "line": 1499
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain_v1/tests/unit_tests/agents/middleware/implementations/test_summarization.py",
-          "line": 1202
+          "line": 1203
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain_v1/tests/unit_tests/agents/middleware/implementations/test_summarization.py",
-          "line": 2077
+          "line": 2078
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain_v1/tests/unit_tests/agents/middleware/implementations/test_summarization.py",
-          "line": 2085
+          "line": 2086
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -8103,35 +8103,35 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain_v1/langchain/agents/middleware/tool_selection.py",
-          "line": 120
+          "line": 118
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain_v1/langchain/agents/middleware/tool_selection.py",
-          "line": 271
+          "line": 262
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain_v1/langchain/agents/middleware/tool_selection.py",
-          "line": 336
+          "line": 327
         },
         {
           "rule": "SEC-SQL-001",
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "libs/langchain_v1/langchain/agents/middleware/tool_selection.py",
-          "line": 336
+          "line": 327
         },
         {
           "rule": "SEC-SQL-001",
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "libs/langchain_v1/langchain/agents/middleware/tool_selection.py",
-          "line": 370
+          "line": 361
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -8145,21 +8145,21 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain_v1/langchain/agents/middleware/summarization.py",
-          "line": 141
+          "line": 142
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain_v1/langchain/agents/middleware/summarization.py",
-          "line": 1023
+          "line": 1017
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain_v1/langchain/agents/middleware/summarization.py",
-          "line": 830
+          "line": 824
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -8383,21 +8383,21 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain_v1/langchain/agents/middleware/tool_emulator.py",
-          "line": 175
+          "line": 166
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain_v1/langchain/agents/middleware/tool_emulator.py",
-          "line": 230
+          "line": 224
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain_v1/langchain/agents/middleware/tool_emulator.py",
-          "line": 125
+          "line": 116
         },
         {
           "rule": "SEC-SQL-001",
@@ -13857,21 +13857,21 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/core/langchain_core/load/load.py",
-          "line": 493
+          "line": 496
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/core/langchain_core/load/load.py",
-          "line": 511
+          "line": 821
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/core/langchain_core/load/load.py",
-          "line": 525
+          "line": 514
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -18228,7 +18228,7 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/src/crewai/agent/core.py",
-          "line": 1585
+          "line": 1593
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -18242,14 +18242,14 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/src/crewai/agent/core.py",
-          "line": 2113
+          "line": 2121
         },
         {
           "rule": "SEC-PQC-001",
           "severity": "High",
           "desc": "Quantum-vulnerable crypto imported: crewai.agent.conversation.",
           "file": "lib/crewai/src/crewai/agent/core.py",
-          "line": 1910
+          "line": 1918
         },
         {
           "rule": "SEC-PROMPT-001",
