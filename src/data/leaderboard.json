@@ -1,6 +1,6 @@
 {
   "source": "NTI-Registry",
-  "generatedAt": "2026-11-10T05:43:17Z",
+  "generatedAt": "2026-11-11T04:21:59Z",
   "rubricVersion": "NTI-1.0",
   "entries": [
     {
@@ -22001,7 +22001,7 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/tests/test_flow_persistence.py",
-          "line": 54
+          "line": 56
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -22520,6 +22520,13 @@
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/tests/llms/bedrock/test_bedrock.py",
           "line": 635
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "lib/crewai/tests/llms/bedrock/test_bedrock_content_usage_contract.py",
+          "line": 161
         },
         {
           "rule": "SEC-PROMPT-001",
