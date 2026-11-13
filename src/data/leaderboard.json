@@ -1,6 +1,6 @@
 {
   "source": "NTI-Registry",
-  "generatedAt": "2026-11-12T05:29:42Z",
+  "generatedAt": "2026-11-13T04:46:36Z",
   "rubricVersion": "NTI-1.0",
   "entries": [
     {
@@ -14629,6 +14629,41 @@
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
+          "file": "lib/cli/src/crewai_cli/agent_tools.py",
+          "line": 53
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "lib/cli/src/crewai_cli/agent_tools.py",
+          "line": 147
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "lib/cli/src/crewai_cli/agent_tools.py",
+          "line": 172
+        },
+        {
+          "rule": "SEC-SQL-001",
+          "severity": "Critical",
+          "desc": "f-string contains SQL keywords.",
+          "file": "lib/cli/src/crewai_cli/agent_tools.py",
+          "line": 237
+        },
+        {
+          "rule": "SEC-SQL-001",
+          "severity": "Critical",
+          "desc": "f-string contains SQL keywords.",
+          "file": "lib/cli/src/crewai_cli/agent_tools.py",
+          "line": 143
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
           "file": "lib/cli/src/crewai_cli/create_crew.py",
           "line": 145
         },
@@ -14735,49 +14770,56 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/src/crewai_cli/create_agent.py",
-          "line": 66
+          "line": 82
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/src/crewai_cli/create_agent.py",
-          "line": 23
+          "line": 24
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/src/crewai_cli/create_agent.py",
-          "line": 57
+          "line": 68
+        },
+        {
+          "rule": "SEC-SQL-001",
+          "severity": "Critical",
+          "desc": "f-string contains SQL keywords.",
+          "file": "lib/cli/src/crewai_cli/create_agent.py",
+          "line": 85
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/src/crewai_cli/create_json_crew.py",
-          "line": 380
+          "line": 385
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/src/crewai_cli/create_json_crew.py",
-          "line": 384
+          "line": 389
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/src/crewai_cli/create_json_crew.py",
-          "line": 401
+          "line": 406
         },
         {
           "rule": "SEC-SQL-001",
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "lib/cli/src/crewai_cli/create_json_crew.py",
-          "line": 403
+          "line": 408
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -15631,28 +15673,28 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/tests/test_create_crew.py",
-          "line": 2812
+          "line": 2879
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/tests/test_create_crew.py",
-          "line": 2820
+          "line": 2887
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/tests/test_create_crew.py",
-          "line": 1529
+          "line": 1596
         },
         {
           "rule": "SEC-SQL-001",
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "lib/cli/tests/test_create_crew.py",
-          "line": 2812
+          "line": 2879
         },
         {
           "rule": "NTI-AUDIT-001",
@@ -15674,6 +15716,20 @@
           "desc": "f-string used in prompt context.",
           "file": "lib/cli/tests/test_run_agent.py",
           "line": 434
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "lib/cli/tests/test_agent_tools.py",
+          "line": 144
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "lib/cli/tests/test_agent_tools.py",
+          "line": 139
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -16471,28 +16527,28 @@
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "lib/crewai-tools/src/crewai_tools/security/safe_requests.py",
-          "line": 271
+          "line": 277
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai-tools/src/crewai_tools/security/safe_path.py",
-          "line": 26
+          "line": 31
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai-tools/src/crewai_tools/security/safe_path.py",
-          "line": 72
+          "line": 247
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai-tools/src/crewai_tools/security/safe_path.py",
-          "line": 131
+          "line": 77
         },
         {
           "rule": "SEC-SSRF-001",
@@ -17465,28 +17521,28 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai-tools/src/crewai_tools/tools/url_read_tool/url_read_tool.py",
-          "line": 500
+          "line": 508
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai-tools/src/crewai_tools/tools/url_read_tool/url_read_tool.py",
-          "line": 530
+          "line": 546
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai-tools/src/crewai_tools/tools/url_read_tool/url_read_tool.py",
-          "line": 355
+          "line": 363
         },
         {
           "rule": "SEC-SQL-001",
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "lib/crewai-tools/src/crewai_tools/tools/url_read_tool/url_read_tool.py",
-          "line": 542
+          "line": 558
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -17591,21 +17647,21 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai-tools/tests/url_read_tool_test.py",
-          "line": 762
+          "line": 763
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai-tools/tests/url_read_tool_test.py",
-          "line": 150
+          "line": 147
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai-tools/tests/url_read_tool_test.py",
-          "line": 161
+          "line": 158
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -17661,7 +17717,7 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai-tools/tests/utilities/test_safe_requests.py",
-          "line": 644
+          "line": 770
         },
         {
           "rule": "SEC-MCP-001",
@@ -17794,42 +17850,42 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/src/crewai/llm.py",
-          "line": 350
+          "line": 351
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/src/crewai/llm.py",
-          "line": 559
+          "line": 560
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/src/crewai/llm.py",
-          "line": 2560
+          "line": 2573
         },
         {
           "rule": "SEC-SQL-001",
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "lib/crewai/src/crewai/llm.py",
-          "line": 963
+          "line": 976
         },
         {
           "rule": "SEC-SQL-001",
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "lib/crewai/src/crewai/llm.py",
-          "line": 1029
+          "line": 1042
         },
         {
           "rule": "SEC-SQL-001",
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "lib/crewai/src/crewai/llm.py",
-          "line": 1026
+          "line": 1039
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -20755,7 +20811,7 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/src/crewai/flow/async_feedback/types.py",
-          "line": 230
+          "line": 236
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -20818,7 +20874,7 @@
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "lib/crewai/src/crewai/flow/runtime/__init__.py",
-          "line": 3152
+          "line": 3155
         },
         {
           "rule": "SEC-SQL-001",
@@ -20832,7 +20888,7 @@
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "lib/crewai/src/crewai/flow/runtime/__init__.py",
-          "line": 2361
+          "line": 2363
         },
         {
           "rule": "SEC-PROMPT-001",
