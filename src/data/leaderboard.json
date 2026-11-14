@@ -1,6 +1,6 @@
 {
   "source": "NTI-Registry",
-  "generatedAt": "2026-11-13T04:46:36Z",
+  "generatedAt": "2026-11-14T04:40:44Z",
   "rubricVersion": "NTI-1.0",
   "entries": [
     {
@@ -8712,21 +8712,21 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/text-splitters/langchain_text_splitters/base.py",
-          "line": 89
+          "line": 90
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/text-splitters/langchain_text_splitters/base.py",
-          "line": 92
+          "line": 93
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/text-splitters/langchain_text_splitters/base.py",
-          "line": 96
+          "line": 97
         },
         {
           "rule": "SEC-SQL-001",
@@ -8754,7 +8754,7 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/groq/langchain_groq/chat_models.py",
-          "line": 549
+          "line": 570
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -8929,21 +8929,21 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/mistralai/langchain_mistralai/chat_models.py",
-          "line": 615
+          "line": 616
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/mistralai/langchain_mistralai/chat_models.py",
-          "line": 198
+          "line": 199
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/mistralai/langchain_mistralai/chat_models.py",
-          "line": 287
+          "line": 288
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -9146,70 +9146,70 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/huggingface/langchain_huggingface/llms/huggingface_pipeline.py",
-          "line": 178
+          "line": 177
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/huggingface/langchain_huggingface/llms/huggingface_pipeline.py",
-          "line": 288
+          "line": 287
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/huggingface/langchain_huggingface/llms/huggingface_pipeline.py",
-          "line": 173
+          "line": 172
         },
         {
           "rule": "SEC-SQL-001",
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "libs/partners/huggingface/langchain_huggingface/llms/huggingface_pipeline.py",
-          "line": 233
+          "line": 232
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/huggingface/langchain_huggingface/llms/huggingface_endpoint.py",
-          "line": 205
+          "line": 204
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/huggingface/langchain_huggingface/llms/huggingface_endpoint.py",
-          "line": 192
+          "line": 191
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/huggingface/langchain_huggingface/llms/huggingface_endpoint.py",
-          "line": 311
+          "line": 310
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/huggingface/langchain_huggingface/chat_models/huggingface.py",
-          "line": 1031
+          "line": 1032
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/huggingface/langchain_huggingface/chat_models/huggingface.py",
-          "line": 1157
+          "line": 1158
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/huggingface/langchain_huggingface/chat_models/huggingface.py",
-          "line": 697
+          "line": 698
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -9286,35 +9286,35 @@
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "libs/partners/openai/langchain_openai/chatgpt_oauth.py",
+          "line": 489
+        },
+        {
+          "rule": "SEC-SQL-001",
+          "severity": "Critical",
+          "desc": "f-string contains SQL keywords.",
+          "file": "libs/partners/openai/langchain_openai/chatgpt_oauth.py",
+          "line": 498
+        },
+        {
+          "rule": "SEC-SQL-001",
+          "severity": "Critical",
+          "desc": "f-string contains SQL keywords.",
+          "file": "libs/partners/openai/langchain_openai/chatgpt_oauth.py",
           "line": 506
-        },
-        {
-          "rule": "SEC-SQL-001",
-          "severity": "Critical",
-          "desc": "f-string contains SQL keywords.",
-          "file": "libs/partners/openai/langchain_openai/chatgpt_oauth.py",
-          "line": 515
-        },
-        {
-          "rule": "SEC-SQL-001",
-          "severity": "Critical",
-          "desc": "f-string contains SQL keywords.",
-          "file": "libs/partners/openai/langchain_openai/chatgpt_oauth.py",
-          "line": 523
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/openai/langchain_openai/llms/base.py",
-          "line": 756
+          "line": 755
         },
         {
           "rule": "SEC-SQL-001",
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "libs/partners/openai/langchain_openai/llms/base.py",
-          "line": 756
+          "line": 755
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -9405,7 +9405,7 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/openai/langchain_openai/chat_models/azure.py",
-          "line": 843
+          "line": 842
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -9419,21 +9419,28 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/openai/langchain_openai/embeddings/base.py",
-          "line": 369
+          "line": 368
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/openai/langchain_openai/embeddings/base.py",
-          "line": 411
+          "line": 410
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/openai/langchain_openai/embeddings/base.py",
-          "line": 356
+          "line": 355
+        },
+        {
+          "rule": "SEC-SQL-001",
+          "severity": "Critical",
+          "desc": "f-string contains SQL keywords.",
+          "file": "libs/partners/openai/langchain_openai/decisions/_classifier_input.py",
+          "line": 70
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -9615,14 +9622,14 @@
           "severity": "High",
           "desc": "Agent without audit trail. NTI-1 requires Merkle-chained logs.",
           "file": "libs/partners/openai/tests/integration_tests/middleware/test_model_router.py",
-          "line": 49
+          "line": 51
         },
         {
           "rule": "NTI-PERS-001",
           "severity": "Low",
           "desc": "Agent state persistence lacks cryptographic integrity checks.",
           "file": "libs/partners/openai/tests/integration_tests/middleware/test_model_router.py",
-          "line": 49
+          "line": 51
         },
         {
           "rule": "NTI-IDENT-001",
@@ -9811,56 +9818,56 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/deepseek/tests/unit_tests/test_chat_models.py",
-          "line": 430
+          "line": 431
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/deepseek/tests/unit_tests/test_chat_models.py",
-          "line": 446
+          "line": 447
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/deepseek/tests/unit_tests/test_chat_models.py",
-          "line": 476
+          "line": 477
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/openrouter/langchain_openrouter/chat_models.py",
-          "line": 1408
+          "line": 1407
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/openrouter/langchain_openrouter/chat_models.py",
-          "line": 401
+          "line": 400
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/openrouter/langchain_openrouter/chat_models.py",
-          "line": 1133
+          "line": 1132
         },
         {
           "rule": "SEC-SQL-001",
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "libs/partners/openrouter/langchain_openrouter/chat_models.py",
-          "line": 1408
+          "line": 1407
         },
         {
           "rule": "SEC-SQL-001",
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "libs/partners/openrouter/langchain_openrouter/chat_models.py",
-          "line": 1483
+          "line": 1482
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -9874,21 +9881,21 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/fireworks/langchain_fireworks/llms.py",
-          "line": 118
+          "line": 117
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/fireworks/langchain_fireworks/llms.py",
-          "line": 169
+          "line": 168
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/fireworks/langchain_fireworks/llms.py",
-          "line": 172
+          "line": 171
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -9944,21 +9951,21 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/perplexity/langchain_perplexity/chat_models.py",
-          "line": 617
+          "line": 616
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/perplexity/langchain_perplexity/chat_models.py",
-          "line": 895
+          "line": 894
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/perplexity/langchain_perplexity/chat_models.py",
-          "line": 1143
+          "line": 1142
         },
         {
           "rule": "SEC-SQL-001",
@@ -11708,70 +11715,70 @@
           "severity": "High",
           "desc": "Agent without audit trail. NTI-1 requires Merkle-chained logs.",
           "file": "libs/langchain/langchain_classic/agents/openai_functions_agent/base.py",
-          "line": 381
+          "line": 380
         },
         {
           "rule": "NTI-PERS-001",
           "severity": "Low",
           "desc": "Agent state persistence lacks cryptographic integrity checks.",
           "file": "libs/langchain/langchain_classic/agents/openai_functions_agent/base.py",
-          "line": 381
+          "line": 380
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain/langchain_classic/agents/openai_functions_agent/base.py",
-          "line": 208
+          "line": 207
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain/langchain_classic/agents/openai_functions_agent/base.py",
-          "line": 368
+          "line": 367
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain/langchain_classic/agents/openai_functions_agent/base.py",
-          "line": 80
+          "line": 79
         },
         {
           "rule": "NTI-AUDIT-001",
           "severity": "High",
           "desc": "Agent without audit trail. NTI-1 requires Merkle-chained logs.",
           "file": "libs/langchain/langchain_classic/agents/openai_functions_multi_agent/base.py",
-          "line": 97
+          "line": 96
         },
         {
           "rule": "NTI-PERS-001",
           "severity": "Low",
           "desc": "Agent state persistence lacks cryptographic integrity checks.",
           "file": "libs/langchain/langchain_classic/agents/openai_functions_multi_agent/base.py",
-          "line": 97
+          "line": 96
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain/langchain_classic/agents/openai_functions_multi_agent/base.py",
-          "line": 87
+          "line": 86
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain/langchain_classic/agents/openai_functions_multi_agent/base.py",
-          "line": 132
+          "line": 131
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain/langchain_classic/agents/openai_functions_multi_agent/base.py",
-          "line": 51
+          "line": 50
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -11862,21 +11869,21 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain/langchain_classic/agents/openai_assistant/base.py",
-          "line": 667
+          "line": 668
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain/langchain_classic/agents/openai_assistant/base.py",
-          "line": 820
+          "line": 821
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain/langchain_classic/agents/openai_assistant/base.py",
-          "line": 649
+          "line": 650
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -12359,21 +12366,21 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain/langchain_classic/chains/sequential.py",
-          "line": 52
+          "line": 51
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain/langchain_classic/chains/sequential.py",
-          "line": 67
+          "line": 66
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain/langchain_classic/chains/sequential.py",
-          "line": 73
+          "line": 72
         },
         {
           "rule": "SEC-SQL-001",
@@ -12611,7 +12618,7 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain/langchain_classic/chains/elasticsearch_database/base.py",
-          "line": 122
+          "line": 121
         },
         {
           "rule": "NTI-IDENT-001",
@@ -12716,28 +12723,28 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain/langchain_classic/chains/conversation/base.py",
-          "line": 140
+          "line": 142
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain/langchain_classic/chains/conversation/base.py",
-          "line": 148
+          "line": 150
         },
         {
           "rule": "SEC-SQL-001",
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "libs/langchain/langchain_classic/chains/conversation/base.py",
-          "line": 148
+          "line": 150
         },
         {
           "rule": "SEC-PQC-001",
           "severity": "High",
           "desc": "Quantum-vulnerable crypto imported: langchain_classic.chains.conversation.prompt.",
           "file": "libs/langchain/langchain_classic/chains/conversation/base.py",
-          "line": 9
+          "line": 11
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -12793,21 +12800,21 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain/langchain_classic/chains/api/base.py",
-          "line": 241
+          "line": 240
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain/langchain_classic/chains/api/base.py",
-          "line": 274
+          "line": 273
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain/langchain_classic/chains/api/base.py",
-          "line": 297
+          "line": 296
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -13115,14 +13122,21 @@
           "severity": "High",
           "desc": "Dynamic URL passed to httpx.get()",
           "file": "libs/model-profiles/langchain_model_profiles/cli.py",
-          "line": 281
+          "line": 272
         },
         {
           "rule": "SEC-SQL-001",
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "libs/model-profiles/langchain_model_profiles/cli.py",
-          "line": 201
+          "line": 192
+        },
+        {
+          "rule": "SEC-SQL-001",
+          "severity": "Critical",
+          "desc": "f-string contains SQL keywords.",
+          "file": "libs/model-profiles/langchain_model_profiles/cli.py",
+          "line": 270
         },
         {
           "rule": "SEC-SQL-001",
@@ -13130,13 +13144,6 @@
           "desc": "f-string contains SQL keywords.",
           "file": "libs/model-profiles/langchain_model_profiles/cli.py",
           "line": 279
-        },
-        {
-          "rule": "SEC-SQL-001",
-          "severity": "Critical",
-          "desc": "f-string contains SQL keywords.",
-          "file": "libs/model-profiles/langchain_model_profiles/cli.py",
-          "line": 288
         },
         {
           "rule": "NTI-CAPDIFF-001",
@@ -13157,21 +13164,21 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/standard-tests/langchain_tests/integration_tests/sandboxes.py",
-          "line": 216
+          "line": 215
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/standard-tests/langchain_tests/integration_tests/sandboxes.py",
-          "line": 643
+          "line": 642
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/standard-tests/langchain_tests/integration_tests/sandboxes.py",
-          "line": 955
+          "line": 954
         },
         {
           "rule": "NTI-CAPDIFF-001",
@@ -13913,7 +13920,21 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/core/langchain_core/utils/_gateway.py",
-          "line": 103
+          "line": 114
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "libs/core/langchain_core/utils/_gateway.py",
+          "line": 183
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "libs/core/langchain_core/utils/_gateway.py",
+          "line": 92
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -18186,7 +18207,7 @@
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "lib/crewai/src/crewai/llms/providers/openai/completion.py",
-          "line": 3050
+          "line": 3051
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -21490,35 +21511,35 @@
           "severity": "High",
           "desc": "Agent declared without cryptographic identity. NTI-1 requires Dilithium5 signatures.",
           "file": "lib/crewai/tests/test_project.py",
-          "line": 329
+          "line": 364
         },
         {
           "rule": "NTI-GOV-001",
           "severity": "Critical",
           "desc": "Found 2 tool function(s) without governance.",
           "file": "lib/crewai/tests/test_project.py",
-          "line": 377
+          "line": 412
         },
         {
           "rule": "NTI-CONS-001",
           "severity": "Moderate",
-          "desc": "Multi-agent system (16 agents) without BFT consensus.",
+          "desc": "Multi-agent system (17 agents) without BFT consensus.",
           "file": "lib/crewai/tests/test_project.py",
-          "line": 329
+          "line": 364
         },
         {
           "rule": "NTI-AUDIT-001",
           "severity": "High",
           "desc": "Agent without audit trail. NTI-1 requires Merkle-chained logs.",
           "file": "lib/crewai/tests/test_project.py",
-          "line": 329
+          "line": 364
         },
         {
           "rule": "NTI-PERS-001",
           "severity": "Low",
           "desc": "Agent state persistence lacks cryptographic integrity checks.",
           "file": "lib/crewai/tests/test_project.py",
-          "line": 329
+          "line": 364
         },
         {
           "rule": "NTI-CAPDIFF-001",
@@ -21532,14 +21553,14 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/tests/test_project.py",
-          "line": 462
+          "line": 497
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/tests/test_project.py",
-          "line": 478
+          "line": 513
         },
         {
           "rule": "NTI-CONS-001",
