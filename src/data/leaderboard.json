@@ -1,6 +1,6 @@
 {
   "source": "NTI-Registry",
-  "generatedAt": "2026-11-15T04:30:20Z",
+  "generatedAt": "2026-11-16T04:27:46Z",
   "rubricVersion": "NTI-1.0",
   "entries": [
     {
@@ -7473,28 +7473,28 @@
           "severity": "Critical",
           "desc": "Tools declared but no grant_capability(). All 4 tools unauthorized.",
           "file": "libs/langchain_v1/tests/unit_tests/agents/middleware/implementations/test_provider_tool_search.py",
-          "line": 30
+          "line": 35
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain_v1/tests/unit_tests/agents/middleware/implementations/test_provider_tool_search.py",
-          "line": 32
+          "line": 37
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain_v1/tests/unit_tests/agents/middleware/implementations/test_provider_tool_search.py",
-          "line": 38
+          "line": 43
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain_v1/tests/unit_tests/agents/middleware/implementations/test_provider_tool_search.py",
-          "line": 44
+          "line": 49
         },
         {
           "rule": "NTI-IDENT-001",
@@ -7753,42 +7753,42 @@
           "severity": "High",
           "desc": "Agent without audit trail. NTI-1 requires Merkle-chained logs.",
           "file": "libs/langchain_v1/tests/unit_tests/agents/middleware/core/test_overrides.py",
-          "line": 34
+          "line": 65
         },
         {
           "rule": "NTI-PERS-001",
           "severity": "Low",
           "desc": "Agent state persistence lacks cryptographic integrity checks.",
           "file": "libs/langchain_v1/tests/unit_tests/agents/middleware/core/test_overrides.py",
-          "line": 34
+          "line": 65
         },
         {
           "rule": "NTI-CAPDIFF-001",
           "severity": "Critical",
           "desc": "Tools declared but no grant_capability(). All 2 tools unauthorized.",
           "file": "libs/langchain_v1/tests/unit_tests/agents/middleware/core/test_overrides.py",
-          "line": 24
+          "line": 26
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain_v1/tests/unit_tests/agents/middleware/core/test_overrides.py",
-          "line": 265
+          "line": 296
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain_v1/tests/unit_tests/agents/middleware/core/test_overrides.py",
-          "line": 293
+          "line": 324
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain_v1/tests/unit_tests/agents/middleware/core/test_overrides.py",
-          "line": 317
+          "line": 348
         },
         {
           "rule": "NTI-CAPDIFF-001",
@@ -8082,14 +8082,14 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain_v1/langchain/chat_models/base.py",
-          "line": 641
+          "line": 643
         },
         {
           "rule": "SEC-SQL-001",
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "libs/langchain_v1/langchain/chat_models/base.py",
-          "line": 586
+          "line": 630
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -8201,14 +8201,14 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain_v1/langchain/agents/middleware/provider_tool_search.py",
-          "line": 140
+          "line": 139
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/langchain_v1/langchain/agents/middleware/provider_tool_search.py",
-          "line": 147
+          "line": 146
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -8929,7 +8929,7 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "libs/partners/mistralai/langchain_mistralai/chat_models.py",
-          "line": 616
+          "line": 626
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -17941,21 +17941,21 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/src/crewai/task.py",
-          "line": 1412
+          "line": 1414
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/src/crewai/task.py",
-          "line": 1211
+          "line": 1212
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/src/crewai/task.py",
-          "line": 704
+          "line": 705
         },
         {
           "rule": "NTI-AUDIT-001",
@@ -21353,6 +21353,20 @@
           "line": 65
         },
         {
+          "rule": "NTI-AUDIT-001",
+          "severity": "High",
+          "desc": "Agent without audit trail. NTI-1 requires Merkle-chained logs.",
+          "file": "lib/crewai/tests/test_task_converter_output.py",
+          "line": 31
+        },
+        {
+          "rule": "NTI-PERS-001",
+          "severity": "Low",
+          "desc": "Agent state persistence lacks cryptographic integrity checks.",
+          "file": "lib/crewai/tests/test_task_converter_output.py",
+          "line": 31
+        },
+        {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
@@ -24521,35 +24535,35 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/tests/project/test_json_loader.py",
-          "line": 578
+          "line": 588
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/tests/project/test_json_loader.py",
-          "line": 392
+          "line": 402
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/tests/project/test_json_loader.py",
-          "line": 737
+          "line": 747
         },
         {
           "rule": "SEC-SQL-001",
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "lib/crewai/tests/project/test_json_loader.py",
-          "line": 620
+          "line": 630
         },
         {
           "rule": "SEC-SQL-001",
           "severity": "Critical",
           "desc": "f-string contains SQL keywords.",
           "file": "lib/crewai/tests/project/test_json_loader.py",
-          "line": 647
+          "line": 657
         },
         {
           "rule": "SEC-PROMPT-001",
