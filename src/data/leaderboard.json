@@ -1,6 +1,6 @@
 {
   "source": "NTI-Registry",
-  "generatedAt": "2026-11-16T04:27:46Z",
+  "generatedAt": "2026-11-17T06:13:00Z",
   "rubricVersion": "NTI-1.0",
   "entries": [
     {
@@ -335,6 +335,41 @@
           "desc": "A2A communication without identity verification.",
           "file": "interop/agent-passport-v2-readers-407ca2d5/check-against-vectors.py",
           "line": 0
+        },
+        {
+          "rule": "SEC-PQC-001",
+          "severity": "High",
+          "desc": "Quantum-vulnerable crypto imported: cryptography.hazmat.primitives.asymmetric.ed25519.",
+          "file": "interop/vaid-a2a-main-abe1448-cleanroom-fa652557/v4_checks.py",
+          "line": 16
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/vaid-a2a-main-abe1448-cleanroom-fa652557/vaid_cr.py",
+          "line": 107
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/vaid-a2a-main-abe1448-cleanroom-fa652557/vaid_cr.py",
+          "line": 228
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "f-string used in prompt context.",
+          "file": "interop/vaid-a2a-main-abe1448-cleanroom-fa652557/vaid_cr.py",
+          "line": 228
+        },
+        {
+          "rule": "SEC-PQC-001",
+          "severity": "High",
+          "desc": "Quantum-vulnerable crypto imported: cryptography.hazmat.primitives.asymmetric.ed25519.",
+          "file": "interop/vaid-a2a-main-abe1448-cleanroom-fa652557/vaid_cr.py",
+          "line": 23
         },
         {
           "rule": "SEC-SSRF-001",
@@ -18333,14 +18368,14 @@
           "severity": "High",
           "desc": "Agent without audit trail. NTI-1 requires Merkle-chained logs.",
           "file": "lib/crewai/src/crewai/agent/core.py",
-          "line": 1435
+          "line": 1441
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/src/crewai/agent/core.py",
-          "line": 1593
+          "line": 1599
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -18354,14 +18389,14 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/src/crewai/agent/core.py",
-          "line": 2121
+          "line": 2127
         },
         {
           "rule": "SEC-PQC-001",
           "severity": "High",
           "desc": "Quantum-vulnerable crypto imported: crewai.agent.conversation.",
           "file": "lib/crewai/src/crewai/agent/core.py",
-          "line": 1918
+          "line": 1924
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -18627,21 +18662,21 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/src/crewai/utilities/string_utils.py",
-          "line": 51
+          "line": 53
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/src/crewai/utilities/string_utils.py",
-          "line": 116
+          "line": 57
         },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/src/crewai/utilities/string_utils.py",
-          "line": 141
+          "line": 122
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -21917,7 +21952,7 @@
           "severity": "High",
           "desc": "f-string used in prompt context.",
           "file": "lib/crewai/tests/test_crew.py",
-          "line": 4395
+          "line": 4419
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -23838,6 +23873,13 @@
           "line": 34
         },
         {
+          "rule": "SEC-SQL-001",
+          "severity": "Critical",
+          "desc": "f-string contains SQL keywords.",
+          "file": "lib/crewai/tests/experimental/evaluation/test_experiment_result.py",
+          "line": 153
+        },
+        {
           "rule": "NTI-AUDIT-001",
           "severity": "High",
           "desc": "Agent without audit trail. NTI-1 requires Merkle-chained logs.",
@@ -24445,6 +24487,27 @@
           "desc": "Agent state persistence lacks cryptographic integrity checks.",
           "file": "lib/crewai/tests/agents/test_agent_a2a_wrapping.py",
           "line": 20
+        },
+        {
+          "rule": "NTI-IDENT-001",
+          "severity": "High",
+          "desc": "Agent declared without cryptographic identity. NTI-1 requires Dilithium5 signatures.",
+          "file": "lib/crewai/tests/agents/test_agent_execution_timeout.py",
+          "line": 22
+        },
+        {
+          "rule": "NTI-AUDIT-001",
+          "severity": "High",
+          "desc": "Agent without audit trail. NTI-1 requires Merkle-chained logs.",
+          "file": "lib/crewai/tests/agents/test_agent_execution_timeout.py",
+          "line": 22
+        },
+        {
+          "rule": "NTI-PERS-001",
+          "severity": "Low",
+          "desc": "Agent state persistence lacks cryptographic integrity checks.",
+          "file": "lib/crewai/tests/agents/test_agent_execution_timeout.py",
+          "line": 22
         },
         {
           "rule": "NTI-CONS-001",
