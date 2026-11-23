@@ -49,7 +49,7 @@ export default function Home() {
       <section className="pt-20 pb-12 max-w-5xl mx-auto px-6 text-center">
         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/[0.04] border border-white/10 text-zinc-300 text-xs font-mono mb-6">
           <Zap className="w-3.5 h-3.5 text-amber-400" />
-          <span>Post-Quantum ML-DSA-5 Verified Benchmarks</span>
+          <span>Static compliance scans, reproducible offline</span>
         </div>
 
         <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-white max-w-4xl mx-auto leading-[1.1]">
@@ -60,8 +60,8 @@ export default function Home() {
         </h1>
 
         <p className="mt-6 text-zinc-400 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-          The definitive public benchmark for AI Agent security. Eliminating
-          self-reported scores with offline-verifiable post-quantum security attestations.
+          The public benchmark for AI Agent compliance. Every score is generated
+          by an open-source scanner you can run yourself against the same commit.
         </p>
       </section>
 

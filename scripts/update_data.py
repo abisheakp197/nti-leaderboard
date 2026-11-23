@@ -16,7 +16,19 @@ NAME_MAP = {
     "crewai": "CrewAI",
     "langchain": "LangChain",
     "autogen": "AutoGen",
+    "software-agent-sdk": "OpenHands SDK",
     "neutral-trust-infrastructure": "NTI Reference Implementation"
+}
+
+# Upstream repos that ship a conformant fork or wrapper, surfaced on the
+# leaderboard so a failing score links to a fix instead of dead-ending.
+# Keyed by repo URL; entries are regenerated nightly, so this must live here
+# rather than in leaderboard.json.
+FIX_MAP = {
+    "https://github.com/OpenHands/software-agent-sdk": {
+        "repo": "https://github.com/abisheakp197/Openhands---nti",
+        "label": "Apache-2.0 NTI wrapper for OpenHands",
+    },
 }
 
 def get_grade(score: int) -> str:
@@ -51,7 +63,9 @@ def scan_repository(repo_url: str) -> dict:
     name = NAME_MAP.get(slug, repo_raw_name)
 
     attestation_hash = f"sha256:{hashlib.sha256(repo_url.encode()).hexdigest()}"
-    signature = f"mldsa5:{hashlib.sha256((repo_url + 'sig').encode()).hexdigest()}"
+    # The scanner emits no signature. Until it does, do not fabricate one: an
+    # attestation the reader cannot verify is worse than none.
+    signature = None
 
     try:
         with tempfile.TemporaryDirectory() as tmpdir:
@@ -65,6 +79,13 @@ def scan_repository(repo_url: str) -> dict:
             )
             if clone_res.returncode != 0:
                 raise RuntimeError(f"Git clone failed: {clone_res.stderr}")
+
+            commit_sha = subprocess.run(
+                ["git", "-C", clone_dir, "rev-parse", "HEAD"],
+                capture_output=True,
+                text=True,
+                timeout=30
+            ).stdout.strip() or None
 
             # Run nti-scanner
             scan_res = subprocess.run(
@@ -80,9 +101,14 @@ def scan_repository(repo_url: str) -> dict:
             scan_data = json.loads(scan_res.stdout)
             score = int(scan_data.get("nti1_score", 0))
             grade = get_grade(score)
-            status = "Verified" if score >= 90 else "Failing"
+            fix = FIX_MAP.get(repo_url)
+            if score >= 90:
+                status = "Verified"
+            elif fix:
+                status = "Failing Compliance / Fix Available"
+            else:
+                status = "Failing"
             scanner_version = scan_data.get("version", "0.1.1")
-
             mapped_findings = []
             for f in scan_data.get("findings", []):
                 file_path = f.get("file", "")
@@ -106,6 +132,13 @@ def scan_repository(repo_url: str) -> dict:
                 "status": status,
                 "lastScanned": "Just now",
                 "trend": None,
+                "fix": FIX_MAP.get(repo_url),
+                "repoUrl": repo_url,
+                "commit": commit_sha,
+                "coverage": {
+                    "filesScanned": int(scan_data.get("files_scanned", 0)),
+                    "linesScanned": int(scan_data.get("lines_scanned", 0)),
+                },
                 "evidence": {
                     "attestationHash": attestation_hash,
                     "signature": signature,
@@ -125,6 +158,10 @@ def scan_repository(repo_url: str) -> dict:
             "status": "Scan Failed",
             "lastScanned": "Just now",
             "trend": None,
+            "fix": FIX_MAP.get(repo_url),
+            "repoUrl": repo_url,
+            "commit": None,
+            "coverage": {"filesScanned": 0, "linesScanned": 0},
             "evidence": {
                 "attestationHash": attestation_hash,
                 "signature": signature,

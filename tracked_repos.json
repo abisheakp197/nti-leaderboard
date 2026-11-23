@@ -3,5 +3,6 @@
   "https://github.com/crewAIInc/crewAI",
   "https://github.com/langchain-ai/langchain",
   "https://github.com/microsoft/autogen",
+  "https://github.com/OpenHands/software-agent-sdk",
   "https://github.com/Agent-Authority-Conformance/aps-conformance-suite"
 ]

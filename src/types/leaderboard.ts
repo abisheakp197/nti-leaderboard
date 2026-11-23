@@ -10,7 +10,7 @@ export interface Finding {
 
 export interface Evidence {
   attestationHash: string;
-  signature: string;
+  signature: string | null;
   scannerVersion: string;
 }
 
@@ -19,7 +19,17 @@ export interface Trend {
   delta: number;
 }
 
-export type Status = "Verified" | "Pending" | "Failing" | "Scan Failed";
+export type Status = "Verified" | "Pending" | "Failing" | "Failing Compliance / Fix Available" | "Scan Failed";
+
+export interface FeatureFix {
+  repo: string;
+  label: string;
+}
+
+export interface Coverage {
+  filesScanned: number;
+  linesScanned: number;
+}
 
 export interface LeaderboardEntry {
   rank: number;
@@ -30,6 +40,10 @@ export interface LeaderboardEntry {
   status: Status;
   lastScanned: string;
   trend: Trend | null;
+  fix?: FeatureFix | null;
+  repoUrl?: string;
+  commit?: string | null;
+  coverage?: Coverage;
   evidence: Evidence;
   findings: Finding[];
 }

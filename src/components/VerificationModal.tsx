@@ -18,7 +18,6 @@ export const VerificationModal: React.FC<VerificationModalProps> = ({
   evidence,
 }) => {
   const [copiedHash, setCopiedHash] = useState(false);
-  const [copiedSig, setCopiedSig] = useState(false);
 
   if (!isOpen) return null;
 
@@ -26,12 +25,6 @@ export const VerificationModal: React.FC<VerificationModalProps> = ({
     navigator.clipboard.writeText(evidence.attestationHash);
     setCopiedHash(true);
     setTimeout(() => setCopiedHash(false), 2000);
-  };
-
-  const handleCopySig = () => {
-    navigator.clipboard.writeText(evidence.signature);
-    setCopiedSig(true);
-    setTimeout(() => setCopiedSig(false), 2000);
   };
 
   return (
@@ -58,11 +51,11 @@ export const VerificationModal: React.FC<VerificationModalProps> = ({
         </div>
 
         {/* Status Badge Banner */}
-        <div className="my-5 p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center gap-3">
-          <CheckCircle2 className="w-5 h-5 text-emerald-400 shrink-0" />
+        <div className="my-5 p-3 rounded-xl bg-white/[0.04] border border-white/10 flex items-center gap-3">
+          <CheckCircle2 className="w-5 h-5 text-zinc-300 shrink-0" />
           <div>
-            <div className="text-emerald-400 font-semibold font-sans">
-              Cryptographically Verified via NTI-Registry
+            <div className="text-zinc-200 font-semibold font-sans">
+              Reproducible scan record
             </div>
             <div className="text-zinc-400 text-[11px] font-sans mt-0.5">
               Target Framework: <span className="text-white font-mono">{entryName}</span>
@@ -90,18 +83,19 @@ export const VerificationModal: React.FC<VerificationModalProps> = ({
 
           <div>
             <div className="flex justify-between items-center mb-1 text-zinc-400">
-              <span className="text-[11px]">Post-Quantum Signature (ML-DSA-5)</span>
-              <button
-                onClick={handleCopySig}
-                className="flex items-center gap-1 text-[10px] text-zinc-400 hover:text-white transition-colors"
-              >
-                <Copy className="w-3 h-3" />
-                {copiedSig ? "Copied" : "Copy"}
-              </button>
+              <span className="text-[11px]">Signature</span>
             </div>
-            <div className="p-2.5 rounded-lg bg-black/60 border border-white/5 text-zinc-300 break-all select-all font-mono text-[11px]">
-              {evidence.signature}
-            </div>
+            {evidence.signature ? (
+              <div className="p-2.5 rounded-lg bg-black/60 border border-white/5 text-zinc-300 break-all select-all font-mono text-[11px]">
+                {evidence.signature}
+              </div>
+            ) : (
+              <div className="p-2.5 rounded-lg bg-black/60 border border-white/5 text-zinc-500 font-sans text-[11px]">
+                Not signed. The scanner does not yet emit a signature, so none is
+                shown. Scores are reproducible by re-running the scanner, not
+                cryptographically attested.
+              </div>
+            )}
           </div>
 
           <div className="flex items-center justify-between pt-2 text-[11px] text-zinc-500 font-sans border-t border-white/5">
@@ -109,12 +103,12 @@ export const VerificationModal: React.FC<VerificationModalProps> = ({
               Scanner Engine: <span className="text-zinc-300 font-mono">{evidence.scannerVersion}</span>
             </div>
             <a
-              href="https://github.com"
+              href="https://github.com/abisheakp197/nti-leaderboard"
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-1 text-emerald-400 hover:underline"
             >
-              Verify on Chain/Registry <ExternalLink className="w-3 h-3" />
+              Reproduce on GitHub <ExternalLink className="w-3 h-3" />
             </a>
           </div>
         </div>

@@ -35,8 +35,9 @@ export const ReproducibilityEngine: React.FC = () => {
         </h2>
 
         <p className="mt-3 text-zinc-400 text-sm md:text-base leading-relaxed max-w-2xl font-sans">
-          Every score on this board is backed by a cryptographic attestation. We don&apos;t guess.
-          We parse the AST and generate offline-verifiable post-quantum attestations.
+          Every score on this board comes from a static scan of a pinned commit.
+          We don&apos;t guess. We parse the AST with an open-source scanner and
+          publish the commit so you can re-run it.
         </p>
 
         {/* Terminal Snippet */}

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import {
   ChevronDown,
   ChevronUp,
@@ -12,6 +13,7 @@ import {
   TrendingUp,
   TrendingDown,
   Minus,
+  ArrowUpRight,
 } from "lucide-react";
 import { LeaderboardEntry, Severity, Status } from "@/types/leaderboard";
 import { VerificationModal } from "./VerificationModal";
@@ -52,6 +54,14 @@ export const LeaderboardTable: React.FC<LeaderboardTableProps> = ({ entries }) =
           <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-rose-400/10 text-rose-400 border border-rose-500/20">
             <span className="w-1.5 h-1.5 rounded-full bg-rose-400" />
             Failing
+          </span>
+        );
+      case "Failing Compliance / Fix Available":
+        return (
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-rose-400/10 text-rose-400 border border-rose-500/20">
+            <span className="w-1.5 h-1.5 rounded-full bg-rose-400" />
+            Failing Compliance
+            <span className="ml-1 text-[10px] text-emerald-400">/ Fix Available</span>
           </span>
         );
       case "Scan Failed":
@@ -144,7 +154,25 @@ export const LeaderboardTable: React.FC<LeaderboardTableProps> = ({ entries }) =
                       </div>
                       <div className="text-xs text-zinc-500 font-mono">
                         {entry.slug}
+                        {entry.coverage && (
+                          <span className="ml-2 text-zinc-600">
+                            {entry.coverage.filesScanned} files /{" "}
+                            {entry.coverage.linesScanned.toLocaleString()} lines
+                          </span>
+                        )}
                       </div>
+                      {entry.fix && (
+                        <a
+                          href={entry.fix.repo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                          className="mt-1 inline-flex items-center gap-1 text-xs text-emerald-400 hover:text-emerald-300 underline decoration-emerald-500/40"
+                        >
+                          {entry.fix.label}
+                          <ArrowUpRight className="w-3 h-3" />
+                        </a>
+                      )}
                     </td>
 
                     {/* Score */}
@@ -208,7 +236,13 @@ export const LeaderboardTable: React.FC<LeaderboardTableProps> = ({ entries }) =
 
                     {/* Last Scanned */}
                     <td className="py-4 px-6 text-right font-mono text-xs text-zinc-400">
-                      {entry.lastScanned}
+                      <Link
+                        href={`/${entry.slug}`}
+                        onClick={(e) => e.stopPropagation()}
+                        className="text-zinc-400 hover:text-emerald-300"
+                      >
+                        {entry.lastScanned}
+                      </Link>
                     </td>
 
                     {/* Verification Action */}
