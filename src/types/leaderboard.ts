@@ -39,6 +39,10 @@ export interface FeatureFix {
 export interface Coverage {
   filesScanned: number;
   linesScanned: number;
+  /** Languages the scanner actually read, e.g. ["python"]. */
+  languages?: string[];
+  /** Set when a score's scope must be disclosed alongside it. */
+  note?: string;
 }
 
 export interface LeaderboardEntry {

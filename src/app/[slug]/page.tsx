@@ -178,6 +178,13 @@ export default async function EntryPage({
           />
         </div>
 
+        {entry.coverage?.note && (
+          <p className="mt-4 rounded-lg border border-amber-500/30 bg-amber-500/5 px-4 py-3 text-xs leading-relaxed text-amber-200/80">
+            <span className="font-semibold text-amber-200">Score scope: </span>
+            {entry.coverage.note}
+          </p>
+        )}
+
         {entry.complianceGaps && entry.complianceGaps.length > 0 && (
           <>
             <h2 className="mt-12 text-lg font-semibold">Compliance gaps</h2>

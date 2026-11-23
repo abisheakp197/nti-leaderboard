@@ -33,6 +33,21 @@ NON_COMPETITIVE = {
     ),
 }
 
+# Scores are only meaningful over code the scanner can parse. When a repo's main
+# implementation is in a language it does not read, say so next to the score
+# rather than presenting a partial scan as a full one.
+SCOPE_NOTES = {
+    "https://github.com/abisheakp197/Neutral-Trust-Infrastructure": (
+        "Scored on the Python SDK and conformance fixtures only. The Rust core "
+        "(ube-foundation/src, ~5.4k lines including merkle.rs and the ML-DSA-87 "
+        "path) is not parsed by this scanner, so this score does not cover it."
+    ),
+}
+
+SCANNED_LANGUAGES = {
+    "https://github.com/abisheakp197/Neutral-Trust-Infrastructure": ["python"],
+}
+
 FIX_MAP = {
     "https://github.com/OpenHands/software-agent-sdk": {
         "repo": "https://github.com/abisheakp197/Openhands---nti",
@@ -177,6 +192,8 @@ def scan_repository(repo_url: str) -> dict:
                 "coverage": {
                     "filesScanned": int(scan_data.get("files_scanned", 0)),
                     "linesScanned": int(scan_data.get("lines_scanned", 0)),
+                    "languages": SCANNED_LANGUAGES.get(repo_url),
+                    "note": SCOPE_NOTES.get(repo_url),
                 },
                 "evidence": {
                     "attestationHash": attestation_hash,

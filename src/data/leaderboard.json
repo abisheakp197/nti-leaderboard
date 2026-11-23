@@ -2176,7 +2176,11 @@
       "commit": "881c0f767fcf143ccffa5492fff28d48bdc5f3f4",
       "coverage": {
         "filesScanned": 6,
-        "linesScanned": 1657
+        "linesScanned": 1657,
+        "languages": [
+          "python"
+        ],
+        "note": "Scored on the Python SDK and conformance fixtures only. The Rust core (ube-foundation/src, ~5.4k lines including merkle.rs and the ML-DSA-87 path) is not parsed by this scanner, so this score does not cover it."
       },
       "evidence": {
         "attestationHash": "sha256:c90e32d2bc82e2aae3cd12b4c3515730d49472270adbe76749af55f805a9b65b",
