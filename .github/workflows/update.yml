@@ -23,10 +23,17 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          # Pinned deliberately: results must be reproducible across machines.
+          # Python 3.11 silently drops files that use 3.12+ grammar (e.g. PEP 695
+          # `type X = ...`) because ast.parse fails, which understates both line
+          # counts and findings. Pin the minor version, not a moving '3.x'.
+          # Keep in lockstep with the scanner version in requirements.txt.
+          python-version: '3.13'
+          cache: pip
+          cache-dependency-path: requirements.txt
 
       - name: Install dependencies
-        run: pip install nti-scanner
+        run: pip install -r requirements.txt
 
       - name: Run data pipeline
         run: python scripts/update_data.py
