@@ -296,7 +296,16 @@ def scan_repository(repo_url: str) -> dict:
             "fix": FIX_MAP.get(repo_url),
             "repoUrl": repo_url,
             "commit": None,
-            "coverage": {"filesScanned": 0, "linesScanned": 0},
+            "coverage": {
+                "filesScanned": 0,
+                "linesScanned": 0,
+                # A failed scan has no language data. Say so, rather than leaving
+                # `note` null, which is what a fully-measured repo looks like.
+                "note": (
+                    f"Not measured: the scan did not complete ({e}), so no "
+                    "language coverage was determined for this entry."
+                ),
+            },
             "evidence": {
                 "attestationHash": attestation_hash,
                 "signature": signature,
