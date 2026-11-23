@@ -124,7 +124,8 @@ export default async function EntryPage({
               <span className="text-lg text-zinc-600">/100</span>
             </div>
             <div className="mt-1 font-mono text-xs text-zinc-500">
-              Grade {entry.grade} · Rank #{entry.rank}
+              Grade {entry.grade} ·{" "}
+              {entry.nonCompetitive ? "Not ranked" : `Rank #${entry.rank}`}
             </div>
           </div>
         </div>

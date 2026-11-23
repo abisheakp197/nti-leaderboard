@@ -1,40 +1,11 @@
 {
   "source": "NTI-Registry",
-  "generatedAt": "2026-11-23T18:37:00Z",
+  "generatedAt": "2026-11-23T18:58:29Z",
   "rubricVersion": "NTI-1.0",
   "entries": [
     {
       "rank": 1,
-      "name": "NTI Reference Implementation",
-      "slug": "neutral-trust-infrastructure",
-      "score": 100,
-      "grade": "A+",
-      "status": "Verified",
-      "lastScanned": "Just now",
-      "trend": null,
-      "fix": null,
-      "repoUrl": "https://github.com/abisheakp197/Neutral-Trust-Infrastructure",
-      "commit": "881c0f767fcf143ccffa5492fff28d48bdc5f3f4",
-      "coverage": {
-        "filesScanned": 6,
-        "linesScanned": 1657
-      },
-      "evidence": {
-        "attestationHash": "sha256:c90e32d2bc82e2aae3cd12b4c3515730d49472270adbe76749af55f805a9b65b",
-        "signature": null,
-        "scannerVersion": "nti-scanner:0.2.2"
-      },
-      "findings": [],
-      "complianceGaps": [],
-      "vulnerabilityCounts": {
-        "critical": 0,
-        "high": 0,
-        "moderate": 0,
-        "low": 0
-      }
-    },
-    {
-      "rank": 2,
+      "nonCompetitive": null,
       "name": "aps-conformance-suite",
       "slug": "aps-conformance-suite",
       "score": 90,
@@ -153,7 +124,8 @@
       }
     },
     {
-      "rank": 3,
+      "rank": 2,
+      "nonCompetitive": null,
       "name": "LangChain",
       "slug": "langchain",
       "score": 86,
@@ -534,7 +506,8 @@
       }
     },
     {
-      "rank": 4,
+      "rank": 3,
+      "nonCompetitive": null,
       "name": "AutoGen",
       "slug": "autogen",
       "score": 85,
@@ -755,7 +728,8 @@
       }
     },
     {
-      "rank": 5,
+      "rank": 4,
+      "nonCompetitive": null,
       "name": "OpenHands SDK",
       "slug": "software-agent-sdk",
       "score": 83,
@@ -1349,7 +1323,8 @@
       }
     },
     {
-      "rank": 6,
+      "rank": 5,
+      "nonCompetitive": null,
       "name": "CrewAI",
       "slug": "crewai",
       "score": 80,
@@ -2182,6 +2157,37 @@
       "vulnerabilityCounts": {
         "critical": 4,
         "high": 67,
+        "moderate": 0,
+        "low": 0
+      }
+    },
+    {
+      "rank": 0,
+      "nonCompetitive": "Reference Implementation (Non-Competitive)",
+      "name": "NTI Reference Implementation",
+      "slug": "neutral-trust-infrastructure",
+      "score": 100,
+      "grade": "A+",
+      "status": "Verified",
+      "lastScanned": "Just now",
+      "trend": null,
+      "fix": null,
+      "repoUrl": "https://github.com/abisheakp197/Neutral-Trust-Infrastructure",
+      "commit": "881c0f767fcf143ccffa5492fff28d48bdc5f3f4",
+      "coverage": {
+        "filesScanned": 6,
+        "linesScanned": 1657
+      },
+      "evidence": {
+        "attestationHash": "sha256:c90e32d2bc82e2aae3cd12b4c3515730d49472270adbe76749af55f805a9b65b",
+        "signature": null,
+        "scannerVersion": "nti-scanner:0.2.2"
+      },
+      "findings": [],
+      "complianceGaps": [],
+      "vulnerabilityCounts": {
+        "critical": 0,
+        "high": 0,
         "moderate": 0,
         "low": 0
       }

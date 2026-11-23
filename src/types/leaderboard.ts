@@ -43,6 +43,8 @@ export interface Coverage {
 
 export interface LeaderboardEntry {
   rank: number;
+  /** Set when the entry is scored but excluded from the competitive ranking. */
+  nonCompetitive?: string | null;
   name: string;
   slug: string;
   score: number;

@@ -139,13 +139,27 @@ export const LeaderboardTable: React.FC<LeaderboardTableProps> = ({ entries }) =
                   >
                     {/* Rank */}
                     <td className="py-4 px-6 font-mono text-zinc-400 font-bold">
-                      #{entry.rank}
+                      {entry.nonCompetitive ? (
+                        <span className="text-zinc-600" title="Scored but not ranked">
+                          —
+                        </span>
+                      ) : (
+                        `#${entry.rank}`
+                      )}
                     </td>
 
                     {/* Name */}
                     <td className="py-4 px-6">
                       <div className="font-semibold text-white group-hover:text-emerald-300 transition-colors flex items-center gap-2">
                         {entry.name}
+                        {entry.nonCompetitive && (
+                          <span
+                            className="text-[10px] px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/20 font-mono whitespace-nowrap"
+                            title="Scored but excluded from the competitive ranking"
+                          >
+                            {entry.nonCompetitive}
+                          </span>
+                        )}
                         {entry.findings.length > 0 && (
                           <span className="text-[10px] px-1.5 py-0.5 rounded bg-zinc-800 text-zinc-400 font-mono">
                             {entry.findings.length} findings

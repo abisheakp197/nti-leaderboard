@@ -24,6 +24,15 @@ NAME_MAP = {
 # leaderboard so a failing score links to a fix instead of dead-ending.
 # Keyed by repo URL; entries are regenerated nightly, so this must live here
 # rather than in leaderboard.json.
+# Scored and displayed, but excluded from the competitive ranking. The scanner's
+# own reference implementation is the calibration target the rules were written
+# against, so ranking it against third-party frameworks is not a fair comparison.
+NON_COMPETITIVE = {
+    "https://github.com/abisheakp197/Neutral-Trust-Infrastructure": (
+        "Reference Implementation (Non-Competitive)"
+    ),
+}
+
 FIX_MAP = {
     "https://github.com/OpenHands/software-agent-sdk": {
         "repo": "https://github.com/abisheakp197/Openhands---nti",
@@ -154,6 +163,7 @@ def scan_repository(repo_url: str) -> dict:
 
             return {
                 "rank": 0,
+                "nonCompetitive": NON_COMPETITIVE.get(repo_url),
                 "name": name,
                 "slug": slug,
                 "score": score,
@@ -188,6 +198,7 @@ def scan_repository(repo_url: str) -> dict:
         scanner_version = "0.2.2"
         return {
             "rank": 0,
+            "nonCompetitive": NON_COMPETITIVE.get(repo_url),
             "name": name,
             "slug": slug,
             "score": 0,
@@ -222,12 +233,20 @@ def main():
 
     all_entries = scanned_entries
 
-    # Sort descending by score
-    all_entries.sort(key=lambda x: x["score"], reverse=True)
+    # Non-competitive entries keep their score but sit outside the ranking, so
+    # they can never occupy the #1 slot.
+    competitive = [e for e in all_entries if not e.get("nonCompetitive")]
+    excluded = [e for e in all_entries if e.get("nonCompetitive")]
 
-    # Assign dynamic rank
-    for rank, entry in enumerate(all_entries, 1):
+    competitive.sort(key=lambda x: x["score"], reverse=True)
+    for rank, entry in enumerate(competitive, 1):
         entry["rank"] = rank
+
+    excluded.sort(key=lambda x: x["score"], reverse=True)
+    for entry in excluded:
+        entry["rank"] = 0
+
+    all_entries = competitive + excluded
 
     output = {
         "source": "NTI-Registry",
