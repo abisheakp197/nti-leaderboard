@@ -1,1 +1,1 @@
-nti-scanner==0.1.1
+nti-scanner==0.2.2

@@ -6,6 +6,16 @@ export interface Finding {
   desc: string;
   file: string;
   line: number;
+  scope?: "production" | "test";
+}
+
+export interface ComplianceGap {
+  rule: string;
+  pillar: string;
+  severity: Severity;
+  desc: string;
+  occurrences: number;
+  remediation: string;
 }
 
 export interface Evidence {
@@ -46,6 +56,8 @@ export interface LeaderboardEntry {
   coverage?: Coverage;
   evidence: Evidence;
   findings: Finding[];
+  complianceGaps?: ComplianceGap[];
+  vulnerabilityCounts?: Record<"critical" | "high" | "moderate" | "low", number>;
 }
 
 export interface LeaderboardData {

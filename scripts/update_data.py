@@ -44,6 +44,17 @@ def get_grade(score: int) -> str:
     else:
         return "F"
 
+GAP_PILLAR = {
+    "NTI-IDENT-001": "Identity",
+    "NTI-PQC-001": "Identity",
+    "NTI-GOV-001": "Governance",
+    "NTI-CAPDIFF-001": "Governance",
+    "NTI-CONS-001": "Consensus",
+    "NTI-AUDIT-001": "Audit",
+    "NTI-PERS-001": "Persistence",
+}
+
+
 def normalize_severity(severity_raw: str) -> str:
     sev = str(severity_raw).lower()
     if sev in ("critical",):
@@ -108,7 +119,7 @@ def scan_repository(repo_url: str) -> dict:
                 status = "Failing Compliance / Fix Available"
             else:
                 status = "Failing"
-            scanner_version = scan_data.get("version", "0.1.1")
+            scanner_version = scan_data.get("version", "0.2.2")
             mapped_findings = []
             for f in scan_data.get("findings", []):
                 file_path = f.get("file", "")
@@ -120,8 +131,26 @@ def scan_repository(repo_url: str) -> dict:
                     "severity": normalize_severity(f.get("severity", "medium")),
                     "desc": f.get("message", f.get("desc", "")),
                     "file": file_path,
-                    "line": int(f.get("line", 1))
+                    "line": int(f.get("line", 1)),
+                    "scope": f.get("scope", "production"),
                 })
+
+            mapped_gaps = []
+            for g in scan_data.get("compliance_gaps", []):
+                gap_file = g.get("file", "")
+                if gap_file.startswith(clone_dir):
+                    gap_file = os.path.relpath(gap_file, clone_dir)
+                mapped_gaps.append({
+                    "rule": g.get("rule_id", ""),
+                    "pillar": GAP_PILLAR.get(g.get("rule_id", ""), g.get("category", "")),
+                    "severity": normalize_severity(g.get("severity", "info")),
+                    "desc": g.get("message", ""),
+                    "occurrences": int(g.get("occurrences", 1)),
+                    "remediation": g.get("remediation", ""),
+                    "file": gap_file,
+                })
+
+            raw_vulns = scan_data.get("vulnerability_counts", {})
 
             return {
                 "rank": 0,
@@ -144,11 +173,19 @@ def scan_repository(repo_url: str) -> dict:
                     "signature": signature,
                     "scannerVersion": f"nti-scanner:{scanner_version}"
                 },
-                "findings": mapped_findings
+                "findings": mapped_findings,
+                "complianceGaps": mapped_gaps,
+                "vulnerabilityCounts": {
+                    "critical": int(raw_vulns.get("critical", 0)),
+                    "high": int(raw_vulns.get("high", 0)),
+                    "moderate": int(raw_vulns.get("medium", 0)),
+                    "low": int(raw_vulns.get("low", 0)),
+                },
             }
 
     except Exception as e:
         print(f"Error scanning {repo_url}: {e}")
+        scanner_version = "0.2.2"
         return {
             "rank": 0,
             "name": name,
@@ -165,7 +202,7 @@ def scan_repository(repo_url: str) -> dict:
             "evidence": {
                 "attestationHash": attestation_hash,
                 "signature": signature,
-                "scannerVersion": "nti-scanner:0.1.1"
+                "scannerVersion": f"nti-scanner:{scanner_version}"
             },
             "findings": []
         }

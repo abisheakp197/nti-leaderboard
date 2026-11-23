@@ -163,7 +163,10 @@ export default async function EntryPage({
         )}
 
         <div className="mt-8 grid sm:grid-cols-3 gap-4">
-          <Stat label="Findings" value={entry.findings.length.toLocaleString()} />
+          <Stat
+            label="Production findings"
+            value={(entry.findings.filter((f) => f.scope !== "test").length).toLocaleString()}
+          />
           <Stat
             label="Files scanned"
             value={(entry.coverage?.filesScanned ?? 0).toLocaleString()}
@@ -174,12 +177,57 @@ export default async function EntryPage({
           />
         </div>
 
+        {entry.complianceGaps && entry.complianceGaps.length > 0 && (
+          <>
+            <h2 className="mt-12 text-lg font-semibold">Compliance gaps</h2>
+            <p className="mt-1 text-xs text-zinc-500">
+              Controls the codebase does not implement. Each gap is counted once
+              per repository, however many files it affects, and lowers the
+              score without being counted as a vulnerability.
+            </p>
+            <div className="mt-4 overflow-hidden rounded-xl border border-white/[0.08]">
+              <table className="w-full text-left text-sm">
+                <thead className="bg-white/[0.03] text-xs uppercase tracking-wider text-zinc-400">
+                  <tr>
+                    <th className="py-3 px-4">Pillar</th>
+                    <th className="py-3 px-4">Gap</th>
+                    <th className="py-3 px-4 text-right">Files affected</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-white/[0.05]">
+                  {entry.complianceGaps.map((gap) => (
+                    <tr key={gap.rule}>
+                      <td className="py-3 px-4 text-xs text-zinc-400">
+                        {gap.pillar}
+                        <div className="mt-0.5 font-mono text-[11px] text-zinc-600">
+                          {gap.rule}
+                        </div>
+                      </td>
+                      <td className="py-3 px-4 text-xs text-zinc-300">
+                        {gap.desc}
+                        {gap.remediation && (
+                          <div className="mt-0.5 text-[11px] text-zinc-500">
+                            {gap.remediation}
+                          </div>
+                        )}
+                      </td>
+                      <td className="py-3 px-4 text-right font-mono text-xs text-zinc-300">
+                        {gap.occurrences}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </>
+        )}
+
         <h2 className="mt-12 text-lg font-semibold">Findings by rule</h2>
         <p className="mt-1 text-xs text-zinc-500">
-          Static pattern matching against the repository as published at scan
-          time. Counts are raw: not weighted, deduplicated, or manually
-          triaged. These are heuristic indicators, not confirmed
-          vulnerabilities, and will include false positives.
+          Production code only; findings under tests, examples, and docs are
+          excluded. Counts are per rule and not manually triaged. These are
+          heuristic indicators, not confirmed vulnerabilities, and will include
+          false positives.
         </p>
         {rules.length === 0 ? (
           <p className="mt-4 text-sm text-zinc-400">No findings recorded.</p>
