@@ -33,20 +33,89 @@ NON_COMPETITIVE = {
     ),
 }
 
-# Scores are only meaningful over code the scanner can parse. When a repo's main
-# implementation is in a language it does not read, say so next to the score
-# rather than presenting a partial scan as a full one.
-SCOPE_NOTES = {
-    "https://github.com/abisheakp197/Neutral-Trust-Infrastructure": (
-        "Scored on the Python SDK and conformance fixtures only. The Rust core "
-        "(ube-foundation/src, ~5.4k lines including merkle.rs and the ML-DSA-87 "
-        "path) is not parsed by this scanner, so this score does not cover it."
-    ),
+# The scanner parses Python and JavaScript/TypeScript. Everything else is
+# counted for coverage but not analysed, so a repo whose bulk is in another
+# language can neither earn nor lose points on that code.
+SCANNED_LANGUAGES = ["python", "javascript", "typescript"]
+LANGUAGE_BY_EXT = {
+    ".py": "python",
+    ".js": "javascript",
+    ".jsx": "javascript",
+    ".mjs": "javascript",
+    ".cjs": "javascript",
+    ".ts": "typescript",
+    ".tsx": "typescript",
+    ".rs": "rust",
+    ".go": "go",
+    ".java": "java",
+    ".rb": "ruby",
+    ".c": "c",
+    ".h": "c",
+    ".cc": "cpp",
+    ".cpp": "cpp",
+    ".hpp": "cpp",
+    ".cs": "csharp",
+    ".swift": "swift",
+    ".kt": "kotlin",
+    ".scala": "scala",
 }
+# Files that are generated, vendored, or build output, and would otherwise
+# dominate a line count without representing reviewed code.
+_SKIP_DIRS = {"node_modules", "target", "dist", "build", "vendor", ".git", "__pycache__"}
 
-SCANNED_LANGUAGES = {
-    "https://github.com/abisheakp197/Neutral-Trust-Infrastructure": ["python"],
-}
+# A dominant unparsed language makes any score a partial one. Named so the
+# threshold is one number in one place rather than a predicate scattered around.
+UNSCANNED_SHARE_THRESHOLD = 0.5
+
+
+def language_breakdown(clone_dir: str) -> dict[str, int]:
+    """Lines per language across tracked-ish source files in a checkout."""
+    counts: dict[str, int] = {}
+    for root, dirs, files in os.walk(clone_dir):
+        dirs[:] = [d for d in dirs if d not in _SKIP_DIRS]
+        for name in files:
+            ext = os.path.splitext(name)[1].lower()
+            language = LANGUAGE_BY_EXT.get(ext)
+            if language is None:
+                continue
+            try:
+                with open(os.path.join(root, name), encoding="utf-8", errors="ignore") as handle:
+                    counts[language] = counts.get(language, 0) + sum(1 for _ in handle)
+            except OSError:
+                continue
+    return counts
+
+
+def scope_note(counts: dict[str, int]) -> tuple[list[str] | None, str | None]:
+    """Return (languages the score covers, note) for a language breakdown.
+
+    The note is only produced when the majority of the code is in a language the
+    scanner cannot parse, because that is the case where a score silently stops
+    describing the codebase it appears to describe.
+    """
+    total = sum(counts.values())
+    if total == 0:
+        return None, None
+
+    scanned = sorted(lang for lang in counts if lang in SCANNED_LANGUAGES)
+    unscanned = {lang: n for lang, n in counts.items() if lang not in SCANNED_LANGUAGES}
+    unscanned_lines = sum(unscanned.values())
+    share = unscanned_lines / total
+
+    if share <= UNSCANNED_SHARE_THRESHOLD:
+        return scanned or None, None
+
+    dominant = max(unscanned, key=lambda lang: unscanned[lang])
+    if scanned:
+        coverage_phrase = f"the {', '.join(scanned)} code only"
+    else:
+        coverage_phrase = "no analysable code, so the score does not reflect this repo"
+    return scanned or None, (
+        f"Partial scan: {share:.0%} of this repo's {total:,} lines are "
+        f"{dominant}, which this scanner cannot parse. The score covers "
+        f"{coverage_phrase} and neither credits nor penalises the {dominant} code."
+    )
+
 
 FIX_MAP = {
     "https://github.com/OpenHands/software-agent-sdk": {
@@ -175,6 +244,7 @@ def scan_repository(repo_url: str) -> dict:
                 })
 
             raw_vulns = scan_data.get("vulnerability_counts", {})
+            scanned_langs, note = scope_note(language_breakdown(clone_dir))
 
             return {
                 "rank": 0,
@@ -192,8 +262,8 @@ def scan_repository(repo_url: str) -> dict:
                 "coverage": {
                     "filesScanned": int(scan_data.get("files_scanned", 0)),
                     "linesScanned": int(scan_data.get("lines_scanned", 0)),
-                    "languages": SCANNED_LANGUAGES.get(repo_url),
-                    "note": SCOPE_NOTES.get(repo_url),
+                    "languages": scanned_langs,
+                    "note": note,
                 },
                 "evidence": {
                     "attestationHash": attestation_hash,

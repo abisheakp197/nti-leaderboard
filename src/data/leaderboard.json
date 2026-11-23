@@ -18,7 +18,9 @@
       "commit": "87256d7911e70c9c676dcab1dd3bef5855ef0866",
       "coverage": {
         "filesScanned": 214,
-        "linesScanned": 44116
+        "linesScanned": 44116,
+        "languages": null,
+        "note": null
       },
       "evidence": {
         "attestationHash": "sha256:f6b8adaa02943d9706061d8943c54726142ed9096bd2f7c8ae8087c3dfb71c26",
@@ -138,7 +140,9 @@
       "commit": "1647f37ec2d491c7a341024403517c255a1bc30c",
       "coverage": {
         "filesScanned": 2665,
-        "linesScanned": 433228
+        "linesScanned": 433228,
+        "languages": null,
+        "note": null
       },
       "evidence": {
         "attestationHash": "sha256:c5a32632e586ab2c7c9c6b0311eaac2477d26a3be132e9c5b7f260a30728c0b7",
@@ -520,7 +524,9 @@
       "commit": "8390985108cb1e3881f5f7297765758d8ad2540c",
       "coverage": {
         "filesScanned": 546,
-        "linesScanned": 112471
+        "linesScanned": 112471,
+        "languages": null,
+        "note": null
       },
       "evidence": {
         "attestationHash": "sha256:d807807ac58742dd264bf1e90085cab2dcab2882313d506f74fcd17dca632abd",
@@ -745,7 +751,9 @@
       "commit": "077f3fad6d31cd852be5c87176e0a93c3b446126",
       "coverage": {
         "filesScanned": 1560,
-        "linesScanned": 483005
+        "linesScanned": 483005,
+        "languages": null,
+        "note": null
       },
       "evidence": {
         "attestationHash": "sha256:b9b2ecfe1b7fca1c8262a131bd50a1b8689f9357e0ea60db3b034581c0270123",
@@ -1337,7 +1345,9 @@
       "commit": "6a5b80c4551a562004f342f46c8d1470627f535f",
       "coverage": {
         "filesScanned": 1547,
-        "linesScanned": 545753
+        "linesScanned": 545753,
+        "languages": null,
+        "note": null
       },
       "evidence": {
         "attestationHash": "sha256:715b6bc81ab4b4ffcee5bb2150989321b00958a3da8b9307fbbd467d19cd4e11",
@@ -2180,7 +2190,7 @@
         "languages": [
           "python"
         ],
-        "note": "Scored on the Python SDK and conformance fixtures only. The Rust core (ube-foundation/src, ~5.4k lines including merkle.rs and the ML-DSA-87 path) is not parsed by this scanner, so this score does not cover it."
+        "note": "Partial scan: 77% of this repo's 7,086 lines are rust, which this scanner cannot parse. The score covers the python code only and neither credits nor penalises the rust code."
       },
       "evidence": {
         "attestationHash": "sha256:c90e32d2bc82e2aae3cd12b4c3515730d49472270adbe76749af55f805a9b65b",
