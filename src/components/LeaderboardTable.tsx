@@ -160,9 +160,9 @@ export const LeaderboardTable: React.FC<LeaderboardTableProps> = ({ entries }) =
                             {entry.nonCompetitive}
                           </span>
                         )}
-                        {entry.findings.length > 0 && (
+                        {entry.findings.some((f) => (f.scope ?? "production") === "production") && (
                           <span className="text-[10px] px-1.5 py-0.5 rounded bg-zinc-800 text-zinc-400 font-mono">
-                            {entry.findings.length} findings
+                            {entry.findings.filter((f) => (f.scope ?? "production") === "production").length} prod findings
                           </span>
                         )}
                       </div>
