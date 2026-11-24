@@ -1,6 +1,6 @@
 {
   "source": "NTI-Registry",
-  "generatedAt": "2026-11-23T18:58:29Z",
+  "generatedAt": "2026-11-24T08:03:30Z",
   "rubricVersion": "NTI-1.0",
   "entries": [
     {
@@ -15,11 +15,15 @@
       "trend": null,
       "fix": null,
       "repoUrl": "https://github.com/Agent-Authority-Conformance/aps-conformance-suite",
-      "commit": "87256d7911e70c9c676dcab1dd3bef5855ef0866",
+      "commit": "fcc74460fc2bc19728e30093e7f03df073cf672a",
       "coverage": {
-        "filesScanned": 214,
-        "linesScanned": 44116,
-        "languages": null,
+        "filesScanned": 217,
+        "linesScanned": 44776,
+        "languages": [
+          "javascript",
+          "python",
+          "typescript"
+        ],
         "note": null
       },
       "evidence": {
@@ -40,6 +44,14 @@
           "rule": "SEC-SSRF-001",
           "severity": "High",
           "desc": "Dynamic URL passed to urllib.request.urlopen()",
+          "file": "candidates/aeoess-relationship-revocation-propagation/harness-r2.2/rp2.py",
+          "line": 65,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-SSRF-001",
+          "severity": "High",
+          "desc": "Dynamic URL passed to urllib.request.urlopen()",
           "file": "candidates/aeoess-relationship-revocation-propagation/harness-r2.2/rp_cond2.py",
           "line": 29,
           "scope": "production"
@@ -48,8 +60,8 @@
           "rule": "SEC-SSRF-001",
           "severity": "High",
           "desc": "Dynamic URL passed to urllib.request.urlopen()",
-          "file": "candidates/aeoess-relationship-revocation-propagation/harness-r2.2/rp2.py",
-          "line": 65,
+          "file": "candidates/aeoess-relationship-revocation-propagation/harness/rp2.py",
+          "line": 57,
           "scope": "production"
         },
         {
@@ -64,8 +76,8 @@
           "rule": "SEC-SSRF-001",
           "severity": "High",
           "desc": "Dynamic URL passed to urllib.request.urlopen()",
-          "file": "candidates/aeoess-relationship-revocation-propagation/harness/rp2.py",
-          "line": 57,
+          "file": "interop/hjs-bb6be62/run-rfc8785-witness.py",
+          "line": 10,
           "scope": "production"
         },
         {
@@ -74,14 +86,6 @@
           "desc": "Direct shell execution via os.popen",
           "file": "interop/cryptovalid-opencore-aps-da95834/run_aps_da95834.py",
           "line": 16,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-SSRF-001",
-          "severity": "High",
-          "desc": "Dynamic URL passed to urllib.request.urlopen()",
-          "file": "interop/hjs-bb6be62/run-rfc8785-witness.py",
-          "line": 10,
           "scope": "production"
         },
         {
@@ -137,11 +141,14 @@
       "trend": null,
       "fix": null,
       "repoUrl": "https://github.com/langchain-ai/langchain",
-      "commit": "1647f37ec2d491c7a341024403517c255a1bc30c",
+      "commit": "fb10639a73d980ce05ea8614a84deaf08d572550",
       "coverage": {
         "filesScanned": 2665,
-        "linesScanned": 433228,
-        "languages": null,
+        "linesScanned": 433489,
+        "languages": [
+          "javascript",
+          "python"
+        ],
         "note": null
       },
       "evidence": {
@@ -150,6 +157,30 @@
         "scannerVersion": "nti-scanner:0.2.2"
       },
       "findings": [
+        {
+          "rule": "SEC-SSRF-001",
+          "severity": "High",
+          "desc": "Dynamic URL passed to requests.get()",
+          "file": "libs/core/langchain_core/runnables/graph_mermaid.py",
+          "line": 501,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-DESER-001",
+          "severity": "Critical",
+          "desc": "Unsafe deserialization via pickle.loads()",
+          "file": "libs/core/tests/unit_tests/test_tools.py",
+          "line": 4742,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-DESER-001",
+          "severity": "Critical",
+          "desc": "Unsafe deserialization via pickle.loads()",
+          "file": "libs/core/tests/unit_tests/test_tools.py",
+          "line": 4745,
+          "scope": "test"
+        },
         {
           "rule": "SEC-CAP-001",
           "severity": "High",
@@ -201,9 +232,9 @@
         {
           "rule": "SEC-CAP-001",
           "severity": "High",
-          "desc": "Tool 'admin_tool' has destructive name.",
-          "file": "libs/langchain_v1/tests/unit_tests/agents/middleware/core/test_tools.py",
-          "line": 177,
+          "desc": "Tool 'delete_file' has destructive name.",
+          "file": "libs/langchain_v1/tests/unit_tests/agents/middleware/implementations/test_auto_mode.py",
+          "line": 90,
           "scope": "test"
         },
         {
@@ -217,9 +248,9 @@
         {
           "rule": "SEC-CAP-001",
           "severity": "High",
-          "desc": "Tool 'delete_file' has destructive name.",
-          "file": "libs/langchain_v1/tests/unit_tests/agents/middleware/implementations/test_auto_mode.py",
-          "line": 90,
+          "desc": "Tool 'admin_tool' has destructive name.",
+          "file": "libs/langchain_v1/tests/unit_tests/agents/middleware/core/test_tools.py",
+          "line": 177,
           "scope": "test"
         },
         {
@@ -234,49 +265,57 @@
           "rule": "SEC-SSRF-001",
           "severity": "High",
           "desc": "Dynamic URL passed to httpx.get()",
-          "file": "libs/standard-tests/langchain_tests/integration_tests/chat_models.py",
-          "line": 175,
+          "file": "libs/model-profiles/langchain_model_profiles/cli.py",
+          "line": 272,
           "scope": "production"
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "Untrusted value interpolated into create() prompt argument.",
+          "file": "libs/partners/openai/langchain_openai/middleware/openai_moderation.py",
+          "line": 421,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "Untrusted value interpolated into create() prompt argument.",
+          "file": "libs/partners/openai/langchain_openai/middleware/openai_moderation.py",
+          "line": 427,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-CAP-001",
+          "severity": "High",
+          "desc": "Tool 'delete_file' has destructive name.",
+          "file": "libs/partners/openai/tests/unit_tests/middleware/test_auto_mode.py",
+          "line": 65,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-CAP-001",
+          "severity": "High",
+          "desc": "Tool 'delete_file' has destructive name.",
+          "file": "libs/partners/openai/tests/integration_tests/middleware/test_auto_mode.py",
+          "line": 72,
+          "scope": "test"
         },
         {
           "rule": "SEC-SSRF-001",
           "severity": "High",
           "desc": "Dynamic URL passed to httpx.get()",
-          "file": "libs/standard-tests/langchain_tests/integration_tests/chat_models.py",
-          "line": 2714,
-          "scope": "production"
+          "file": "libs/partners/openai/tests/integration_tests/chat_models/test_base.py",
+          "line": 787,
+          "scope": "test"
         },
         {
           "rule": "SEC-SSRF-001",
           "severity": "High",
           "desc": "Dynamic URL passed to httpx.get()",
-          "file": "libs/standard-tests/langchain_tests/integration_tests/chat_models.py",
-          "line": 2915,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-DESER-001",
-          "severity": "Critical",
-          "desc": "Unsafe deserialization via pickle.loads()",
-          "file": "libs/core/tests/unit_tests/test_tools.py",
-          "line": 4742,
+          "file": "libs/partners/openai/tests/integration_tests/chat_models/test_base.py",
+          "line": 821,
           "scope": "test"
-        },
-        {
-          "rule": "SEC-DESER-001",
-          "severity": "Critical",
-          "desc": "Unsafe deserialization via pickle.loads()",
-          "file": "libs/core/tests/unit_tests/test_tools.py",
-          "line": 4745,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-SSRF-001",
-          "severity": "High",
-          "desc": "Dynamic URL passed to requests.get()",
-          "file": "libs/core/langchain_core/runnables/graph_mermaid.py",
-          "line": 501,
-          "scope": "production"
         },
         {
           "rule": "SEC-SSRF-001",
@@ -292,14 +331,6 @@
           "desc": "Dynamic URL passed to httpx.get()",
           "file": "libs/partners/anthropic/tests/integration_tests/test_chat_models.py",
           "line": 1430,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-SSRF-001",
-          "severity": "High",
-          "desc": "Dynamic URL passed to requests.get()",
-          "file": "libs/partners/chroma/tests/integration_tests/test_vectorstores.py",
-          "line": 598,
           "scope": "test"
         },
         {
@@ -327,59 +358,51 @@
           "scope": "test"
         },
         {
-          "rule": "SEC-CAP-001",
+          "rule": "SEC-SSRF-001",
           "severity": "High",
-          "desc": "Tool 'delete_file' has destructive name.",
-          "file": "libs/partners/openai/tests/unit_tests/middleware/test_auto_mode.py",
-          "line": 65,
+          "desc": "Dynamic URL passed to requests.get()",
+          "file": "libs/partners/chroma/tests/integration_tests/test_vectorstores.py",
+          "line": 598,
           "scope": "test"
         },
         {
           "rule": "SEC-SSRF-001",
           "severity": "High",
           "desc": "Dynamic URL passed to httpx.get()",
-          "file": "libs/partners/openai/tests/integration_tests/chat_models/test_base.py",
-          "line": 787,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-SSRF-001",
-          "severity": "High",
-          "desc": "Dynamic URL passed to httpx.get()",
-          "file": "libs/partners/openai/tests/integration_tests/chat_models/test_base.py",
-          "line": 821,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-CAP-001",
-          "severity": "High",
-          "desc": "Tool 'delete_file' has destructive name.",
-          "file": "libs/partners/openai/tests/integration_tests/middleware/test_auto_mode.py",
-          "line": 72,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-PROMPT-001",
-          "severity": "High",
-          "desc": "Untrusted value interpolated into create() prompt argument.",
-          "file": "libs/partners/openai/langchain_openai/middleware/openai_moderation.py",
-          "line": 421,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-PROMPT-001",
-          "severity": "High",
-          "desc": "Untrusted value interpolated into create() prompt argument.",
-          "file": "libs/partners/openai/langchain_openai/middleware/openai_moderation.py",
-          "line": 427,
+          "file": "libs/standard-tests/langchain_tests/integration_tests/chat_models.py",
+          "line": 175,
           "scope": "production"
         },
         {
           "rule": "SEC-SSRF-001",
           "severity": "High",
           "desc": "Dynamic URL passed to httpx.get()",
-          "file": "libs/model-profiles/langchain_model_profiles/cli.py",
-          "line": 272,
+          "file": "libs/standard-tests/langchain_tests/integration_tests/chat_models.py",
+          "line": 2714,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-SSRF-001",
+          "severity": "High",
+          "desc": "Dynamic URL passed to httpx.get()",
+          "file": "libs/standard-tests/langchain_tests/integration_tests/chat_models.py",
+          "line": 2915,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "Untrusted value interpolated into create() prompt argument.",
+          "file": "libs/langchain/langchain_classic/chains/moderation.py",
+          "line": 115,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "Untrusted value interpolated into create() prompt argument.",
+          "file": "libs/langchain/langchain_classic/chains/moderation.py",
+          "line": 127,
           "scope": "production"
         },
         {
@@ -404,22 +427,6 @@
           "desc": "SQL statement interpolated into execute() instead of bound parameters.",
           "file": "libs/langchain/langchain_classic/indexes/_sql_record_manager.py",
           "line": 503,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-PROMPT-001",
-          "severity": "High",
-          "desc": "Untrusted value interpolated into create() prompt argument.",
-          "file": "libs/langchain/langchain_classic/chains/moderation.py",
-          "line": 115,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-PROMPT-001",
-          "severity": "High",
-          "desc": "Untrusted value interpolated into create() prompt argument.",
-          "file": "libs/langchain/langchain_classic/chains/moderation.py",
-          "line": 127,
           "scope": "production"
         },
         {
@@ -463,25 +470,25 @@
           "desc": "Agent declared with no cryptographic identity binding in this module.",
           "occurrences": 166,
           "remediation": "Bind each agent to a signing identity and verify it before use.",
-          "file": "libs/langchain_v1/examples/mcp/protocol_eras.py"
+          "file": "libs/core/langchain_core/agents.py"
         },
         {
           "rule": "NTI-GOV-001",
           "pillar": "Governance",
           "severity": "Info",
-          "desc": "6 tool function(s) defined with no capability check in this module.",
+          "desc": "75 tool function(s) defined with no capability check in this module.",
           "occurrences": 66,
           "remediation": "Check an explicit capability grant before each tool invocation.",
-          "file": "libs/langchain_v1/examples/mcp/_servers.py"
+          "file": "libs/core/tests/unit_tests/test_tools.py"
         },
         {
           "rule": "NTI-CAPDIFF-001",
           "pillar": "Governance",
           "severity": "Info",
-          "desc": "6 of 6 tool(s) declared without grant_capability().",
+          "desc": "40 of 40 tool(s) declared without grant_capability().",
           "occurrences": 69,
           "remediation": "Grant an explicit capability for every declared tool.",
-          "file": "libs/langchain_v1/examples/mcp/_servers.py"
+          "file": "libs/core/tests/unit_tests/test_tools.py"
         },
         {
           "rule": "NTI-AUDIT-001",
@@ -525,7 +532,11 @@
       "coverage": {
         "filesScanned": 546,
         "linesScanned": 112471,
-        "languages": null,
+        "languages": [
+          "javascript",
+          "python",
+          "typescript"
+        ],
         "note": null
       },
       "evidence": {
@@ -534,118 +545,6 @@
         "scannerVersion": "nti-scanner:0.2.2"
       },
       "findings": [
-        {
-          "rule": "SEC-SSRF-001",
-          "severity": "High",
-          "desc": "Dynamic URL passed to requests.get()",
-          "file": "python/samples/agentchat_graphrag/app.py",
-          "line": 22,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-MCP-001",
-          "severity": "High",
-          "desc": "MCP client 'fastmcp' constructed without authentication parameters.",
-          "file": "python/packages/autogen-ext/examples/mcp_example_server.py",
-          "line": 10,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-PROMPT-001",
-          "severity": "High",
-          "desc": "Untrusted value interpolated into create() prompt argument.",
-          "file": "python/packages/autogen-ext/src/autogen_ext/agents/azure/_azure_ai_agent.py",
-          "line": 882,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-PROMPT-001",
-          "severity": "High",
-          "desc": "Untrusted value interpolated into create() prompt argument.",
-          "file": "python/packages/autogen-ext/src/autogen_ext/agents/openai/_openai_assistant_agent.py",
-          "line": 538,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-PROMPT-001",
-          "severity": "High",
-          "desc": "Untrusted value interpolated into create() prompt argument.",
-          "file": "python/packages/autogen-ext/src/autogen_ext/tools/azure/_ai_search.py",
-          "line": 188,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-PROMPT-001",
-          "severity": "High",
-          "desc": "Untrusted value interpolated into create() prompt argument.",
-          "file": "python/packages/autogen-ext/src/autogen_ext/tools/azure/_ai_search.py",
-          "line": 206,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-MCP-001",
-          "severity": "High",
-          "desc": "MCP client 'stdio_client' constructed without authentication parameters.",
-          "file": "python/packages/autogen-ext/src/autogen_ext/tools/mcp/_session.py",
-          "line": 23,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-DESER-001",
-          "severity": "Critical",
-          "desc": "Unsafe deserialization via pickle.load()",
-          "file": "python/packages/autogen-ext/src/autogen_ext/experimental/task_centric_memory/_string_similarity_map.py",
-          "line": 48,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-DESER-001",
-          "severity": "Critical",
-          "desc": "Unsafe deserialization via pickle.load()",
-          "file": "python/packages/autogen-ext/src/autogen_ext/experimental/task_centric_memory/_memory_bank.py",
-          "line": 82,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-PROMPT-001",
-          "severity": "High",
-          "desc": "Untrusted value interpolated into create() prompt argument.",
-          "file": "python/packages/agbench/src/agbench/linter/cli.py",
-          "line": 70,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-SSRF-001",
-          "severity": "High",
-          "desc": "Dynamic URL passed to requests.get()",
-          "file": "python/packages/agbench/benchmarks/HumanEval/Scripts/init_tasks.py",
-          "line": 62,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-MCP-001",
-          "severity": "High",
-          "desc": "MCP client 'mcpclient' constructed without authentication parameters.",
-          "file": "python/packages/autogen-studio/tests/mcp/test_mcp_client.py",
-          "line": 142,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-MCP-001",
-          "severity": "High",
-          "desc": "MCP client 'mcpclient' constructed without authentication parameters.",
-          "file": "python/packages/autogen-studio/tests/mcp/test_mcp_integration.py",
-          "line": 43,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-MCP-001",
-          "severity": "High",
-          "desc": "MCP client 'mcpclient' constructed without authentication parameters.",
-          "file": "python/packages/autogen-studio/tests/mcp/test_mcp_websocket.py",
-          "line": 148,
-          "scope": "test"
-        },
         {
           "rule": "SEC-PROMPT-001",
           "severity": "High",
@@ -676,6 +575,118 @@
           "desc": "MCP client 'stdio_client' constructed without authentication parameters.",
           "file": "python/packages/autogen-studio/autogenstudio/web/routes/mcp.py",
           "line": 55,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-MCP-001",
+          "severity": "High",
+          "desc": "MCP client 'mcpclient' constructed without authentication parameters.",
+          "file": "python/packages/autogen-studio/tests/mcp/test_mcp_client.py",
+          "line": 142,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-MCP-001",
+          "severity": "High",
+          "desc": "MCP client 'mcpclient' constructed without authentication parameters.",
+          "file": "python/packages/autogen-studio/tests/mcp/test_mcp_integration.py",
+          "line": 43,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-MCP-001",
+          "severity": "High",
+          "desc": "MCP client 'mcpclient' constructed without authentication parameters.",
+          "file": "python/packages/autogen-studio/tests/mcp/test_mcp_websocket.py",
+          "line": 148,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "Untrusted value interpolated into create() prompt argument.",
+          "file": "python/packages/agbench/src/agbench/linter/cli.py",
+          "line": 70,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-SSRF-001",
+          "severity": "High",
+          "desc": "Dynamic URL passed to requests.get()",
+          "file": "python/packages/agbench/benchmarks/HumanEval/Scripts/init_tasks.py",
+          "line": 62,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-MCP-001",
+          "severity": "High",
+          "desc": "MCP client 'fastmcp' constructed without authentication parameters.",
+          "file": "python/packages/autogen-ext/examples/mcp_example_server.py",
+          "line": 10,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-DESER-001",
+          "severity": "Critical",
+          "desc": "Unsafe deserialization via pickle.load()",
+          "file": "python/packages/autogen-ext/src/autogen_ext/experimental/task_centric_memory/_memory_bank.py",
+          "line": 82,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-DESER-001",
+          "severity": "Critical",
+          "desc": "Unsafe deserialization via pickle.load()",
+          "file": "python/packages/autogen-ext/src/autogen_ext/experimental/task_centric_memory/_string_similarity_map.py",
+          "line": 48,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "Untrusted value interpolated into create() prompt argument.",
+          "file": "python/packages/autogen-ext/src/autogen_ext/tools/azure/_ai_search.py",
+          "line": 188,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "Untrusted value interpolated into create() prompt argument.",
+          "file": "python/packages/autogen-ext/src/autogen_ext/tools/azure/_ai_search.py",
+          "line": 206,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-MCP-001",
+          "severity": "High",
+          "desc": "MCP client 'stdio_client' constructed without authentication parameters.",
+          "file": "python/packages/autogen-ext/src/autogen_ext/tools/mcp/_session.py",
+          "line": 23,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "Untrusted value interpolated into create() prompt argument.",
+          "file": "python/packages/autogen-ext/src/autogen_ext/agents/azure/_azure_ai_agent.py",
+          "line": 882,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "Untrusted value interpolated into create() prompt argument.",
+          "file": "python/packages/autogen-ext/src/autogen_ext/agents/openai/_openai_assistant_agent.py",
+          "line": 538,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-SSRF-001",
+          "severity": "High",
+          "desc": "Dynamic URL passed to requests.get()",
+          "file": "python/samples/agentchat_graphrag/app.py",
+          "line": 22,
           "scope": "production"
         }
       ],
@@ -748,11 +759,15 @@
         "label": "Apache-2.0 NTI wrapper for OpenHands"
       },
       "repoUrl": "https://github.com/OpenHands/software-agent-sdk",
-      "commit": "077f3fad6d31cd852be5c87176e0a93c3b446126",
+      "commit": "0988e976491ff733bc09e976b36a271b0c511530",
       "coverage": {
         "filesScanned": 1560,
-        "linesScanned": 483005,
-        "languages": null,
+        "linesScanned": 483207,
+        "languages": [
+          "javascript",
+          "python",
+          "typescript"
+        ],
         "note": null
       },
       "evidence": {
@@ -765,24 +780,32 @@
           "rule": "SEC-SSRF-001",
           "severity": "High",
           "desc": "Dynamic URL passed to urllib.request.urlopen()",
-          "file": "scripts/auto_close_duplicate_issues.py",
-          "line": 72,
+          "file": "scripts/issue_duplicate_check_openhands.py",
+          "line": 126,
           "scope": "production"
         },
         {
           "rule": "SEC-SSRF-001",
           "severity": "High",
           "desc": "Dynamic URL passed to urllib.request.urlopen()",
-          "file": "scripts/issue_duplicate_check_openhands.py",
-          "line": 126,
+          "file": "scripts/auto_close_duplicate_issues.py",
+          "line": 72,
           "scope": "production"
         },
         {
-          "rule": "SEC-PROMPT-001",
+          "rule": "SEC-MCP-001",
           "severity": "High",
-          "desc": "Untrusted value interpolated into completion() prompt argument.",
-          "file": "examples/01_standalone_sdk/21_generate_extraneous_conversation_costs.py",
-          "line": 73,
+          "desc": "MCP client 'mcpserver' constructed without authentication parameters.",
+          "file": "examples/01_standalone_sdk/10_persistence.py",
+          "line": 43,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-MCP-001",
+          "severity": "High",
+          "desc": "MCP client 'mcpserver' constructed without authentication parameters.",
+          "file": "examples/01_standalone_sdk/13_get_llm_metrics.py",
+          "line": 41,
           "scope": "test"
         },
         {
@@ -802,19 +825,19 @@
           "scope": "test"
         },
         {
-          "rule": "SEC-MCP-001",
+          "rule": "SEC-PROMPT-001",
           "severity": "High",
-          "desc": "MCP client 'mcpserver' constructed without authentication parameters.",
-          "file": "examples/01_standalone_sdk/13_get_llm_metrics.py",
-          "line": 41,
+          "desc": "Untrusted value interpolated into completion() prompt argument.",
+          "file": "examples/01_standalone_sdk/21_generate_extraneous_conversation_costs.py",
+          "line": 73,
           "scope": "test"
         },
         {
-          "rule": "SEC-MCP-001",
-          "severity": "High",
-          "desc": "MCP client 'mcpserver' constructed without authentication parameters.",
-          "file": "examples/01_standalone_sdk/10_persistence.py",
-          "line": 43,
+          "rule": "SEC-CMD-001",
+          "severity": "Critical",
+          "desc": "Direct shell execution via os.system",
+          "file": "examples/01_standalone_sdk/33_hooks/main.py",
+          "line": 46,
           "scope": "test"
         },
         {
@@ -866,12 +889,340 @@
           "scope": "test"
         },
         {
+          "rule": "SEC-MCP-001",
+          "severity": "High",
+          "desc": "MCP client 'mcpserver' constructed without authentication parameters.",
+          "file": "openhands-workspace/openhands/workspace/cloud/workspace.py",
+          "line": 778,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-MCP-001",
+          "severity": "High",
+          "desc": "MCP client 'mcpserver' constructed without authentication parameters.",
+          "file": "tests/agent_server/test_agent_profile_conv_start.py",
+          "line": 882,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-MCP-001",
+          "severity": "High",
+          "desc": "MCP client 'mcpserver' constructed without authentication parameters.",
+          "file": "tests/agent_server/test_launch_parity.py",
+          "line": 65,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-SSRF-001",
+          "severity": "High",
+          "desc": "Dynamic URL passed to httpx.get()",
+          "file": "tests/agent_server/test_mcp_oauth_redirect.py",
+          "line": 85,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-MCP-001",
+          "severity": "High",
+          "desc": "MCP client 'mcpserver' constructed without authentication parameters.",
+          "file": "tests/sdk/subagent/test_subagent_scope.py",
+          "line": 14,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-MCP-001",
+          "severity": "High",
+          "desc": "MCP client 'mcpserver' constructed without authentication parameters.",
+          "file": "tests/sdk/subagent/test_subagent_registry.py",
+          "line": 960,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-MCP-001",
+          "severity": "High",
+          "desc": "MCP client 'mcpserver' constructed without authentication parameters.",
+          "file": "tests/sdk/subagent/test_subagent_schema.py",
+          "line": 380,
+          "scope": "test"
+        },
+        {
           "rule": "SEC-CMD-001",
           "severity": "Critical",
-          "desc": "Direct shell execution via os.system",
-          "file": "examples/01_standalone_sdk/33_hooks/main.py",
-          "line": 46,
+          "desc": "subprocess.Popen called with shell=True",
+          "file": "tests/sdk/hooks/test_executor.py",
+          "line": 423,
           "scope": "test"
+        },
+        {
+          "rule": "SEC-CMD-001",
+          "severity": "Critical",
+          "desc": "subprocess.Popen called with shell=True",
+          "file": "tests/sdk/hooks/test_executor.py",
+          "line": 455,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-CMD-001",
+          "severity": "Critical",
+          "desc": "subprocess.Popen called with shell=True",
+          "file": "tests/sdk/hooks/test_executor.py",
+          "line": 514,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-MCP-001",
+          "severity": "High",
+          "desc": "MCP client 'mcpserver' constructed without authentication parameters.",
+          "file": "tests/sdk/launch/test_field_ownership.py",
+          "line": 287,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-MCP-001",
+          "severity": "High",
+          "desc": "MCP client 'mcpserver' constructed without authentication parameters.",
+          "file": "tests/sdk/launch/test_resolve.py",
+          "line": 34,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-MCP-001",
+          "severity": "High",
+          "desc": "MCP client 'mcpserver' constructed without authentication parameters.",
+          "file": "tests/sdk/plugin/test_plugin_merging.py",
+          "line": 177,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-MCP-001",
+          "severity": "High",
+          "desc": "MCP client 'mcpserver' constructed without authentication parameters.",
+          "file": "tests/sdk/plugin/test_agent_plugins_mcp.py",
+          "line": 602,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-MCP-001",
+          "severity": "High",
+          "desc": "MCP client 'mcpserver' constructed without authentication parameters.",
+          "file": "tests/sdk/conversation/test_local_conversation_mcp.py",
+          "line": 177,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-MCP-001",
+          "severity": "High",
+          "desc": "MCP client 'mcpserver' constructed without authentication parameters.",
+          "file": "tests/sdk/conversation/test_local_conversation_plugins.py",
+          "line": 2077,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-MCP-001",
+          "severity": "High",
+          "desc": "MCP client 'mcpserver' constructed without authentication parameters.",
+          "file": "tests/sdk/conversation/test_base_state_single_source.py",
+          "line": 96,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-CMD-001",
+          "severity": "Critical",
+          "desc": "subprocess.run called with shell=True",
+          "file": "tests/sdk/agent/test_tool_call_compatibility.py",
+          "line": 55,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-CMD-001",
+          "severity": "Critical",
+          "desc": "subprocess.run called with shell=True",
+          "file": "tests/sdk/git/test_git_diff.py",
+          "line": 16,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-CMD-001",
+          "severity": "Critical",
+          "desc": "subprocess.run called with shell=True",
+          "file": "tests/sdk/git/test_git_changes.py",
+          "line": 21,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-CMD-001",
+          "severity": "Critical",
+          "desc": "subprocess.run called with shell=True",
+          "file": "tests/sdk/git/test_git_utils.py",
+          "line": 12,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-CMD-001",
+          "severity": "Critical",
+          "desc": "subprocess.run called with shell=True",
+          "file": "tests/sdk/git/test_git_commits.py",
+          "line": 22,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-MCP-001",
+          "severity": "High",
+          "desc": "MCP client 'fastmcp' constructed without authentication parameters.",
+          "file": "tests/sdk/mcp/test_stateful_mcp.py",
+          "line": 42,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-MCP-001",
+          "severity": "High",
+          "desc": "MCP client 'fastmcp' constructed without authentication parameters.",
+          "file": "tests/sdk/mcp/stdio_test_server.py",
+          "line": 9,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-MCP-001",
+          "severity": "High",
+          "desc": "MCP client 'fastmcp' constructed without authentication parameters.",
+          "file": "tests/sdk/mcp/test_mcp_session_persistence.py",
+          "line": 32,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-MCP-001",
+          "severity": "High",
+          "desc": "MCP client 'fastmcp' constructed without authentication parameters.",
+          "file": "tests/sdk/mcp/test_mcp_tool_list_changed.py",
+          "line": 274,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-MCP-001",
+          "severity": "High",
+          "desc": "MCP client 'fastmcp' constructed without authentication parameters.",
+          "file": "tests/sdk/mcp/test_create_mcp_tool.py",
+          "line": 821,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-MCP-001",
+          "severity": "High",
+          "desc": "MCP client 'mcpserver' constructed without authentication parameters.",
+          "file": "tests/tools/task/test_mcp_inheritance.py",
+          "line": 93,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-MCP-001",
+          "severity": "High",
+          "desc": "MCP client 'fastmcp' constructed without authentication parameters.",
+          "file": "tests/tools/task/mcp_echo_server.py",
+          "line": 20,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-MCP-001",
+          "severity": "High",
+          "desc": "MCP client 'mcpserver' constructed without authentication parameters.",
+          "file": "tests/tools/task/test_sub_agent_scope.py",
+          "line": 50,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-SSRF-001",
+          "severity": "High",
+          "desc": "Dynamic URL passed to urllib.request.urlopen()",
+          "file": "tests/tools/browser_use/test_browser_executor_e2e.py",
+          "line": 143,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-MCP-001",
+          "severity": "High",
+          "desc": "MCP client 'mcpserver' constructed without authentication parameters.",
+          "file": "tests/agent_server/docker_runtime/test_mediation.py",
+          "line": 164,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "Untrusted value interpolated into generate() prompt argument.",
+          "file": "openhands-sdk/openhands/sdk/llm/cleanup_profile.py",
+          "line": 131,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-CMD-001",
+          "severity": "Critical",
+          "desc": "subprocess.run called with shell=True",
+          "file": "openhands-sdk/openhands/sdk/skills/execute.py",
+          "line": 66,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-SSRF-001",
+          "severity": "High",
+          "desc": "Dynamic URL passed to httpx.get()",
+          "file": "openhands-sdk/openhands/sdk/secret/secrets.py",
+          "line": 139,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-CMD-001",
+          "severity": "Critical",
+          "desc": "subprocess.Popen called with shell=True",
+          "file": "openhands-sdk/openhands/sdk/hooks/executor.py",
+          "line": 518,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-CMD-001",
+          "severity": "Critical",
+          "desc": "subprocess.Popen called with shell=True",
+          "file": "openhands-sdk/openhands/sdk/hooks/executor.py",
+          "line": 558,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "Untrusted value interpolated into completion() prompt argument.",
+          "file": "openhands-sdk/openhands/sdk/conversation/resolution.py",
+          "line": 315,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-MCP-001",
+          "severity": "High",
+          "desc": "MCP client 'mcpclient' constructed without authentication parameters.",
+          "file": "openhands-sdk/openhands/sdk/mcp/utils.py",
+          "line": 441,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "Untrusted value interpolated into completion() prompt argument.",
+          "file": "openhands-sdk/openhands/sdk/conversation/goal/judge.py",
+          "line": 71,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-PATH-001",
+          "severity": "High",
+          "desc": "Concatenated path passed to remove()",
+          "file": "openhands-sdk/openhands/sdk/context/view/properties/tool_call_matching.py",
+          "line": 93,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-PATH-001",
+          "severity": "High",
+          "desc": "Concatenated path passed to remove()",
+          "file": "openhands-sdk/openhands/sdk/context/view/properties/batch_atomicity.py",
+          "line": 74,
+          "scope": "production"
         },
         {
           "rule": "SEC-PROMPT-001",
@@ -906,254 +1257,6 @@
           "scope": "production"
         },
         {
-          "rule": "SEC-MCP-001",
-          "severity": "High",
-          "desc": "MCP client 'mcpserver' constructed without authentication parameters.",
-          "file": "tests/agent_server/test_launch_parity.py",
-          "line": 65,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-SSRF-001",
-          "severity": "High",
-          "desc": "Dynamic URL passed to httpx.get()",
-          "file": "tests/agent_server/test_mcp_oauth_redirect.py",
-          "line": 85,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-MCP-001",
-          "severity": "High",
-          "desc": "MCP client 'mcpserver' constructed without authentication parameters.",
-          "file": "tests/agent_server/test_agent_profile_conv_start.py",
-          "line": 882,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-MCP-001",
-          "severity": "High",
-          "desc": "MCP client 'fastmcp' constructed without authentication parameters.",
-          "file": "tests/tools/task/mcp_echo_server.py",
-          "line": 20,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-MCP-001",
-          "severity": "High",
-          "desc": "MCP client 'mcpserver' constructed without authentication parameters.",
-          "file": "tests/tools/task/test_mcp_inheritance.py",
-          "line": 93,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-MCP-001",
-          "severity": "High",
-          "desc": "MCP client 'mcpserver' constructed without authentication parameters.",
-          "file": "tests/tools/task/test_sub_agent_scope.py",
-          "line": 50,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-SSRF-001",
-          "severity": "High",
-          "desc": "Dynamic URL passed to urllib.request.urlopen()",
-          "file": "tests/tools/browser_use/test_browser_executor_e2e.py",
-          "line": 143,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-MCP-001",
-          "severity": "High",
-          "desc": "MCP client 'mcpserver' constructed without authentication parameters.",
-          "file": "tests/agent_server/docker_runtime/test_mediation.py",
-          "line": 164,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-CMD-001",
-          "severity": "Critical",
-          "desc": "subprocess.Popen called with shell=True",
-          "file": "tests/sdk/hooks/test_executor.py",
-          "line": 423,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-CMD-001",
-          "severity": "Critical",
-          "desc": "subprocess.Popen called with shell=True",
-          "file": "tests/sdk/hooks/test_executor.py",
-          "line": 455,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-CMD-001",
-          "severity": "Critical",
-          "desc": "subprocess.Popen called with shell=True",
-          "file": "tests/sdk/hooks/test_executor.py",
-          "line": 514,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-MCP-001",
-          "severity": "High",
-          "desc": "MCP client 'mcpserver' constructed without authentication parameters.",
-          "file": "tests/sdk/conversation/test_local_conversation_mcp.py",
-          "line": 177,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-MCP-001",
-          "severity": "High",
-          "desc": "MCP client 'mcpserver' constructed without authentication parameters.",
-          "file": "tests/sdk/conversation/test_base_state_single_source.py",
-          "line": 96,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-MCP-001",
-          "severity": "High",
-          "desc": "MCP client 'mcpserver' constructed without authentication parameters.",
-          "file": "tests/sdk/conversation/test_local_conversation_plugins.py",
-          "line": 2077,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-MCP-001",
-          "severity": "High",
-          "desc": "MCP client 'fastmcp' constructed without authentication parameters.",
-          "file": "tests/sdk/mcp/test_create_mcp_tool.py",
-          "line": 821,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-MCP-001",
-          "severity": "High",
-          "desc": "MCP client 'fastmcp' constructed without authentication parameters.",
-          "file": "tests/sdk/mcp/stdio_test_server.py",
-          "line": 9,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-MCP-001",
-          "severity": "High",
-          "desc": "MCP client 'fastmcp' constructed without authentication parameters.",
-          "file": "tests/sdk/mcp/test_mcp_session_persistence.py",
-          "line": 32,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-MCP-001",
-          "severity": "High",
-          "desc": "MCP client 'fastmcp' constructed without authentication parameters.",
-          "file": "tests/sdk/mcp/test_stateful_mcp.py",
-          "line": 42,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-MCP-001",
-          "severity": "High",
-          "desc": "MCP client 'fastmcp' constructed without authentication parameters.",
-          "file": "tests/sdk/mcp/test_mcp_tool_list_changed.py",
-          "line": 274,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-MCP-001",
-          "severity": "High",
-          "desc": "MCP client 'mcpserver' constructed without authentication parameters.",
-          "file": "tests/sdk/launch/test_field_ownership.py",
-          "line": 287,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-MCP-001",
-          "severity": "High",
-          "desc": "MCP client 'mcpserver' constructed without authentication parameters.",
-          "file": "tests/sdk/launch/test_resolve.py",
-          "line": 34,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-CMD-001",
-          "severity": "Critical",
-          "desc": "subprocess.run called with shell=True",
-          "file": "tests/sdk/agent/test_tool_call_compatibility.py",
-          "line": 55,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-CMD-001",
-          "severity": "Critical",
-          "desc": "subprocess.run called with shell=True",
-          "file": "tests/sdk/git/test_git_changes.py",
-          "line": 21,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-CMD-001",
-          "severity": "Critical",
-          "desc": "subprocess.run called with shell=True",
-          "file": "tests/sdk/git/test_git_commits.py",
-          "line": 22,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-CMD-001",
-          "severity": "Critical",
-          "desc": "subprocess.run called with shell=True",
-          "file": "tests/sdk/git/test_git_utils.py",
-          "line": 12,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-CMD-001",
-          "severity": "Critical",
-          "desc": "subprocess.run called with shell=True",
-          "file": "tests/sdk/git/test_git_diff.py",
-          "line": 16,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-MCP-001",
-          "severity": "High",
-          "desc": "MCP client 'mcpserver' constructed without authentication parameters.",
-          "file": "tests/sdk/subagent/test_subagent_registry.py",
-          "line": 960,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-MCP-001",
-          "severity": "High",
-          "desc": "MCP client 'mcpserver' constructed without authentication parameters.",
-          "file": "tests/sdk/subagent/test_subagent_schema.py",
-          "line": 380,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-MCP-001",
-          "severity": "High",
-          "desc": "MCP client 'mcpserver' constructed without authentication parameters.",
-          "file": "tests/sdk/subagent/test_subagent_scope.py",
-          "line": 14,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-MCP-001",
-          "severity": "High",
-          "desc": "MCP client 'mcpserver' constructed without authentication parameters.",
-          "file": "tests/sdk/plugin/test_plugin_merging.py",
-          "line": 177,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-MCP-001",
-          "severity": "High",
-          "desc": "MCP client 'mcpserver' constructed without authentication parameters.",
-          "file": "tests/sdk/plugin/test_agent_plugins_mcp.py",
-          "line": 602,
-          "scope": "test"
-        },
-        {
           "rule": "SEC-SSRF-001",
           "severity": "High",
           "desc": "Dynamic URL passed to httpx.post()",
@@ -1168,94 +1271,6 @@
           "file": "openhands-agent-server/openhands/agent_server/canvas_extensions/backend.py",
           "line": 711,
           "scope": "production"
-        },
-        {
-          "rule": "SEC-MCP-001",
-          "severity": "High",
-          "desc": "MCP client 'mcpserver' constructed without authentication parameters.",
-          "file": "openhands-workspace/openhands/workspace/cloud/workspace.py",
-          "line": 778,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-CMD-001",
-          "severity": "Critical",
-          "desc": "subprocess.Popen called with shell=True",
-          "file": "openhands-sdk/openhands/sdk/hooks/executor.py",
-          "line": 518,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-CMD-001",
-          "severity": "Critical",
-          "desc": "subprocess.Popen called with shell=True",
-          "file": "openhands-sdk/openhands/sdk/hooks/executor.py",
-          "line": 558,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-PROMPT-001",
-          "severity": "High",
-          "desc": "Untrusted value interpolated into generate() prompt argument.",
-          "file": "openhands-sdk/openhands/sdk/llm/cleanup_profile.py",
-          "line": 131,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-PROMPT-001",
-          "severity": "High",
-          "desc": "Untrusted value interpolated into completion() prompt argument.",
-          "file": "openhands-sdk/openhands/sdk/conversation/resolution.py",
-          "line": 315,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-MCP-001",
-          "severity": "High",
-          "desc": "MCP client 'mcpclient' constructed without authentication parameters.",
-          "file": "openhands-sdk/openhands/sdk/mcp/utils.py",
-          "line": 441,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-CMD-001",
-          "severity": "Critical",
-          "desc": "subprocess.run called with shell=True",
-          "file": "openhands-sdk/openhands/sdk/skills/execute.py",
-          "line": 66,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-SSRF-001",
-          "severity": "High",
-          "desc": "Dynamic URL passed to httpx.get()",
-          "file": "openhands-sdk/openhands/sdk/secret/secrets.py",
-          "line": 139,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-PATH-001",
-          "severity": "High",
-          "desc": "Concatenated path passed to remove()",
-          "file": "openhands-sdk/openhands/sdk/context/view/properties/tool_call_matching.py",
-          "line": 93,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-PATH-001",
-          "severity": "High",
-          "desc": "Concatenated path passed to remove()",
-          "file": "openhands-sdk/openhands/sdk/context/view/properties/batch_atomicity.py",
-          "line": 74,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-PROMPT-001",
-          "severity": "High",
-          "desc": "Untrusted value interpolated into completion() prompt argument.",
-          "file": "openhands-sdk/openhands/sdk/conversation/goal/judge.py",
-          "line": 71,
-          "scope": "production"
         }
       ],
       "complianceGaps": [
@@ -1266,7 +1281,7 @@
           "desc": "Agent declared with no cryptographic identity binding in this module.",
           "occurrences": 414,
           "remediation": "Bind each agent to a signing identity and verify it before use.",
-          "file": "scripts/check_import_rules.py"
+          "file": "tests/conftest.py"
         },
         {
           "rule": "NTI-AUDIT-001",
@@ -1293,7 +1308,7 @@
           "desc": "Multi-agent system (2 agents) with no consensus or arbitration step.",
           "occurrences": 109,
           "remediation": "Add an explicit arbitration step for conflicting agent outputs.",
-          "file": "examples/01_standalone_sdk/55_persistent_memory.py"
+          "file": "examples/01_standalone_sdk/52_dynamic_workflow.py"
         },
         {
           "rule": "NTI-GOV-001",
@@ -1342,11 +1357,14 @@
       "trend": null,
       "fix": null,
       "repoUrl": "https://github.com/crewAIInc/crewAI",
-      "commit": "6a5b80c4551a562004f342f46c8d1470627f535f",
+      "commit": "29311aeb08c5ec0079d95d1fad05f3b227518f52",
       "coverage": {
         "filesScanned": 1547,
-        "linesScanned": 545753,
-        "languages": null,
+        "linesScanned": 545939,
+        "languages": [
+          "javascript",
+          "python"
+        ],
         "note": null
       },
       "evidence": {
@@ -1356,467 +1374,51 @@
       },
       "findings": [
         {
-          "rule": "SEC-A2A-001",
+          "rule": "SEC-SSRF-001",
           "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/tests/test_artifacts.py",
-          "line": 0,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-A2A-001",
-          "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/src/crewai/__init__.py",
-          "line": 0,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-MCP-001",
-          "severity": "High",
-          "desc": "MCP client 'mcpclient' constructed without authentication parameters.",
-          "file": "lib/crewai/src/crewai/mcp/tool_resolver.py",
-          "line": 354,
+          "desc": "Dynamic URL passed to httpx.get()",
+          "file": "lib/crewai-files/src/crewai_files/core/sources.py",
+          "line": 534,
           "scope": "production"
         },
         {
           "rule": "SEC-SSRF-001",
           "severity": "High",
           "desc": "Dynamic URL passed to httpx.get()",
-          "file": "lib/crewai/src/crewai/skills/registry.py",
-          "line": 365,
+          "file": "lib/cli/src/crewai_cli/model_catalog.py",
+          "line": 551,
           "scope": "production"
-        },
-        {
-          "rule": "SEC-MCP-001",
-          "severity": "High",
-          "desc": "MCP client 'streamablehttp_client' constructed without authentication parameters.",
-          "file": "lib/crewai/src/crewai/tools/mcp_tool_wrapper.py",
-          "line": 173,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-A2A-001",
-          "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/src/crewai/agent/core.py",
-          "line": 0,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-DESER-001",
-          "severity": "Critical",
-          "desc": "Unsafe deserialization via pickle.load()",
-          "file": "lib/crewai/src/crewai/utilities/file_handler.py",
-          "line": 167,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-A2A-001",
-          "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/src/crewai/a2a/__init__.py",
-          "line": 0,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-A2A-001",
-          "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/src/crewai/a2a/errors.py",
-          "line": 0,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-A2A-001",
-          "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/src/crewai/a2a/types.py",
-          "line": 0,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-A2A-001",
-          "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/src/crewai/a2a/task_helpers.py",
-          "line": 0,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-A2A-001",
-          "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/src/crewai/a2a/wrapper.py",
-          "line": 0,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-A2A-001",
-          "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/src/crewai/a2a/config.py",
-          "line": 0,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-A2A-001",
-          "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/src/crewai/a2a/extensions/server.py",
-          "line": 0,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-A2A-001",
-          "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/src/crewai/a2a/extensions/__init__.py",
-          "line": 0,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-A2A-001",
-          "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/src/crewai/a2a/extensions/base.py",
-          "line": 0,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-A2A-001",
-          "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/src/crewai/a2a/extensions/registry.py",
-          "line": 0,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-A2A-001",
-          "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/src/crewai/a2a/auth/__init__.py",
-          "line": 0,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-A2A-001",
-          "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/src/crewai/a2a/auth/server_schemes.py",
-          "line": 0,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-A2A-001",
-          "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/src/crewai/a2a/auth/schemas.py",
-          "line": 0,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-A2A-001",
-          "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/src/crewai/a2a/auth/utils.py",
-          "line": 0,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-A2A-001",
-          "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/src/crewai/a2a/updates/__init__.py",
-          "line": 0,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-A2A-001",
-          "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/src/crewai/a2a/updates/base.py",
-          "line": 0,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-A2A-001",
-          "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/src/crewai/a2a/utils/response_model.py",
-          "line": 0,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-A2A-001",
-          "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/src/crewai/a2a/utils/content_type.py",
-          "line": 0,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-PROMPT-001",
-          "severity": "High",
-          "desc": "Untrusted value interpolated into execute() prompt argument.",
-          "file": "lib/crewai/src/crewai/a2a/utils/delegation.py",
-          "line": 644,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-A2A-001",
-          "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/src/crewai/a2a/utils/task.py",
-          "line": 0,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-A2A-001",
-          "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/src/crewai/a2a/utils/transport.py",
-          "line": 0,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-A2A-001",
-          "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/src/crewai/a2a/updates/polling/handler.py",
-          "line": 0,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-A2A-001",
-          "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/src/crewai/a2a/updates/streaming/handler.py",
-          "line": 0,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-A2A-001",
-          "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/src/crewai/a2a/updates/streaming/params.py",
-          "line": 0,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-A2A-001",
-          "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/src/crewai/a2a/updates/push_notifications/handler.py",
-          "line": 0,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-A2A-001",
-          "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/src/crewai/a2a/extensions/a2ui/__init__.py",
-          "line": 0,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-A2A-001",
-          "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/src/crewai/a2a/extensions/a2ui/client_extension.py",
-          "line": 0,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-A2A-001",
-          "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/src/crewai/a2a/extensions/a2ui/server_extension.py",
-          "line": 0,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-A2A-001",
-          "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/src/crewai/a2a/extensions/a2ui/prompt.py",
-          "line": 0,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-A2A-001",
-          "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/src/crewai/a2a/extensions/a2ui/validator.py",
-          "line": 0,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-SQL-001",
-          "severity": "Critical",
-          "desc": "SQL statement interpolated into execute() instead of bound parameters.",
-          "file": "lib/crewai/src/crewai/memory/storage/kickoff_task_outputs_storage.py",
-          "line": 163,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-A2A-001",
-          "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/src/crewai/agent/internal/meta.py",
-          "line": 0,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-MCP-001",
-          "severity": "High",
-          "desc": "MCP client 'stdio_client' constructed without authentication parameters.",
-          "file": "lib/crewai/src/crewai/mcp/transports/stdio.py",
-          "line": 97,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-MCP-001",
-          "severity": "High",
-          "desc": "MCP client 'mcpclient' constructed without authentication parameters.",
-          "file": "lib/crewai/tests/mcp/test_client_server_info.py",
-          "line": 11,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-MCP-001",
-          "severity": "High",
-          "desc": "MCP client 'mcpclient' constructed without authentication parameters.",
-          "file": "lib/crewai/tests/mcp/test_client_tool_execution_auth.py",
-          "line": 39,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-MCP-001",
-          "severity": "High",
-          "desc": "MCP client 'mcpclient' constructed without authentication parameters.",
-          "file": "lib/crewai/tests/mcp/test_tool_result_content.py",
-          "line": 40,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-MCP-001",
-          "severity": "High",
-          "desc": "MCP client 'mcpclient' constructed without authentication parameters.",
-          "file": "lib/crewai/tests/mcp/test_client_connect_auth.py",
-          "line": 59,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-CAP-001",
-          "severity": "High",
-          "desc": "Tool 'execute_code' has destructive name.",
-          "file": "lib/crewai/tests/tools/test_base_tool.py",
-          "line": 339,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-CAP-001",
-          "severity": "High",
-          "desc": "Tool 'execute_code' has destructive name.",
-          "file": "lib/crewai/tests/tools/test_base_tool.py",
-          "line": 349,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-CAP-001",
-          "severity": "High",
-          "desc": "Tool 'async_execute' has destructive name.",
-          "file": "lib/crewai/tests/tools/test_base_tool.py",
-          "line": 693,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-CAP-001",
-          "severity": "High",
-          "desc": "Tool 'async_execute' has destructive name.",
-          "file": "lib/crewai/tests/tools/test_base_tool.py",
-          "line": 704,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-A2A-001",
-          "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/tests/agents/test_agent_a2a_wrapping.py",
-          "line": 0,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-A2A-001",
-          "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/tests/agents/test_a2a_trust_completion_status.py",
-          "line": 0,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-A2A-001",
-          "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/tests/agents/test_agent_spreadsheets.py",
-          "line": 0,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-A2A-001",
-          "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/tests/agents/test_agent_a2a_kickoff.py",
-          "line": 0,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-A2A-001",
-          "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/tests/a2a/test_server_schemes.py",
-          "line": 0,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-A2A-001",
-          "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/tests/a2a/test_a2a_integration.py",
-          "line": 0,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-A2A-001",
-          "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/tests/a2a/extensions/test_a2ui_schema_conformance.py",
-          "line": 0,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-A2A-001",
-          "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/tests/a2a/utils/test_task.py",
-          "line": 0,
-          "scope": "test"
-        },
-        {
-          "rule": "SEC-A2A-001",
-          "severity": "High",
-          "desc": "A2A communication without identity verification.",
-          "file": "lib/crewai/tests/a2a/utils/test_agent_card.py",
-          "line": 0,
-          "scope": "test"
         },
         {
           "rule": "SEC-SSRF-001",
           "severity": "High",
-          "desc": "Dynamic URL passed to requests.get()",
-          "file": "lib/crewai-tools/src/crewai_tools/adapters/enterprise_adapter.py",
-          "line": 299,
+          "desc": "Dynamic URL passed to httpx.get()",
+          "file": "lib/cli/src/crewai_cli/skills/main.py",
+          "line": 176,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-SSRF-001",
+          "severity": "High",
+          "desc": "Dynamic URL passed to httpx.get()",
+          "file": "lib/cli/src/crewai_cli/remote_template/main.py",
+          "line": 210,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-SSRF-001",
+          "severity": "High",
+          "desc": "Dynamic URL passed to httpx.get()",
+          "file": "lib/cli/src/crewai_cli/remote_template/main.py",
+          "line": 166,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-SSRF-001",
+          "severity": "High",
+          "desc": "Dynamic URL passed to httpx.get()",
+          "file": "lib/cli/src/crewai_cli/enterprise/main.py",
+          "line": 50,
           "scope": "production"
         },
         {
@@ -1830,9 +1432,89 @@
         {
           "rule": "SEC-SSRF-001",
           "severity": "High",
+          "desc": "Dynamic URL passed to requests.get()",
+          "file": "lib/crewai-tools/src/crewai_tools/adapters/enterprise_adapter.py",
+          "line": 299,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "Untrusted value interpolated into create() prompt argument.",
+          "file": "lib/crewai-tools/src/crewai_tools/tools/contextualai_query_tool/contextual_query_tool.py",
+          "line": 99,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-SSRF-001",
+          "severity": "High",
+          "desc": "Dynamic URL passed to requests.get()",
+          "file": "lib/crewai-tools/src/crewai_tools/tools/contextualai_query_tool/contextual_query_tool.py",
+          "line": 49,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "Untrusted value interpolated into create() prompt argument.",
+          "file": "lib/crewai-tools/src/crewai_tools/tools/ai_mind_tool/ai_mind_tool.py",
+          "line": 93,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-SSRF-001",
+          "severity": "High",
+          "desc": "Dynamic URL passed to urllib.request.urlopen()",
+          "file": "lib/crewai-tools/src/crewai_tools/tools/arxiv_paper_tool/arxiv_paper_tool.py",
+          "line": 85,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-SSRF-001",
+          "severity": "High",
           "desc": "Dynamic URL passed to requests.post()",
-          "file": "lib/crewai-tools/src/crewai_tools/tools/contextualai_rerank_tool/contextual_rerank_tool.py",
-          "line": 69,
+          "file": "lib/crewai-tools/src/crewai_tools/tools/brightdata_tool/brightdata_serp.py",
+          "line": 224,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-SSRF-001",
+          "severity": "High",
+          "desc": "Dynamic URL passed to requests.post()",
+          "file": "lib/crewai-tools/src/crewai_tools/tools/brightdata_tool/brightdata_unlocker.py",
+          "line": 141,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-SSRF-001",
+          "severity": "High",
+          "desc": "Dynamic URL passed to requests.get()",
+          "file": "lib/crewai-tools/src/crewai_tools/tools/brave_search_tool/brave_search_tool.py",
+          "line": 133,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-SSRF-001",
+          "severity": "High",
+          "desc": "Dynamic URL passed to requests.get()",
+          "file": "lib/crewai-tools/src/crewai_tools/tools/brave_search_tool/base.py",
+          "line": 190,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-SSRF-001",
+          "severity": "High",
+          "desc": "Dynamic URL passed to requests.get()",
+          "file": "lib/crewai-tools/src/crewai_tools/tools/crewai_platform_tools/integrations_client.py",
+          "line": 156,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "Untrusted value interpolated into create() prompt argument.",
+          "file": "lib/crewai-tools/src/crewai_tools/tools/qdrant_vector_search_tool/qdrant_search_tool.py",
+          "line": 112,
           "scope": "production"
         },
         {
@@ -1841,6 +1523,62 @@
           "desc": "Dynamic URL passed to requests.post()",
           "file": "lib/crewai-tools/src/crewai_tools/tools/parallel_tools/parallel_search_tool.py",
           "line": 104,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-SSRF-001",
+          "severity": "High",
+          "desc": "Dynamic URL passed to requests.post()",
+          "file": "lib/crewai-tools/src/crewai_tools/tools/merge_agent_handler_tool/merge_agent_handler_tool.py",
+          "line": 97,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-SQL-001",
+          "severity": "Critical",
+          "desc": "SQL statement interpolated into execute() instead of bound parameters.",
+          "file": "lib/crewai-tools/src/crewai_tools/tools/oracle_vector_search_tool/vector_search.py",
+          "line": 614,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-SQL-001",
+          "severity": "Critical",
+          "desc": "SQL statement interpolated into execute() instead of bound parameters.",
+          "file": "lib/crewai-tools/src/crewai_tools/tools/oracle_vector_search_tool/vector_search.py",
+          "line": 851,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-SSRF-001",
+          "severity": "High",
+          "desc": "Dynamic URL passed to requests.post()",
+          "file": "lib/crewai-tools/src/crewai_tools/tools/serper_scrape_website_tool/serper_scrape_website_tool.py",
+          "line": 59,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-SSRF-001",
+          "severity": "High",
+          "desc": "Dynamic URL passed to requests.post()",
+          "file": "lib/crewai-tools/src/crewai_tools/tools/serper_dev_tool/serper_dev_tool.py",
+          "line": 257,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-SSRF-001",
+          "severity": "High",
+          "desc": "Dynamic URL passed to requests.post()",
+          "file": "lib/crewai-tools/src/crewai_tools/tools/patronus_eval_tool/patronus_eval_tool.py",
+          "line": 145,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-SSRF-001",
+          "severity": "High",
+          "desc": "Dynamic URL passed to requests.post()",
+          "file": "lib/crewai-tools/src/crewai_tools/tools/patronus_eval_tool/patronus_predefined_criteria_eval_tool.py",
+          "line": 95,
           "scope": "production"
         },
         {
@@ -1870,102 +1608,6 @@
         {
           "rule": "SEC-SSRF-001",
           "severity": "High",
-          "desc": "Dynamic URL passed to requests.post()",
-          "file": "lib/crewai-tools/src/crewai_tools/tools/patronus_eval_tool/patronus_predefined_criteria_eval_tool.py",
-          "line": 95,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-SSRF-001",
-          "severity": "High",
-          "desc": "Dynamic URL passed to requests.post()",
-          "file": "lib/crewai-tools/src/crewai_tools/tools/patronus_eval_tool/patronus_eval_tool.py",
-          "line": 145,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-PROMPT-001",
-          "severity": "High",
-          "desc": "Untrusted value interpolated into create() prompt argument.",
-          "file": "lib/crewai-tools/src/crewai_tools/tools/contextualai_query_tool/contextual_query_tool.py",
-          "line": 99,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-SSRF-001",
-          "severity": "High",
-          "desc": "Dynamic URL passed to requests.get()",
-          "file": "lib/crewai-tools/src/crewai_tools/tools/contextualai_query_tool/contextual_query_tool.py",
-          "line": 49,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-SSRF-001",
-          "severity": "High",
-          "desc": "Dynamic URL passed to requests.post()",
-          "file": "lib/crewai-tools/src/crewai_tools/tools/serper_dev_tool/serper_dev_tool.py",
-          "line": 257,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-SSRF-001",
-          "severity": "High",
-          "desc": "Dynamic URL passed to urllib.request.urlopen()",
-          "file": "lib/crewai-tools/src/crewai_tools/tools/arxiv_paper_tool/arxiv_paper_tool.py",
-          "line": 85,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-SQL-001",
-          "severity": "Critical",
-          "desc": "SQL statement interpolated into execute() instead of bound parameters.",
-          "file": "lib/crewai-tools/src/crewai_tools/tools/oracle_vector_search_tool/vector_search.py",
-          "line": 614,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-SQL-001",
-          "severity": "Critical",
-          "desc": "SQL statement interpolated into execute() instead of bound parameters.",
-          "file": "lib/crewai-tools/src/crewai_tools/tools/oracle_vector_search_tool/vector_search.py",
-          "line": 851,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-PROMPT-001",
-          "severity": "High",
-          "desc": "Untrusted value interpolated into create() prompt argument.",
-          "file": "lib/crewai-tools/src/crewai_tools/tools/ai_mind_tool/ai_mind_tool.py",
-          "line": 93,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-SSRF-001",
-          "severity": "High",
-          "desc": "Dynamic URL passed to requests.post()",
-          "file": "lib/crewai-tools/src/crewai_tools/tools/serper_scrape_website_tool/serper_scrape_website_tool.py",
-          "line": 59,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-SSRF-001",
-          "severity": "High",
-          "desc": "Dynamic URL passed to requests.get()",
-          "file": "lib/crewai-tools/src/crewai_tools/tools/brave_search_tool/base.py",
-          "line": 190,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-SSRF-001",
-          "severity": "High",
-          "desc": "Dynamic URL passed to requests.get()",
-          "file": "lib/crewai-tools/src/crewai_tools/tools/brave_search_tool/brave_search_tool.py",
-          "line": 133,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-SSRF-001",
-          "severity": "High",
           "desc": "Dynamic URL passed to requests.get()",
           "file": "lib/crewai-tools/src/crewai_tools/tools/serply_api_tool/serply_news_search_tool.py",
           "line": 78,
@@ -1975,8 +1617,8 @@
           "rule": "SEC-SSRF-001",
           "severity": "High",
           "desc": "Dynamic URL passed to requests.post()",
-          "file": "lib/crewai-tools/src/crewai_tools/tools/merge_agent_handler_tool/merge_agent_handler_tool.py",
-          "line": 97,
+          "file": "lib/crewai-tools/src/crewai_tools/tools/contextualai_rerank_tool/contextual_rerank_tool.py",
+          "line": 69,
           "scope": "production"
         },
         {
@@ -1985,38 +1627,6 @@
           "desc": "Untrusted value interpolated into create() prompt argument.",
           "file": "lib/crewai-tools/src/crewai_tools/tools/db2_search_tool/db2_search_tool.py",
           "line": 227,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-PROMPT-001",
-          "severity": "High",
-          "desc": "Untrusted value interpolated into create() prompt argument.",
-          "file": "lib/crewai-tools/src/crewai_tools/tools/qdrant_vector_search_tool/qdrant_search_tool.py",
-          "line": 112,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-SSRF-001",
-          "severity": "High",
-          "desc": "Dynamic URL passed to requests.post()",
-          "file": "lib/crewai-tools/src/crewai_tools/tools/brightdata_tool/brightdata_unlocker.py",
-          "line": 141,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-SSRF-001",
-          "severity": "High",
-          "desc": "Dynamic URL passed to requests.post()",
-          "file": "lib/crewai-tools/src/crewai_tools/tools/brightdata_tool/brightdata_serp.py",
-          "line": 224,
-          "scope": "production"
-        },
-        {
-          "rule": "SEC-SSRF-001",
-          "severity": "High",
-          "desc": "Dynamic URL passed to requests.get()",
-          "file": "lib/crewai-tools/src/crewai_tools/tools/crewai_platform_tools/integrations_client.py",
-          "line": 156,
           "scope": "production"
         },
         {
@@ -2060,52 +1670,460 @@
           "scope": "test"
         },
         {
-          "rule": "SEC-SSRF-001",
+          "rule": "SEC-A2A-001",
           "severity": "High",
-          "desc": "Dynamic URL passed to httpx.get()",
-          "file": "lib/crewai-files/src/crewai_files/core/sources.py",
-          "line": 534,
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/tests/test_artifacts.py",
+          "line": 0,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-A2A-001",
+          "severity": "High",
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/src/crewai/__init__.py",
+          "line": 0,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-DESER-001",
+          "severity": "Critical",
+          "desc": "Unsafe deserialization via pickle.load()",
+          "file": "lib/crewai/src/crewai/utilities/file_handler.py",
+          "line": 167,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-MCP-001",
+          "severity": "High",
+          "desc": "MCP client 'streamablehttp_client' constructed without authentication parameters.",
+          "file": "lib/crewai/src/crewai/tools/mcp_tool_wrapper.py",
+          "line": 173,
           "scope": "production"
         },
         {
           "rule": "SEC-SSRF-001",
           "severity": "High",
           "desc": "Dynamic URL passed to httpx.get()",
-          "file": "lib/cli/src/crewai_cli/model_catalog.py",
-          "line": 551,
+          "file": "lib/crewai/src/crewai/skills/registry.py",
+          "line": 365,
           "scope": "production"
         },
         {
-          "rule": "SEC-SSRF-001",
+          "rule": "SEC-A2A-001",
           "severity": "High",
-          "desc": "Dynamic URL passed to httpx.get()",
-          "file": "lib/cli/src/crewai_cli/remote_template/main.py",
-          "line": 210,
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/src/crewai/a2a/__init__.py",
+          "line": 0,
           "scope": "production"
         },
         {
-          "rule": "SEC-SSRF-001",
+          "rule": "SEC-A2A-001",
           "severity": "High",
-          "desc": "Dynamic URL passed to httpx.get()",
-          "file": "lib/cli/src/crewai_cli/remote_template/main.py",
-          "line": 166,
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/src/crewai/a2a/task_helpers.py",
+          "line": 0,
           "scope": "production"
         },
         {
-          "rule": "SEC-SSRF-001",
+          "rule": "SEC-A2A-001",
           "severity": "High",
-          "desc": "Dynamic URL passed to httpx.get()",
-          "file": "lib/cli/src/crewai_cli/skills/main.py",
-          "line": 176,
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/src/crewai/a2a/wrapper.py",
+          "line": 0,
           "scope": "production"
         },
         {
-          "rule": "SEC-SSRF-001",
+          "rule": "SEC-A2A-001",
           "severity": "High",
-          "desc": "Dynamic URL passed to httpx.get()",
-          "file": "lib/cli/src/crewai_cli/enterprise/main.py",
-          "line": 50,
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/src/crewai/a2a/types.py",
+          "line": 0,
           "scope": "production"
+        },
+        {
+          "rule": "SEC-A2A-001",
+          "severity": "High",
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/src/crewai/a2a/errors.py",
+          "line": 0,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-A2A-001",
+          "severity": "High",
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/src/crewai/a2a/config.py",
+          "line": 0,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-A2A-001",
+          "severity": "High",
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/src/crewai/agent/core.py",
+          "line": 0,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-MCP-001",
+          "severity": "High",
+          "desc": "MCP client 'mcpclient' constructed without authentication parameters.",
+          "file": "lib/crewai/src/crewai/mcp/tool_resolver.py",
+          "line": 354,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-MCP-001",
+          "severity": "High",
+          "desc": "MCP client 'stdio_client' constructed without authentication parameters.",
+          "file": "lib/crewai/src/crewai/mcp/transports/stdio.py",
+          "line": 97,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-A2A-001",
+          "severity": "High",
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/src/crewai/agent/internal/meta.py",
+          "line": 0,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-A2A-001",
+          "severity": "High",
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/src/crewai/a2a/updates/__init__.py",
+          "line": 0,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-A2A-001",
+          "severity": "High",
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/src/crewai/a2a/updates/base.py",
+          "line": 0,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-A2A-001",
+          "severity": "High",
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/src/crewai/a2a/extensions/__init__.py",
+          "line": 0,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-A2A-001",
+          "severity": "High",
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/src/crewai/a2a/extensions/registry.py",
+          "line": 0,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-A2A-001",
+          "severity": "High",
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/src/crewai/a2a/extensions/server.py",
+          "line": 0,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-A2A-001",
+          "severity": "High",
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/src/crewai/a2a/extensions/base.py",
+          "line": 0,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-A2A-001",
+          "severity": "High",
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/src/crewai/a2a/utils/transport.py",
+          "line": 0,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-PROMPT-001",
+          "severity": "High",
+          "desc": "Untrusted value interpolated into execute() prompt argument.",
+          "file": "lib/crewai/src/crewai/a2a/utils/delegation.py",
+          "line": 644,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-A2A-001",
+          "severity": "High",
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/src/crewai/a2a/utils/task.py",
+          "line": 0,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-A2A-001",
+          "severity": "High",
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/src/crewai/a2a/utils/content_type.py",
+          "line": 0,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-A2A-001",
+          "severity": "High",
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/src/crewai/a2a/utils/response_model.py",
+          "line": 0,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-A2A-001",
+          "severity": "High",
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/src/crewai/a2a/auth/__init__.py",
+          "line": 0,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-A2A-001",
+          "severity": "High",
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/src/crewai/a2a/auth/utils.py",
+          "line": 0,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-A2A-001",
+          "severity": "High",
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/src/crewai/a2a/auth/server_schemes.py",
+          "line": 0,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-A2A-001",
+          "severity": "High",
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/src/crewai/a2a/auth/schemas.py",
+          "line": 0,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-A2A-001",
+          "severity": "High",
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/src/crewai/a2a/extensions/a2ui/__init__.py",
+          "line": 0,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-A2A-001",
+          "severity": "High",
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/src/crewai/a2a/extensions/a2ui/server_extension.py",
+          "line": 0,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-A2A-001",
+          "severity": "High",
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/src/crewai/a2a/extensions/a2ui/validator.py",
+          "line": 0,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-A2A-001",
+          "severity": "High",
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/src/crewai/a2a/extensions/a2ui/prompt.py",
+          "line": 0,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-A2A-001",
+          "severity": "High",
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/src/crewai/a2a/extensions/a2ui/client_extension.py",
+          "line": 0,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-A2A-001",
+          "severity": "High",
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/src/crewai/a2a/updates/polling/handler.py",
+          "line": 0,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-A2A-001",
+          "severity": "High",
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/src/crewai/a2a/updates/push_notifications/handler.py",
+          "line": 0,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-A2A-001",
+          "severity": "High",
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/src/crewai/a2a/updates/streaming/handler.py",
+          "line": 0,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-A2A-001",
+          "severity": "High",
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/src/crewai/a2a/updates/streaming/params.py",
+          "line": 0,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-SQL-001",
+          "severity": "Critical",
+          "desc": "SQL statement interpolated into execute() instead of bound parameters.",
+          "file": "lib/crewai/src/crewai/memory/storage/kickoff_task_outputs_storage.py",
+          "line": 163,
+          "scope": "production"
+        },
+        {
+          "rule": "SEC-A2A-001",
+          "severity": "High",
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/tests/agents/test_agent_a2a_wrapping.py",
+          "line": 0,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-A2A-001",
+          "severity": "High",
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/tests/agents/test_a2a_trust_completion_status.py",
+          "line": 0,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-A2A-001",
+          "severity": "High",
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/tests/agents/test_agent_spreadsheets.py",
+          "line": 0,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-A2A-001",
+          "severity": "High",
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/tests/agents/test_agent_a2a_kickoff.py",
+          "line": 0,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-CAP-001",
+          "severity": "High",
+          "desc": "Tool 'execute_code' has destructive name.",
+          "file": "lib/crewai/tests/tools/test_base_tool.py",
+          "line": 339,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-CAP-001",
+          "severity": "High",
+          "desc": "Tool 'execute_code' has destructive name.",
+          "file": "lib/crewai/tests/tools/test_base_tool.py",
+          "line": 349,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-CAP-001",
+          "severity": "High",
+          "desc": "Tool 'async_execute' has destructive name.",
+          "file": "lib/crewai/tests/tools/test_base_tool.py",
+          "line": 693,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-CAP-001",
+          "severity": "High",
+          "desc": "Tool 'async_execute' has destructive name.",
+          "file": "lib/crewai/tests/tools/test_base_tool.py",
+          "line": 704,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-A2A-001",
+          "severity": "High",
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/tests/a2a/test_a2a_integration.py",
+          "line": 0,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-A2A-001",
+          "severity": "High",
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/tests/a2a/test_server_schemes.py",
+          "line": 0,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-MCP-001",
+          "severity": "High",
+          "desc": "MCP client 'mcpclient' constructed without authentication parameters.",
+          "file": "lib/crewai/tests/mcp/test_client_connect_auth.py",
+          "line": 59,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-MCP-001",
+          "severity": "High",
+          "desc": "MCP client 'mcpclient' constructed without authentication parameters.",
+          "file": "lib/crewai/tests/mcp/test_client_tool_execution_auth.py",
+          "line": 39,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-MCP-001",
+          "severity": "High",
+          "desc": "MCP client 'mcpclient' constructed without authentication parameters.",
+          "file": "lib/crewai/tests/mcp/test_client_server_info.py",
+          "line": 11,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-MCP-001",
+          "severity": "High",
+          "desc": "MCP client 'mcpclient' constructed without authentication parameters.",
+          "file": "lib/crewai/tests/mcp/test_tool_result_content.py",
+          "line": 40,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-A2A-001",
+          "severity": "High",
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/tests/a2a/extensions/test_a2ui_schema_conformance.py",
+          "line": 0,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-A2A-001",
+          "severity": "High",
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/tests/a2a/utils/test_task.py",
+          "line": 0,
+          "scope": "test"
+        },
+        {
+          "rule": "SEC-A2A-001",
+          "severity": "High",
+          "desc": "A2A communication without identity verification.",
+          "file": "lib/crewai/tests/a2a/utils/test_agent_card.py",
+          "line": 0,
+          "scope": "test"
         }
       ],
       "complianceGaps": [
@@ -2137,31 +2155,31 @@
           "file": "scripts/age90_file_input_runner.py"
         },
         {
-          "rule": "NTI-GOV-001",
-          "pillar": "Governance",
-          "severity": "Info",
-          "desc": "6 tool function(s) defined with no capability check in this module.",
-          "occurrences": 18,
-          "remediation": "Check an explicit capability grant before each tool invocation.",
-          "file": "lib/crewai/tests/test_crew.py"
-        },
-        {
           "rule": "NTI-CONS-001",
           "pillar": "Consensus",
           "severity": "Info",
-          "desc": "Multi-agent system (82 agents) with no consensus or arbitration step.",
+          "desc": "Multi-agent system (3 agents) with no consensus or arbitration step.",
           "occurrences": 70,
           "remediation": "Add an explicit arbitration step for conflicting agent outputs.",
-          "file": "lib/crewai/tests/test_crew.py"
+          "file": "lib/cli/src/crewai_cli/templates/flow/crews/content_crew/content_crew.py"
+        },
+        {
+          "rule": "NTI-GOV-001",
+          "pillar": "Governance",
+          "severity": "Info",
+          "desc": "1 tool function(s) defined with no capability check in this module.",
+          "occurrences": 18,
+          "remediation": "Check an explicit capability grant before each tool invocation.",
+          "file": "lib/crewai-tools/tests/base_tool_test.py"
         },
         {
           "rule": "NTI-CAPDIFF-001",
           "pillar": "Governance",
           "severity": "Info",
-          "desc": "6 of 6 tool(s) declared without grant_capability().",
+          "desc": "1 of 1 tool(s) declared without grant_capability().",
           "occurrences": 18,
           "remediation": "Grant an explicit capability for every declared tool.",
-          "file": "lib/crewai/tests/test_crew.py"
+          "file": "lib/crewai-tools/tests/base_tool_test.py"
         }
       ],
       "vulnerabilityCounts": {
