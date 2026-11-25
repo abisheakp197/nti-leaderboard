@@ -1,6 +1,6 @@
 {
   "source": "NTI-Registry",
-  "generatedAt": "2026-11-24T08:03:30Z",
+  "generatedAt": "2026-11-25T06:41:45Z",
   "rubricVersion": "NTI-1.0",
   "entries": [
     {
@@ -15,10 +15,10 @@
       "trend": null,
       "fix": null,
       "repoUrl": "https://github.com/Agent-Authority-Conformance/aps-conformance-suite",
-      "commit": "fcc74460fc2bc19728e30093e7f03df073cf672a",
+      "commit": "fd6e37a4929bbb4639ec090905b0f758e0ddd8d2",
       "coverage": {
-        "filesScanned": 217,
-        "linesScanned": 44776,
+        "filesScanned": 220,
+        "linesScanned": 45169,
         "languages": [
           "javascript",
           "python",
@@ -141,10 +141,10 @@
       "trend": null,
       "fix": null,
       "repoUrl": "https://github.com/langchain-ai/langchain",
-      "commit": "fb10639a73d980ce05ea8614a84deaf08d572550",
+      "commit": "87ad2d71e1351fc1508483610bb6c965b3bbdffe",
       "coverage": {
         "filesScanned": 2665,
-        "linesScanned": 433489,
+        "linesScanned": 432981,
         "languages": [
           "javascript",
           "python"
@@ -759,10 +759,10 @@
         "label": "Apache-2.0 NTI wrapper for OpenHands"
       },
       "repoUrl": "https://github.com/OpenHands/software-agent-sdk",
-      "commit": "0988e976491ff733bc09e976b36a271b0c511530",
+      "commit": "a053dbc47bfd98e96c621fa1b1e8d154abb1154c",
       "coverage": {
-        "filesScanned": 1560,
-        "linesScanned": 483207,
+        "filesScanned": 1564,
+        "linesScanned": 484214,
         "languages": [
           "javascript",
           "python",
@@ -1279,7 +1279,7 @@
           "pillar": "Identity",
           "severity": "Info",
           "desc": "Agent declared with no cryptographic identity binding in this module.",
-          "occurrences": 414,
+          "occurrences": 417,
           "remediation": "Bind each agent to a signing identity and verify it before use.",
           "file": "tests/conftest.py"
         },
@@ -1288,7 +1288,7 @@
           "pillar": "Audit",
           "severity": "Info",
           "desc": "Agent constructed with no audit-trail implementation in this module.",
-          "occurrences": 347,
+          "occurrences": 349,
           "remediation": "Record each agent action in an append-only, hash-chained log.",
           "file": "tests/conftest.py"
         },
@@ -1297,7 +1297,7 @@
           "pillar": "Persistence",
           "severity": "Info",
           "desc": "Agent constructed with no integrity-verified state persistence in this module.",
-          "occurrences": 339,
+          "occurrences": 341,
           "remediation": "Persist agent state with a verifiable integrity check.",
           "file": "tests/conftest.py"
         },
@@ -1357,10 +1357,10 @@
       "trend": null,
       "fix": null,
       "repoUrl": "https://github.com/crewAIInc/crewAI",
-      "commit": "29311aeb08c5ec0079d95d1fad05f3b227518f52",
+      "commit": "ba2bd50f70069e3079eed29bb9cbed3f777c548b",
       "coverage": {
-        "filesScanned": 1547,
-        "linesScanned": 545939,
+        "filesScanned": 1549,
+        "linesScanned": 546465,
         "languages": [
           "javascript",
           "python"
