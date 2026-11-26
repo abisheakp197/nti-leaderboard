@@ -1,6 +1,6 @@
 {
   "source": "NTI-Registry",
-  "generatedAt": "2026-11-25T06:41:45Z",
+  "generatedAt": "2026-11-26T06:34:23Z",
   "rubricVersion": "NTI-1.0",
   "entries": [
     {
@@ -141,10 +141,10 @@
       "trend": null,
       "fix": null,
       "repoUrl": "https://github.com/langchain-ai/langchain",
-      "commit": "87ad2d71e1351fc1508483610bb6c965b3bbdffe",
+      "commit": "30c4e38d71c2fdf6af474e0bb21832491aaa983e",
       "coverage": {
         "filesScanned": 2665,
-        "linesScanned": 432981,
+        "linesScanned": 434000,
         "languages": [
           "javascript",
           "python"
@@ -759,10 +759,10 @@
         "label": "Apache-2.0 NTI wrapper for OpenHands"
       },
       "repoUrl": "https://github.com/OpenHands/software-agent-sdk",
-      "commit": "a053dbc47bfd98e96c621fa1b1e8d154abb1154c",
+      "commit": "d7263334df62150bdfdfabec5991484dd001064d",
       "coverage": {
         "filesScanned": 1564,
-        "linesScanned": 484214,
+        "linesScanned": 484494,
         "languages": [
           "javascript",
           "python",
@@ -1357,10 +1357,10 @@
       "trend": null,
       "fix": null,
       "repoUrl": "https://github.com/crewAIInc/crewAI",
-      "commit": "ba2bd50f70069e3079eed29bb9cbed3f777c548b",
+      "commit": "77237aecacb204684a80e334dcd8eefa90d7ee60",
       "coverage": {
         "filesScanned": 1549,
-        "linesScanned": 546465,
+        "linesScanned": 547008,
         "languages": [
           "javascript",
           "python"
@@ -1490,7 +1490,7 @@
           "severity": "High",
           "desc": "Dynamic URL passed to requests.get()",
           "file": "lib/crewai-tools/src/crewai_tools/tools/brave_search_tool/brave_search_tool.py",
-          "line": 133,
+          "line": 143,
           "scope": "production"
         },
         {
@@ -1626,7 +1626,7 @@
           "severity": "High",
           "desc": "Untrusted value interpolated into create() prompt argument.",
           "file": "lib/crewai-tools/src/crewai_tools/tools/db2_search_tool/db2_search_tool.py",
-          "line": 227,
+          "line": 237,
           "scope": "production"
         },
         {
@@ -2132,7 +2132,7 @@
           "pillar": "Identity",
           "severity": "Info",
           "desc": "Agent declared with no cryptographic identity binding in this module.",
-          "occurrences": 202,
+          "occurrences": 203,
           "remediation": "Bind each agent to a signing identity and verify it before use.",
           "file": "scripts/age90_file_input_runner.py"
         },
@@ -2141,7 +2141,7 @@
           "pillar": "Audit",
           "severity": "Info",
           "desc": "Agent constructed with no audit-trail implementation in this module.",
-          "occurrences": 153,
+          "occurrences": 154,
           "remediation": "Record each agent action in an append-only, hash-chained log.",
           "file": "scripts/age90_file_input_runner.py"
         },
@@ -2150,7 +2150,7 @@
           "pillar": "Persistence",
           "severity": "Info",
           "desc": "Agent constructed with no integrity-verified state persistence in this module.",
-          "occurrences": 149,
+          "occurrences": 150,
           "remediation": "Persist agent state with a verifiable integrity check.",
           "file": "scripts/age90_file_input_runner.py"
         },
@@ -2201,7 +2201,7 @@
       "trend": null,
       "fix": null,
       "repoUrl": "https://github.com/abisheakp197/Neutral-Trust-Infrastructure",
-      "commit": "881c0f767fcf143ccffa5492fff28d48bdc5f3f4",
+      "commit": "c2baf8a012474fd0f75917f7cbd4d974186dc3c3",
       "coverage": {
         "filesScanned": 6,
         "linesScanned": 1657,
