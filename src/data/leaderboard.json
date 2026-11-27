@@ -1,6 +1,6 @@
 {
   "source": "NTI-Registry",
-  "generatedAt": "2026-11-26T06:34:23Z",
+  "generatedAt": "2026-11-27T06:24:04Z",
   "rubricVersion": "NTI-1.0",
   "entries": [
     {
@@ -15,7 +15,7 @@
       "trend": null,
       "fix": null,
       "repoUrl": "https://github.com/Agent-Authority-Conformance/aps-conformance-suite",
-      "commit": "fd6e37a4929bbb4639ec090905b0f758e0ddd8d2",
+      "commit": "79e9a7d4ff68a565fe0ca82261e23a0be434ec26",
       "coverage": {
         "filesScanned": 220,
         "linesScanned": 45169,
@@ -759,7 +759,7 @@
         "label": "Apache-2.0 NTI wrapper for OpenHands"
       },
       "repoUrl": "https://github.com/OpenHands/software-agent-sdk",
-      "commit": "d7263334df62150bdfdfabec5991484dd001064d",
+      "commit": "7cfef13a0aaf967d192b1db5e01ace609863dcce",
       "coverage": {
         "filesScanned": 1564,
         "linesScanned": 484494,
@@ -2201,14 +2201,14 @@
       "trend": null,
       "fix": null,
       "repoUrl": "https://github.com/abisheakp197/Neutral-Trust-Infrastructure",
-      "commit": "c2baf8a012474fd0f75917f7cbd4d974186dc3c3",
+      "commit": "ee4f1b09b1ae07c8d3aa39909462881cf232d33f",
       "coverage": {
-        "filesScanned": 6,
-        "linesScanned": 1657,
+        "filesScanned": 13,
+        "linesScanned": 2343,
         "languages": [
           "python"
         ],
-        "note": "Partial scan: 77% of this repo's 7,086 lines are rust, which this scanner cannot parse. The score covers the python code only and neither credits nor penalises the rust code."
+        "note": "Partial scan: 72% of this repo's 8,331 lines are rust, which this scanner cannot parse. The score covers the python code only and neither credits nor penalises the rust code."
       },
       "evidence": {
         "attestationHash": "sha256:c90e32d2bc82e2aae3cd12b4c3515730d49472270adbe76749af55f805a9b65b",
